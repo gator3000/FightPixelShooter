@@ -753,6 +753,9 @@ on death of a player:
 
 
 on damage:
+    if event-damagecause is suffocation:
+        cancel event
+        stop
     # broadcast "%event-projectile%"
     if event-projectile is a spectral arrow:
         set damage to 9
@@ -766,7 +769,6 @@ on damage:
     if victim is attacker:
         cancel event
     attacker is a player
-    increase {minijeu::%attacker's uuid%.kills.total} by 1
     if attacker's tool is trident:
         cancel event
         stop
@@ -775,6 +777,7 @@ on damage:
         stop
     if damage is more than victim's health:
         increase {minijeu::%attacker's uuid%.kills.total} by 1
+        # increase {minijeu::%attacker's uuid%.kills.total} by 1
         increase {minijeu::%attacker's uuid%.kills.round.%{round}%} by 1
         if {minijeu::%attacker's uuid%.kills.round.%{round}%} <= 1:
             play sound "kill.one" to attacker
@@ -879,97 +882,114 @@ on left clicking holding TNT:                                                   
         spawn 1 primed TNT at location of block above player
         push last spawned tnt in direction of player with force 0.8
 
-on left click holding spyglass:
-# on left clicking holding stick:
-    # if player is holding a stick with name "&4&lOperator":
-    cancel event
-    if {minijeu::%player's uuid%.operator.reloading} is true:
-        stop
-    if {minijeu::%player's uuid%.operator.cooldown} is true:
-        set {minijeu::%player's uuid%.operator.cooldown} to false
-        play sound "gun.shoot.sniper" with volume 0.5 at player
-        remove 1 from {minijeu::%player's uuid%.operator.bullets}
-        if player isn't sneaking:
-            shoot spectral arrow from player at speed 5 in direction of player
-        else:
-            shoot spectral arrow from player at speed 10000 in direction of player
-        wait 26 ticks
-        set {minijeu::%player's uuid%.operator.cooldown} to true
-    if {minijeu::%player's uuid%.operator.bullets} < 1:
-        set {minijeu::%player's uuid%.operator.reloading} to true
-        send actionbar "&eReloading Operator ..." to player
-        make console execute "xp set %player's name% 0 levels"
-        make console execute "xp set %player's name% 0 points"
-        wait 9 ticks
-        give 1 xp to player
-        wait 9 ticks
-        give 1 xp to player
-        wait 9 ticks
-        give 1 xp to player
-        wait 9 ticks
-        give 1 xp to player
-        play sound "gun.reload.long" with volume 0.8 at player
-        wait 9 ticks
-        give 1 xp to player
-        wait 9 ticks
-        give 1 xp to player
-        wait 9 ticks
-        give 1 xp to player
-        wait 9 ticks
-        play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at player
-        make console execute "xp set %player's name% 0 levels"
-        make console execute "xp set %player's name% 0 points"
-        set {minijeu::%player's uuid%.operator.bullets} to 5
-        set {minijeu::%player's uuid%.operator.reloading} to false
-        stop
+function reloadGhost(P: player):
+    set {minijeu::%{_P}'s uuid%.ghost.reloading} to true
+    send actionbar "&eReloading Ghost ..." to {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    wait 3 ticks
+    give 1 xp to {_P}
+    wait 4 ticks
+    give 1 xp to {_P}
+    wait 4 ticks
+    give 1 xp to {_P}
+    wait 4 ticks
+    give 1 xp to {_P}
+    play sound "gun.reload" with volume 0.8 at {_P}
+    wait 4 ticks
+    give 1 xp to {_P}
+    wait 4 ticks
+    give 1 xp to {_P}
+    wait 4 ticks
+    give 1 xp to {_P}
+    wait 3 ticks
+    play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {minijeu::%{_P}'s uuid%.ghost.bullets} to 15
+    set {minijeu::%{_P}'s uuid%.ghost.reloading} to false
+
+function reloadBulldog(P: player):
+    set {minijeu::%{_P}'s uuid%.bulldog.reloading} to true
+    send actionbar "&eReloading Bulldog ..." to {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    wait 6 ticks
+    give 1 xp to {_P}
+    wait 6 ticks
+    give 1 xp to {_P}
+    wait 6 ticks
+    give 1 xp to {_P}
+    wait 6 ticks
+    give 1 xp to {_P}
+    play sound "gun.reload" with volume 0.8 at {_P}
+    wait 6 ticks
+    give 1 xp to {_P}
+    wait 6 ticks
+    give 1 xp to {_P}
+    wait 6 ticks
+    give 1 xp to {_P}
+    wait 6 ticks
+    play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {minijeu::%{_P}'s uuid%.bulldog.bullets} to 24
+    set {minijeu::%{_P}'s uuid%.bulldog.reloading} to false
 
 
-on left clicking holding spectral arrow:
-    cancel event
-    if {minijeu::%player's uuid%.odin.reloading} is true:
-        stop
-    if {minijeu::%player's uuid%.odin.cooldown} is true:
-        set {minijeu::%player's uuid%.odin.cooldown} to false
-        loop 50 times:
-            if player isn't sneaking:
-                stop loop
-            if player's tool isn't a spectral arrow:
-                stop loop
-            play sound "gun.shoot.silencer" with volume 0.2 at player
-            remove 1 from {minijeu::%player's uuid%.odin.bullets}
-            shoot arrow from player at speed 8 in direction of player
-            wait 2 ticks
-            if {minijeu::%player's uuid%.odin.bullets} < 1:
-                stop loop
-        wait 2 ticks
-        set {minijeu::%player's uuid%.odin.cooldown} to true
-    if {minijeu::%player's uuid%.odin.bullets} < 1:
-        set {minijeu::%player's uuid%.odin.reloading} to true
-        send actionbar "&eReloading Odin ..." to player
-        make console execute "xp set %player's name% 0 levels"
-        make console execute "xp set %player's name% 0 points"
-        wait 12 ticks
-        give 1 xp to player
-        wait 12 ticks
-        give 1 xp to player
-        wait 12 ticks
-        give 1 xp to player
-        wait 12 ticks
-        give 1 xp to player
-        play sound "gun.reload.long" with volume 0.8 at player
-        wait 12 ticks
-        give 1 xp to player
-        wait 12 ticks
-        give 1 xp to player
-        wait 12 ticks
-        give 1 xp to player
-        wait 12 ticks
-        play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at player
-        make console execute "xp set %player's name% 0 levels"
-        make console execute "xp set %player's name% 0 points"
-        set {minijeu::%player's uuid%.odin.bullets} to 100
-        set {minijeu::%player's uuid%.odin.reloading} to false
-        stop
+function reloadOdin(P: player):
+    set {minijeu::%{_P}'s uuid%.odin.reloading} to true
+    send actionbar "&eReloading Odin ..." to {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    wait 12 ticks
+    give 1 xp to {_P}
+    wait 12 ticks
+    give 1 xp to {_P}
+    wait 12 ticks
+    give 1 xp to {_P}
+    play sound "gun.reload.long" with volume 0.8 at {_P}
+    wait 12 ticks
+    give 1 xp to {_P}
+    wait 12 ticks
+    give 1 xp to {_P}
+    wait 12 ticks
+    give 1 xp to {_P}
+    wait 12 ticks
+    give 1 xp to {_P}
+    wait 12 ticks
+    play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {minijeu::%{_P}'s uuid%.odin.bullets} to 100
+    set {minijeu::%{_P}'s uuid%.odin.reloading} to false
+
+function reloadOperator(P: player):
+    set {minijeu::%{_P}'s uuid%.operator.reloading} to true
+    send actionbar "&eReloading Operator ..." to {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    wait 9 ticks
+    give 1 xp to {_P}
+    wait 9 ticks
+    give 1 xp to {_P}
+    wait 9 ticks
+    give 1 xp to {_P}
+    play sound "gun.reload.long" with volume 0.8 at {_P}
+    wait 9 ticks
+    give 1 xp to {_P}
+    wait 9 ticks
+    give 1 xp to {_P}
+    wait 9 ticks
+    give 1 xp to {_P}
+    wait 9 ticks
+    give 1 xp to {_P}
+    wait 9 ticks
+    play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {minijeu::%{_P}'s uuid%.operator.bullets} to 5
+    set {minijeu::%{_P}'s uuid%.operator.reloading} to false
 
 
 
@@ -1018,31 +1038,7 @@ on left clicking holding a stick:
             wait 3 ticks
             set {minijeu::%player's uuid%.ghost.cooldown} to true
         if {minijeu::%player's uuid%.ghost.bullets} < 1:
-            set {minijeu::%player's uuid%.ghost.reloading} to true
-            send actionbar "&eReloading Ghost ..." to player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            wait 3 ticks
-            give 1 xp to player
-            wait 4 ticks
-            give 1 xp to player
-            wait 4 ticks
-            give 1 xp to player
-            wait 4 ticks
-            give 1 xp to player
-            play sound "gun.reload" with volume 0.8 at player
-            wait 4 ticks
-            give 1 xp to player
-            wait 4 ticks
-            give 1 xp to player
-            wait 4 ticks
-            give 1 xp to player
-            wait 3 ticks
-            play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            set {minijeu::%player's uuid%.ghost.bullets} to 15
-            set {minijeu::%player's uuid%.ghost.reloading} to false
+            reloadGhost(player)
             stop
 
 
@@ -1052,7 +1048,7 @@ on left clicking holding a stick:
             stop
         if {minijeu::%player's uuid%.bulldog.cooldown} is true:
             set {minijeu::%player's uuid%.bulldog.cooldown} to false
-            loop 8 times:
+            loop 5 times:
                 play sound "gun.shoot.silencer" with volume 0.2 at player
                 remove 1 from {minijeu::%player's uuid%.bulldog.bullets}
                 shoot arrow from player at speed 10 in direction of player
@@ -1062,31 +1058,7 @@ on left clicking holding a stick:
             wait 2 ticks
             set {minijeu::%player's uuid%.bulldog.cooldown} to true
         if {minijeu::%player's uuid%.bulldog.bullets} < 1:
-            set {minijeu::%player's uuid%.bulldog.reloading} to true
-            send actionbar "&eReloading Bulldog ..." to player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            wait 6 ticks
-            give 1 xp to player
-            wait 6 ticks
-            give 1 xp to player
-            wait 6 ticks
-            give 1 xp to player
-            wait 6 ticks
-            give 1 xp to player
-            play sound "gun.reload" with volume 0.8 at player
-            wait 6 ticks
-            give 1 xp to player
-            wait 6 ticks
-            give 1 xp to player
-            wait 6 ticks
-            give 1 xp to player
-            wait 6 ticks
-            play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            set {minijeu::%player's uuid%.bulldog.bullets} to 24
-            set {minijeu::%player's uuid%.bulldog.reloading} to false
+            reloadBulldog(player)
             stop
 
 
@@ -1110,31 +1082,7 @@ on left clicking holding a stick:
             wait 2 ticks
             set {minijeu::%player's uuid%.odin.cooldown} to true
         if {minijeu::%player's uuid%.odin.bullets} < 1:
-            set {minijeu::%player's uuid%.odin.reloading} to true
-            send actionbar "&eReloading Odin ..." to player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            wait 12 ticks
-            give 1 xp to player
-            wait 12 ticks
-            give 1 xp to player
-            wait 12 ticks
-            give 1 xp to player
-            play sound "gun.reload.long" with volume 0.8 at player
-            wait 12 ticks
-            give 1 xp to player
-            wait 12 ticks
-            give 1 xp to player
-            wait 12 ticks
-            give 1 xp to player
-            wait 12 ticks
-            give 1 xp to player
-            wait 12 ticks
-            play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            set {minijeu::%player's uuid%.odin.bullets} to 100
-            set {minijeu::%player's uuid%.odin.reloading} to false
+            reloadOdin(player)
             stop
 
 
@@ -1153,49 +1101,28 @@ on left clicking holding a stick:
             wait 26 ticks
             set {minijeu::%player's uuid%.operator.cooldown} to true
         if {minijeu::%player's uuid%.operator.bullets} < 1:
-            set {minijeu::%player's uuid%.operator.reloading} to true
-            send actionbar "&eReloading Operator ..." to player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            wait 9 ticks
-            give 1 xp to player
-            wait 9 ticks
-            give 1 xp to player
-            wait 9 ticks
-            give 1 xp to player
-            play sound "gun.reload.long" with volume 0.8 at player
-            wait 9 ticks
-            give 1 xp to player
-            wait 9 ticks
-            give 1 xp to player
-            wait 9 ticks
-            give 1 xp to player
-            wait 9 ticks
-            give 1 xp to player
-            wait 9 ticks
-            play sound "shells.hitground.%random integer from 0 to 4%" with volume 0.8 at player
-            make console execute "xp set %player's name% 0 levels"
-            make console execute "xp set %player's name% 0 points"
-            set {minijeu::%player's uuid%.operator.bullets} to 5
-            set {minijeu::%player's uuid%.operator.reloading} to false
+            reloadOperator(player)
             stop
     
 
 
-every 3 ticks:
+every 2 ticks:
     loop all players:
-        if item in loop-player's selected hotbar slot is a spyglass:
-            if {minijeu::%loop-player's uuid%.operator.reloading} isn't true:
-                send actionbar "&e&l%{minijeu::%loop-player's uuid%.operator.bullets}%/5" to loop-player
-        else if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
+        # if loop-player's tool != {minijeu::%loop-player's uuid%.oldmainitem}:   # Item was changed
+        #     if {minijeu::%loop-player's uuid%.oldmainitem} is a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
+        #         if {minijeu::%loop-player's uuid%.operator.reloading} isn't true:
+        #             if {minijeu::%loop-player's uuid%.operator.cooldown} isn't true:
+        #                 reloadOperator(loop-player)
+        # set {minijeu::%loop-player's uuid%.oldmainitem} to loop-player's tool
+
+
+        # Bullets Display
+        if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
             if {minijeu::%loop-player's uuid%.operator.reloading} isn't true:
                 send actionbar "&e&l%{minijeu::%loop-player's uuid%.operator.bullets}%/5" to loop-player
         else if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
             if {minijeu::%loop-player's uuid%.bulldog.reloading} isn't true:
                 send actionbar "&e&l%{minijeu::%loop-player's uuid%.bulldog.bullets}%/24" to loop-player
-        else if item in loop-player's selected hotbar slot is a spectral arrow:
-            if {minijeu::%loop-player's uuid%.odin.reloading} isn't true:
-                send actionbar "&e&l%{minijeu::%loop-player's uuid%.odin.bullets}%/100" to loop-player
         else if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
             if {minijeu::%loop-player's uuid%.odin.reloading} isn't true:
                 send actionbar "&e&l%{minijeu::%loop-player's uuid%.odin.bullets}%/100" to loop-player

@@ -65,6 +65,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/snow_block": {
+    "criteria": {
+      "has_snowball": "2024-07-28 06:47:50 +0200"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:plains": "2024-07-28 07:10:07 +0200"
@@ -74,12 +80,6 @@
   "minecraft:husbandry/root": {
     "criteria": {
       "consumed_item": "2024-07-28 07:20:13 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/snow_block": {
-    "criteria": {
-      "has_snowball": "2024-07-28 06:47:50 +0200"
     },
     "done": true
   },

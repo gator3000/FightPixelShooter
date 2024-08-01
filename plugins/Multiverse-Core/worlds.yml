@@ -80,16 +80,16 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 40.30000001192093
-      y: 87.0
-      z: -78.69999998807907
-      pitch: -2.1895766E-4
-      yaw: -39.444214
+      x: 8.318963854668333
+      y: -60.0
+      z: 8.420351148123027
+      pitch: 85.79996
+      yaw: -112.34383
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '5200638142186722857'
+    seed: '-6315325053134155997'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
@@ -136,7 +136,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '5200638142186722857'
+    seed: '484647379840616077'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
