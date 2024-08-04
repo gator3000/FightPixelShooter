@@ -52,7 +52,7 @@ worlds:
     alias: lobby
     color: WHITE
     style: NORMAL
-    pvp: 'false'
+    pvp: 'true'
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
@@ -80,11 +80,11 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 8.318963854668333
-      y: -60.0
-      z: 8.420351148123027
-      pitch: 85.79996
-      yaw: -112.34383
+      x: 0.33391240183441084
+      y: 3.0
+      z: -6.623983923637863
+      pitch: -2.8501947
+      yaw: -0.14517964
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
