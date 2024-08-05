@@ -1,6 +1,5 @@
 options:
     server: "Minecraft X Valorant"
-    mymotd: "A &bM&2i&bn&2e&bc&2r&ba&2f&bt&r X &cV&ea&cl&eo&cr&ea&cn&et&9 distance PVP1.9&r server%nl%"
 
 
 
@@ -28,50 +27,50 @@ command /initplayervarables:
             set {minijeu::%player's uuid%.odin.cooldown} to true
             set {minijeu::%player's uuid%.odin.bullets} to 100
             set {minijeu::%player's uuid%.odin.reloading} to false
+            set {minijeu::%player's uuid%.odin.shooting} to false
             set {minijeu::%player's uuid%.odin.aiming} to false
             set {minijeu::%player's uuid%.money} to 0
+            send "&aYour variables are initialized !" to all players
 
-command /initgamerules:
-    permission: op
-    trigger:
-        make player execute command "/gamerule announceAdvancements false"
-        make player execute command "/gamerule commandBlockOutput false"
-        make player execute command "/gamerule disableRaids true"
-        make player execute command "/gamerule doMobLoot false"
-        make player execute command "/gamerule doMobSpawning false"
-        make player execute command "/gamerule doPatrolSpawning false"
-        make player execute command "/gamerule doTraderSpawning false"
-        make player execute command "/gamerule doVinesSpread false"
-        make player execute command "/gamerule doWeatherCycle false"
-        make player execute command "/gamerule drowningDamage false"
-        make player execute command "/gamerule fallDamage false"
-        make player execute command "/gamerule keepInventory true"
-        make player execute command "/gamerule naturalRegeneration false"
-        make player execute command "/gamerule sendCommandFeedback true"
-        make player execute command "/gamerule showDeathMessages false"
-        make player execute command "/gamerule spawnRadius 1"
-        make player execute command "/gamerule spectatorsGenerateChunks false"
+# command /initgamerules:
+#     permission: op
+#     trigger:
+#         make player execute command "/gamerule announceAdvancements false"
+#         make player execute command "/gamerule commandBlockOutput false"
+#         make player execute command "/gamerule disableRaids true"
+#         make player execute command "/gamerule doMobLoot false"
+#         make player execute command "/gamerule doMobSpawning false"
+#         make player execute command "/gamerule doPatrolSpawning false"
+#         make player execute command "/gamerule doTraderSpawning false"
+#         make player execute command "/gamerule doVinesSpread false"
+#         make player execute command "/gamerule doWeatherCycle false"
+#         make player execute command "/gamerule drowningDamage false"
+#         make player execute command "/gamerule fallDamage false"
+#         make player execute command "/gamerule keepInventory true"
+#         make player execute command "/gamerule naturalRegeneration false"
+#         make player execute command "/gamerule sendCommandFeedback true"
+#         make player execute command "/gamerule showDeathMessages false"
+#         make player execute command "/gamerule spawnRadius 1"
+#         make player execute command "/gamerule spectatorsGenerateChunks false"
         
 
 function initbullets(P: player):
-    play sound "gun.reload" in player category with volume 1 at {_P}
+    # play sound "gun.reload" in player category with volume 1 at {_P}
     set {minijeu::%{_P}'s uuid%.ghost.bullets} to 15
     set {minijeu::%{_P}'s uuid%.bulldog.bullets} to 24
     set {minijeu::%{_P}'s uuid%.operator.bullets} to 5
     set {minijeu::%{_P}'s uuid%.odin.bullets} to 100
 
 
-function getplayers(TEAM: string) :: players:
-    return team entries of team named {_TEAM}
 
 
 function setscoreboard(P: player):
-    if {blue::*} contain {_P}:
+    if getTeammates("blue") contain {_P}:
         set {_teamcolor} to "&9"
         set {_team} to "blue"
         set {_kills} to {morts.red}
         set {_deaths} to {morts.blue}
-    else if {red::*} contain {_P}:
+    else if getTeammates("red") contain {_P}:
         set {_teamcolor} to "&c"
         set {_team} to "red"
         set {_kills} to {morts.blue}
@@ -105,59 +104,86 @@ command /togglescoreboard:
     aliases: tgglsb
     trigger:
         toggle player's scoreboard
-        send "Scoreboard Toggled !" to player
+        send "&aScoreboard Toggled !" to player
 
+command /setadmin <player>:
+    executable by: console
+    trigger:
+        set {hardwareadmin} to argument
+        send "&a%argument% is now set to hardware admin !"
 
 on load:
-    make console execute command "/teamsinit"
     set {game} to false
-
-on server list ping:
-    set {mymotd} to "A &bM&2i&bn&2e&bc&2r&ba&2f&bt&r X &cV&ea&cl&eo&cr&ea&cn&et&9 distance PVP1.9&r server%nl%"
-    chance of 20%:
-        set the motd to "%{mymotd}%""Wherever I go, obliteration follows."""
+    if {hardwareadmin} is online:
+        make {hardwareadmin} execute command "/teamsinit"
     else:
-        chance of 25%:
-            set the motd to "%{mymotd}%""They should've dug a deeper grave."""
-        else:
-            chance of 33%:
-                set the motd to "%{mymotd}%""Nobody escapes me. But they'll try."""
-            else:
-                chance of 50%:
-                    set the motd to "%{mymotd}%""Stay alive! I want their life, not yours."""
-                else:
-                    set the motd to "%{mymotd}%""We're gonna win. No other option. Let's go."""
+        make console execute command "/teamsinit"
 
+# on server list ping:
+#     set {mymotd} to "A &bM&2i&bn&2e&bc&2r&ba&2f&bt&r X &cV&ea&cl&eo&cr&ea&cn&et&9 distance PVP1.9&r server%nl%"
+#     chance of 20%:
+#         set the motd to "%{mymotd}%""Wherever I go, obliteration follows."""
+#     else:
+#         chance of 25%:
+#             set the motd to "%{mymotd}%""They should've dug a deeper grave."""
+#         else:
+#             chance of 33%:
+#                 set the motd to "%{mymotd}%""Nobody escapes me. But they'll try."""
+#             else:
+#                 chance of 50%:
+#                     set the motd to "%{mymotd}%""Stay alive! I want their life, not yours."""
+#                 else:
+#                     set the motd to "%{mymotd}%""We're gonna win. No other option. Let's go."""
 
-
-
-on drop:
-    if item isn't gold nugget:
-        if item isn't glass bottle:
-            cancel event
+# command /togglebuildmode:
+#     aliases: tggbuild, build, tggbm
+#     permission: op
+#     trigger:
+#         if {minijeu::%player's uuid%.buildermode} is false:
+#             set {minijeu::%player's uuid%.buildermode} to true
+#             send "Now, you can build !" to player
+#         else:
+#             set {minijeu::%player's uuid%.buildermode} to false
+#             send "Good ! You are secure from grief the world." to player
         
+# on block break:
+#     if {minijeu::%player's uuid%.buildermode} isn't set:
+#         set {minijeu::%player's uuid%.buildermode} to false
+#     if {minijeu::%player's uuid%.buildermode} is false:
+#         send "&cYou can't build and break now ! Use '/togglebuildmode' to modify the world !" to player
+#         cancel event
+
+# on block build:
+#     if {minijeu::%player's uuid%.buildermode} isn't set:
+#         set {minijeu::%player's uuid%.buildermode} to false
+#     if {minijeu::%player's uuid%.buildermode} is false:
+#         send "&cYou can't build and break now ! Use '/togglebuildmode' to modify the world !" to player
+#         cancel event
+
+
 
 
 every 5 ticks:
     loop all players:
         setscoreboard(loop-player)
 
-every 10 seconds:
-    loop all players:
-        set loop-player's food level to 20
+# every 10 seconds:
+#     loop all players:
+#         set loop-player's food level to 20
 
 
-function getTeammates(team: team) :: players:
-    set {_teammates::*} to team entries of {_team}
-    return {_teammates::*}
+
+function getTeammates(TEAM: string) :: players:
+    return team entries of team named {_TEAM}
+
 
 command /teamsdisplay:
     trigger:
-        send "&9Members of team Blue : %{blue::*}%"
-        send "&cMembers of team Red : %{red::*}%"
+        send "&9Members of team blue : %getTeammates("blue")%"
+        send "&cMembers of team red : %getTeammates("red")%"
 
 on join:
-    set join message to ""
+    set join message to "&e%player's name% joined the party !"
     make console execute command "/mvtp %player's name% lobby"
     # give player a written book with nbt from "{title:Help,author:Gator3000,display:{Lore:[""DM Discord for more infos"",""Pseudo -> _gator3000""]},pages:[{""text"":""Welcome !""}]}"
     # {pages:['[,{text:Hello !\\nVoici une aide pour les items en vente dans le shop, mais aussi les },{text:commandes custom,clickEvent:{action:change_page,value:2}},{text: pour te permettre de passer un agréable moment.\\n\\nServeur Discord pour mieux comprendre :\\n},{text:https://discord.gg/EGwCPUs4hg,color:blue,clickEvent:{action:open_url,value:https://discord.gg/EGwCPUs4hg}},{text:\\n \\u0020 \\u0020 \\u0020 \\u0020 \\u0020 \\u0020 \\u0020 \\u0020Gator :),color:reset}]','[,{text:Commandes :,bold:true},{text:\\n,color:reset},{text:/teamsdisplay,color:gray,clickEvent:{action:run_command,value:/teamsdisplay}},{text::\\nAffiche les joueurs dans les teams.\\n,color:reset},{text:/teamblue,color:gray,clickEvent:{action:run_command,value:/teamblue}},{text::\\nRejoint la team blue !\\n,color:reset},{text:/teamred,color:gray,clickEvent:{action:run_command,value:/teamred}},{text::\\nRejoint la team red !,color:reset}]'],title:Aide !,author:Gator3000,display:{Lore:[MP sur discord si tu n'as pas compris : pseudo -> _gator3000]}}"
@@ -171,22 +197,22 @@ on join:
     send "&eDont forget to set your FOV effects accessibility parameter to 100percents" to player
 
 on quit:
-    if {blue::*} contain player:
+    if getTeammates("blue") contain player:
         make player execute command "/teamquit"
-    else if {red::*} contain player:
+    else if getTeammates("red") contain player:
         make player execute command "/teamquit"
 
 
 command /trade <int> [coins to] <player>:
     trigger:
-        if {blue::*} contain player:
-            if {blue::*} contain arg-2:
+        if getTeammates("blue") contain player:
+            if getTeammates("blue") contain arg-2:
                 remove arg-1 from {minijeu::%player's uuid%.money}
                 add arg-1 to {minijeu::%arg-2's uuid%.money}
             else:
                 send "&cYou can't trade with another team ..." to player
-        else if {red::*} contain player:
-            if {red::*} contain arg-2:
+        else if getTeammates("red") contain player:
+            if getTeammates("red") contain arg-2:
                 remove arg-1 from {minijeu::%player's uuid%.money}
                 add arg-1 to {minijeu::%arg-2's uuid%.money}
             else:
@@ -199,51 +225,44 @@ command /teamquit:                                                              
         if {game} is true:
             send "Dont quit your team in a game !! Think to your teammates before disconecting..."
             stop
-        if {blue::*} contain player:
-            remove player from {blue::*}
-            send "&9Members of Blue Team : &r%{blue::*}%" to all players
-            make console execute command "/team leave Blue %player%"
-        else if {red::*} contain player:
-            remove player from {red::*}
-            send "&cMembers of Red Team : &r%{red::*}%" to all players
-            make console execute command "/team leave Red %player%"
+        if getTeammates("blue") contain player:
+            make player execute command "/team leave blue"
+        else if getTeammates("red") contain player:
+            make player execute command "/team leave red"
+        else:
+            send "You aren't in a team lmaoo !" to player
 
 
 command /teamblue:                                                                        # Team management 3
     trigger:
-        if {blue::*} contain player:
+        if getTeammates("blue") contain player:
             send "&9You are already in this Team" to player
             stop
         else if {game}:
             send "&cThere is a game in process ..."
             stop
-        else if {red::*} contain player:
-            remove player from {red::*}
-            add player to {blue::*}
-            make console execute command "/team join Blue %player%"
+        else if getTeammates("red") contain player:
+            make player execute command "/team leave red"
+            make player execute command "/team join blue"
         else:
-            add player to {blue::*}
-            send "&9Blue Team members : &r%{blue::*}%" to all players
-            make console execute command "/team join Blue %player%"
-        send "&9Members of Blue Team : &r%{blue::*}%" to all players
+            make player execute command "/team join blue"
+        make all players execute command "/teamsdisplay"
 
 
 command /teamred:                                                                        # Team management 4
     trigger:
-        if {red::*} contain player:
+        if getTeammates("red") contain player:
             send "&cYou are already in this Team"
             stop
         else if {game}:
             send "&cThere is a game in process ..."
             stop
-        else if {blue::*} contain player:
-            remove player from {blue::*}
-            add player to {red::*}
-            make console execute command "/team join Red %player%"
+        else if getTeammates("blue") contain player:
+            make player execute command "/team leave blue"
+            make player execute command "/team join red"
         else:
-            add player to {red::*}
-            make console execute command "/team join Red %player%"
-        make console execute command "/teamsdisplay"
+            make player execute command "/team join red "
+        make all players execute command "/teamsdisplay"
 
 
 command /teamsinit:                                                                         # Team Initialization
@@ -252,18 +271,18 @@ command /teamsinit:                                                             
         send "Pre-clearing ..." to console
         make console execute command "/teamsclear"
         send "Removing teams ..." to console
-        make console execute command "/team remove Blue"
-        make console execute command "/team remove Red"
-        make console execute command "/team add Red"
-        make console execute command "/team modify Red color red"
-        make console execute command "/team modify Red collisionRule never"
-        make console execute command "/team modify Red friendlyFire false"
-        make console execute command "/team modify Red nametagVisibility hideForOtherTeams"
-        make console execute command "/team add Blue"
-        make console execute command "/team modify Blue color blue"
-        make console execute command "/team modify Blue collisionRule never"
-        make console execute command "/team modify Blue friendlyFire false"
-        make console execute command "/team modify Blue nametagVisibility hideForOtherTeams"
+        make console execute command "/team remove blue"
+        make console execute command "/team remove red"
+        make console execute command "/team add red"
+        make console execute command "/team modify red color red"
+        make console execute command "/team modify red collisionRule never"
+        make console execute command "/team modify red friendlyFire false"
+        make console execute command "/team modify red nametagVisibility hideForOtherTeams"
+        make console execute command "/team add blue"
+        make console execute command "/team modify blue color blue"
+        make console execute command "/team modify blue collisionRule never"
+        make console execute command "/team modify blue friendlyFire false"
+        make console execute command "/team modify blue nametagVisibility hideForOtherTeams"
         send "Clearing workspace ..." to console
         make console execute command "/teamsclear"
         if "%player%" isn't "<none>":
@@ -276,8 +295,10 @@ command /teamsinit:                                                             
 command /teamsclear:                                                                        # Team clearing
     permission: op
     trigger:
-        clear {blue::*}
-        clear {red::*}
+        make console execute command "/team empty blue"
+        make console execute command "/team empty red"
+    #     clear getTeammates("blue")
+    #     clear getTeammates("red")
 
 
 
@@ -293,8 +314,8 @@ command /teamchoose:
             increase {_slotActuel} by 1
             if {_slotActuel} = 10:
                 set {_slotActuel} to 17
-        set slot 12 of open inventory of player to red wool named "&cRed Team"
-        set slot 14 of open inventory of player to blue wool named "&9Blue Team"
+        set slot 12 of open inventory of player to red wool named "&cred Team"
+        set slot 14 of open inventory of player to blue wool named "&9blue Team"
         set slot 26 of open inventory of player to barrier named "&lClear Teams"
 
 
@@ -541,9 +562,9 @@ command /opstart <integer>:                                                     
         set {score.blue} to 0
         set {score.red} to 0
         
-        set {nombre.red} to size of {red::*}
-        set {nombre.blue} to size of {blue::*}
-        loop {blue::*} and {red::*}:
+        set {nombre.red} to size of getTeammates("red")
+        set {nombre.blue} to size of getTeammates("blue")
+        loop getTeammates("blue") and getTeammates("red"):
             clear loop-value's inventory
             set {minijeu::%player's uuid%.money} to 3
             set {minijeu::%player's uuid%.kills.total} to 0
@@ -613,10 +634,10 @@ command /nextround:                                                             
             set {_map} to "map1"
         
         disable PvP in {_map}
-        set {nombre.red} to size of {red::*}
-        set {nombre.blue} to size of {blue::*}
+        set {nombre.red} to size of getTeammates("red")
+        set {nombre.blue} to size of getTeammates("blue")
 
-        loop {blue::*} and {red::*}:
+        loop getTeammates("blue") and getTeammates("red"):
             set {minijeu::%player's uuid%.kills.round.%{round}%} to 0
             set gamemode of loop-value to adventure
             heal loop-value
@@ -634,13 +655,13 @@ command /nextround:                                                             
                     set slot 40 of loop-value's inventory to 5 firework rocket with NBT from "{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:0,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0,FadeColors:[I;11743532]}]}}"
             set {minijeu::%loop-value%.alive} to true
             give a nether star named "&e&lShop" to loop-value's inventory
-        loop {blue::*}:
+        loop getTeammates("blue"):
             set slot 39 of loop-value to a leather helmet with nbt from "{display:{color:1331199}}"
             set slot 38 of loop-value to a leather chestplate with nbt from "{display:{color:1331199}}"
             set slot 37 of loop-value to leather leggings with nbt from "{display:{color:1331199},Enchantments:[{lvl:2,id:swift_sneak}]}"
             set slot 36 of loop-value to leather boots with nbt from "{display:{color:1331199}}"
             teleport loop-value to location {xBlue}, {y}, {zBlue} in {_map}
-        loop {red::*}:
+        loop getTeammates("red"):
             set slot 39 of loop-value to leather helmet with nbt from "{display:{color:16056327}}"
             set slot 38 of loop-value to a leather chestplate with nbt from "{display:{color:16056327}}"
             set slot 37 of loop-value to a leather leggings with nbt from "{display:{color:16056327},Enchantments:[{lvl:2,id:swift_sneak}]}"
@@ -658,9 +679,9 @@ command /nextround:                                                             
         set {morts.blue} to 0
         set {morts.red} to 0
 
-        {game} is true
+
         buildShopBases("true", {_map})
-        loop {blue::*} and {red::*}:
+        loop getTeammates("blue") and getTeammates("red"):
             initbullets(loop-value)
             send title "Round %{round}%" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 2 seconds
         wait 42 ticks
@@ -685,21 +706,23 @@ command /endgame:
             send "&cThere is no game ..."
             stop
         disable PvP in all worlds
+        loop getTeammates("blue") and getTeammates("red"):
+            make console execute command "/mvtp %player's name% lobby"
         if {score.red} > {score.blue}:
             wait 20 ticks
-            loop {blue::*}:
+            loop getTeammates("blue"):
                 send title "&cDefeat..." with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
-            loop {red::*}:
+            loop getTeammates("red"):
                 send title "&cVictory !" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
         else if {score.red} < {score.blue}:
             wait 20 ticks
-            loop {red::*}:
+            loop getTeammates("red"):
                 send title "&cDefeat..." with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
-            loop {blue::*}:
+            loop getTeammates("blue"):
                 send title "&cVictory !" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
         else:
             wait 20 ticks
-            loop all players:
+            loop getTeammates("blue") and getTeammates("red"):
                 send title "&7Draw !" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-player for 5 seconds
         set {game} to false
 
@@ -737,6 +760,7 @@ on damage:
         cancel event
         stop
     if damage is more than victim's health:
+        cancel event
         increase {minijeu::%attacker's uuid%.kills.total} by 1
         # increase {minijeu::%attacker's uuid%.kills.total} by 1
         increase {minijeu::%attacker's uuid%.kills.round.%{round}%} by 1
@@ -748,23 +772,27 @@ on damage:
             play sound "kill.three" in player category to attacker
         else if {minijeu::%attacker's uuid%.kills.round.%{round}%} is 4:
             play sound "kill.four" in player category to attacker
-        else if {minijeu::%attacker's uuid%.kills.round.%{round}%} <= 5:
+        else if {minijeu::%attacker's uuid%.kills.round.%{round}%} >= 5:
             play sound "kill.five" in player category to attacker
         victim is player
-        if {blue::*} contain victim:
+        if getTeammates("blue") contain victim:
             set {_victimteam} to "&9"
-        else if {red::*} contain victim:
+        else if getTeammates("red") contain victim:
             set {_victimteam} to "&c"
         else:
-            set {_victimteam} to "&7"
-        if {blue::*} contain attacker:
+            set {_victimteam} to "&0"
+        if getTeammates("blue") contain attacker:
             set {_attackerteam} to "&9"
-        else if {red::*} contain attacker:
+        else if getTeammates("red") contain attacker:
             set {_attackerteam} to "&c"
         else:
-            set {_attackerteam} to "&7"
+            set {_attackerteam} to "&0"
         if damage type is projectile:
             set {_damager} to "︻╦╤─"
+            if event-projectile is a spectral arrow:
+                set {_damager} to "︻╦╤───"
+            else if event-projectile is a arrow:
+                set {_damager} to "︻╦╤─"
         else if damage type is entity explosion:
             set {_damager} to "︻╦╤─ --  ҉ "
         else:
@@ -776,36 +804,33 @@ on damage:
         add 2 to {minijeu::%attacker's uuid%.money}
         set {minijeu::%victim's uuid%.alive} to false
 
-        if {blue::*} contain victim:
-            cancel event
+        if getTeammates("blue") contain victim:
+            clear victim's inventory
             add 1 to {morts.blue}
-            wait 3 tick
-            if size of {blue::*} = {morts.blue}:
-                broadcast "&cRound win by Reds !"
+            if size of getTeammates("blue") = {morts.blue}:
+                broadcast "&cRound win by reds !"
                 add 1 to {score.red}
-                wait 20 ticks
+                wait 50 ticks
                 make console execute command "/nextround"
-        if {red::*} contain victim:
-            cancel event
+        if getTeammates("red") contain victim:
+            clear victim's inventory
             add 1 to {morts.red}
-            wait 3 tick
-            if size of {red::*} = {morts.red}:
-                broadcast "&9Round win by Blues !"
+            if size of getTeammates("red") = {morts.red}:
+                broadcast "&9Round win by blues !"
                 add 1 to {score.blue}
-                wait 20 ticks
+                wait 50 ticks
                 make console execute command "/nextround"
-        wait 5 ticks
-        if {minijeu::%victim's uuid%.alive} is false:
-            apply potion of invisibility to victim for 1 day
-            set helmet slot of victim to air
-            set chestplate slot of victim to air
-            set leggings slot of victim to air
-            set boots slot of victim to air
+        # if {minijeu::%victim's uuid%.alive} is false:
+        #     apply potion of invisibility to victim for 1 day
+        #     set helmet slot of victim to air
+        #     set chestplate slot of victim to air
+        #     set leggings slot of victim to air
+        #     set boots slot of victim to air
 
 
 
 on respawn:
-    wait 10 ticks
+    wait 1 tick
     if {minijeu::%player's uuid%.alive} is false:
         wait 1 tick
         apply potion of invisibility to player for 1 day
@@ -821,8 +846,8 @@ command /alive:
         if {game} is false:
             send "All ! : There is no game..."
             stop
-        send "&cRouges en vie :&r %{nombre.red}-{morts.red}%/%size of {red::*}%"
-        send "&9Bleus en vie :&r %{nombre.blue}-{morts.blue}%/%size of {blue::*}%"
+        send "&cReds alive :&r %{nombre.red}-{morts.red}%/%size of getTeammates("red")%"
+        send "&9Blues alive :&r %{nombre.blue}-{morts.blue}%/%size of getTeammates("blue")%"
 
 
 
@@ -834,14 +859,25 @@ command /debug:
             set {minijeu::%loop-value's uuid%.alive} to true
 
 
-on item damage:
-    cancel event
+# on item damage:
+#     cancel event
 
 on left clicking holding TNT:                                                     # TNT beavour
         cancel event
         remove 1 TNT from player's inventory
         spawn 1 primed TNT at location of block above player
         push last spawned tnt in direction of player with force 0.8
+
+
+
+
+command /givebaseweapons:
+    trigger:
+        give 1 iron sword named "&lKnife" to player
+        give 1 stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}" to player
+        give 1 stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}" to player
+        give 1 stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}" to player
+        give 1 stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}" to player
 
 function reloadGhost(P: player):
     set {minijeu::%{_P}'s uuid%.ghost.reloading} to true
@@ -951,6 +987,21 @@ function reloadOperator(P: player):
     make console execute "xp set %{_P}'s name% 0 points"
     set {minijeu::%{_P}'s uuid%.operator.bullets} to 5
     set {minijeu::%{_P}'s uuid%.operator.reloading} to false
+
+
+
+on swap item:
+    cancel event
+    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
+        reloadOperator(player)
+    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
+        reloadOdin(player)
+    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
+        reloadBulldog(player)
+    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}":
+        reloadGhost(player)
+
+
 
 every 1 tick:
     loop all players:
@@ -1070,14 +1121,18 @@ on left clicking holding a stick:
 
     if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
         cancel event
+        if {minijeu::%player's uuid%.odin.shooting} is true:
+            set {minijeu::%player's uuid%.odin.shooting} to false
         if {minijeu::%player's uuid%.odin.reloading} is true:
             stop
         if {minijeu::%player's uuid%.odin.cooldown} is true:
             set {minijeu::%player's uuid%.odin.cooldown} to false
+            {minijeu::%player's uuid%.odin.shooting} is false
+            set {minijeu::%player's uuid%.odin.shooting} to true
             loop 50 times:
-                if player isn't sneaking:
-                    stop loop
                 if player's tool isn't a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
+                    stop loop
+                if {minijeu::%player's uuid%.odin.shooting} is false:
                     stop loop
                 play sound "gun.shoot.silencer" in player category with volume 0.2 at player
                 remove 1 from {minijeu::%player's uuid%.odin.bullets}
@@ -1088,6 +1143,7 @@ on left clicking holding a stick:
                 wait 2 ticks
                 if {minijeu::%player's uuid%.odin.bullets} < 1:
                     stop loop
+            set {minijeu::%player's uuid%.odin.shooting} to false
             wait 2 ticks
             set {minijeu::%player's uuid%.odin.cooldown} to true
         if {minijeu::%player's uuid%.odin.bullets} < 1:
@@ -1136,28 +1192,28 @@ every 2 ticks:
             
 
 
-on explode:
-    event-entity is tnt
-    cancel event
-    create a safe explosion of force 5 at event-location
+# on explode:
+#     event-entity is tnt
+#     cancel event
+#     create a safe explosion of force 5 at event-location
 
 
 on projectile hit:
     if projectile is a trident:
         loop 13 times:
             loop all players in radius 15 around event-location:
-                if {blue::*} contain shooter:
-                    if {red::*} contain loop-player:
+                if getTeammates("blue") contain shooter:
+                    if getTeammates("red") contain loop-player:
                         apply potion of glowing without particles to loop-player for 15 ticks
-                else if {red::*} contain shooter:
-                    if {blue::*} contain loop-player:
+                else if getTeammates("red") contain shooter:
+                    if getTeammates("blue") contain loop-player:
                         apply potion of glowing without particles to loop-player for 15 ticks
             wait 20 ticks
     else if projectile is a snowball:
         cancel event
-        if {blue::*} contain shooter:
+        if getTeammates("blue") contain shooter:
             set {_texture} to "blue_wool"
-        else if {red::*} contain shooter:
+        else if getTeammates("red") contain shooter:
             set {_texture} to "red_wool"
         else if shooter has permission "op":
             set {_texture} to "black_wool"
@@ -1175,8 +1231,8 @@ on projectile hit:
         wait 100 ticks
         kill event-projectile
 
-on pickup:
-    cancel event
+# on pickup:
+#     cancel event
 
 on potion effect added:
     if event-entity is a player:
@@ -1209,30 +1265,30 @@ on potion effect added:
             wait 5 ticks
             remove all glass bottle from event-entity's inventory
 
-command /distance <int> <int> <int> [<int> <int> <int>]:
-    trigger:
-        if argument 4 is set:
-            send "&l    %distance between the location (argument 1, argument 2, argument 3) and the location (argument 4, argument 5, argument 6)%" to player
-        else:
-            send "&l    %distance between the location (argument 1, argument 2, argument 3) and player%" to player
+# command /distance <int> <int> <int> [<int> <int> <int>]:
+#     trigger:
+#         if argument 4 is set:
+#             send "&l    %distance between the location (argument 1, argument 2, argument 3) and the location (argument 4, argument 5, argument 6)%" to player
+#         else:
+#             send "&l    %distance between the location (argument 1, argument 2, argument 3) and player%" to player
 
-command /pvp <boolean> [[in] <string>]:
-    permission: op
-    trigger:
-        if arg-2 is set:
-            if arg-1 is true:
-                enable pvp in world arg-2
-                send "&ePvP enabled in world ""%arg-2%""!" to player
-            else:
-                disable pvp in world arg-2
-                send "&ePvP disabled in world ""%arg-2%""!" to player
-        else:
-            if arg-1 is true:
-                enable pvp in all worlds
-                send "&ePvP enabled !" to player
-            else:
-                disable pvp in all worlds
-                send "&ePvP disabled !" to player
+# command /pvp <boolean> [[in] <string>]:
+#     permission: op
+#     trigger:
+#         if arg-2 is set:
+#             if arg-1 is true:
+#                 enable pvp in world arg-2
+#                 send "&ePvP enabled in world ""%arg-2%""!" to player
+#             else:
+#                 disable pvp in world arg-2
+#                 send "&ePvP disabled in world ""%arg-2%""!" to player
+#         else:
+#             if arg-1 is true:
+#                 enable pvp in all worlds
+#                 send "&ePvP enabled !" to player
+#             else:
+#                 disable pvp in all worlds
+#                 send "&ePvP disabled !" to player
 
 
 command /ready [for] <string> [[in] <int> [seconds]]:
@@ -1243,11 +1299,12 @@ command /ready [for] <string> [[in] <int> [seconds]]:
             wait "%arg-2% seconds" parsed as timespan
             set {minijeu::%player's uuid%.wanttostart} to true
             set {_start} to true
-            loop {blue::*} and {red::*}:
+            send "&aYou are ready !" to all players
+            loop getTeammates("blue") and getTeammates("red"):
                 if {minijeu::%loop-value's uuid%.wanttostart} is false:
                     set {_start} to false
             if {_start} is true:
-                loop {blue::*} and {red::*}:
+                loop getTeammates("blue") and getTeammates("red"):
                     set {minijeu::%loop-value's uuid%.wanttostart} to false
 
                 send title "Game will start in 5" to all players for 2 seconds
@@ -1268,28 +1325,10 @@ command /ready [for] <string> [[in] <int> [seconds]]:
 
 
 
-command /t:
-    permission: op
-    trigger:
-        broadcast "%getTeammates(team named "Blue")%"
 
 
-on left click:
-    if world of player is world "lobby":
-        if player has permission "op":
-            send "%player's name% (uuid=%player's uuid%) has left clicked" to console
-        else:
-            cancel event
-on right click:
-    if world of player is world "lobby":
-        if player has permission "op":
-            send "%player's name% (uuid=%player's uuid%) has right clicked" to console
-        else:
-            cancel event
-
-
-every 1 second:
-    loop all players:
-        if loop-player isn't in world "lobby":
-            make console execute command "/effect give %loop-player's name% speed 1 1 true"
-            make console execute command "/effect give %loop-player's name% jump_boost 1 4 true"
+# every 1 second:
+#     loop all players:
+#         if loop-player isn't in world "lobby":
+#             # make console execute command "/effect give %loop-player's name% speed 1 0 true"
+#             # make console execute command "/effect give %loop-player's name% jump_boost 1 1 true"
