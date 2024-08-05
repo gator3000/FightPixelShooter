@@ -1,0 +1,19 @@
+option:
+    # Weapons Variables
+    smalldamages: 2
+    bigdamages: 8
+
+    ghostmagazine: 15
+    bulldogmagazine: 24
+    odinmagazine: 100
+    operatormagazine: 5
+
+    ghostshootcooldown: 
+    bulldogshootcooldown: 
+    odinshootcooldown: 
+    operatorshootcooldown: 
+
+    ghostreloadcooldown: 
+    bulldogreloadcooldown: 
+    odinreloadcooldown: 
+    operatorreloadcooldown: 
