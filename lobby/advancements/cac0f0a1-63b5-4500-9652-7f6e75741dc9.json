@@ -299,15 +299,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/red_dye_from_tulip": {
+    "criteria": {
+      "has_red_flower": "2024-08-05 18:26:23 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/red_dye_from_poppy": {
     "criteria": {
       "has_poppy": "2024-08-05 18:26:28 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/misc/red_dye_from_tulip": {
+  "minecraft:recipes/decorations/white_glazed_terracotta": {
     "criteria": {
-      "has_red_flower": "2024-08-05 18:26:23 +0200"
+      "has_white_terracotta": "2024-08-08 18:35:55 +0200"
     },
     "done": true
   },

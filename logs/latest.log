@@ -1,1119 +1,1759 @@
-[00:00:36] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:00:37] [Server thread/INFO]: Pre-clearing ...
-[00:00:37] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:00:37] [Server thread/INFO]: Removing teams ...
-[00:00:37] [Server thread/INFO]: Removed team [blue]
-[00:00:37] [Server thread/INFO]: Removed team [red]
-[00:00:37] [Server thread/INFO]: Created team [red]
-[00:00:37] [Server thread/INFO]: Updated the color for team [red] to red
-[00:00:37] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:00:37] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:00:37] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:00:37] [Server thread/INFO]: Created team [blue]
-[00:00:37] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:00:37] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:00:37] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:00:37] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:00:37] [Server thread/INFO]: Clearing workspace ...
-[00:00:37] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:00:37] [Server thread/INFO]: Teams Initialized from the console !
-[00:00:37] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:00:37] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:00:37] [Server thread/INFO]: Gator3000 (uuid=5792af6d-5024-30e3-9e28-1e72052b9fcc) has right clicked
-[00:01:43] [Server thread/INFO]: [Skript] Rechargement de minijeu.sk...
-[00:01:44] [Server thread/INFO]: Pre-clearing ...
-[00:01:44] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:01:44] [Server thread/INFO]: Removing teams ...
-[00:01:44] [Server thread/INFO]: Removed team [blue]
-[00:01:44] [Server thread/INFO]: Removed team [red]
-[00:01:44] [Server thread/INFO]: Created team [red]
-[00:01:44] [Server thread/INFO]: Updated the color for team [red] to red
-[00:01:44] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:01:44] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:01:44] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:01:44] [Server thread/INFO]: Created team [blue]
-[00:01:44] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:01:44] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:01:44] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:01:44] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:01:44] [Server thread/INFO]: Clearing workspace ...
-[00:01:44] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:01:44] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:01:44] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:01:44] [Server thread/INFO]: Pre-clearing ...
-[00:01:44] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:01:44] [Server thread/INFO]: Removing teams ...
-[00:01:44] [Server thread/INFO]: Removed team [blue]
-[00:01:44] [Server thread/INFO]: Removed team [red]
-[00:01:44] [Server thread/INFO]: Created team [red]
-[00:01:44] [Server thread/INFO]: Updated the color for team [red] to red
-[00:01:44] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:01:44] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:01:44] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:01:44] [Server thread/INFO]: Created team [blue]
-[00:01:44] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:01:44] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:01:44] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:01:44] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:01:44] [Server thread/INFO]: Clearing workspace ...
-[00:01:44] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:01:44] [Server thread/INFO]: Teams Initialized from the console !
-[00:01:44] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:01:44] [Server thread/INFO]: [Skript] minijeu.sk rechargé(s) avec succès. (929ms)
-[00:02:02] [Server thread/INFO]: [Skript] Rechargement de minijeu.sk...
-[00:02:03] [Server thread/INFO]: Pre-clearing ...
-[00:02:03] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:02:03] [Server thread/INFO]: Removing teams ...
-[00:02:03] [Server thread/INFO]: Removed team [blue]
-[00:02:03] [Server thread/INFO]: Removed team [red]
-[00:02:03] [Server thread/INFO]: Created team [red]
-[00:02:03] [Server thread/INFO]: Updated the color for team [red] to red
-[00:02:03] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:02:03] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:02:03] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:02:03] [Server thread/INFO]: Created team [blue]
-[00:02:03] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:02:03] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:02:03] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:02:03] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:02:03] [Server thread/INFO]: Clearing workspace ...
-[00:02:03] [Server thread/INFO]: Unknown command. Type "/help" for help.
-[00:02:03] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:02:03] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:02:03] [Server thread/INFO]: [Skript] minijeu.sk rechargé(s) avec succès. (821ms)
-[00:02:19] [Server thread/INFO]: Gator3000 is now set to hardware admin !
-[00:10:43] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:10:44] [Server thread/INFO]: Pre-clearing ...
-[00:10:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:10:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:10:44] [Server thread/INFO]: Removing teams ...
-[00:10:44] [Server thread/INFO]: Removed team [blue]
-[00:10:44] [Server thread/INFO]: Removed team [red]
-[00:10:44] [Server thread/INFO]: Created team [red]
-[00:10:44] [Server thread/INFO]: Updated the color for team [red] to red
-[00:10:44] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:10:44] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:10:44] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:10:44] [Server thread/INFO]: Created team [blue]
-[00:10:44] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:10:44] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:10:44] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:10:44] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:10:44] [Server thread/INFO]: Clearing workspace ...
-[00:10:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:10:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:10:44] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:10:44] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:14:40] [Server thread/INFO]: [Skript] Rechargement de minijeu.sk...
-[00:14:41] [Server thread/INFO]: Ligne 982 : (minijeu.sk)
-[00:14:41] [Server thread/INFO]:     There's no loop that matches 'loop-player'
-[00:14:41] [Server thread/INFO]:     Ligne : if loop-player isn't holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
-[00:14:41] [Server thread/INFO]:  
-[00:14:41] [Server thread/INFO]: Ligne 984 : (minijeu.sk)
-[00:14:41] [Server thread/INFO]:     There's no loop that matches 'loop-player'
-[00:14:41] [Server thread/INFO]:     Ligne : if loop-player isn't holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
-[00:14:41] [Server thread/INFO]:  
-[00:14:41] [Server thread/INFO]: Ligne 986 : (minijeu.sk)
-[00:14:41] [Server thread/INFO]:     There's no loop that matches 'loop-player'
-[00:14:41] [Server thread/INFO]:     Ligne : if loop-player isn't holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
-[00:14:41] [Server thread/INFO]:  
-[00:14:41] [Server thread/INFO]: Ligne 988 : (minijeu.sk)
-[00:14:41] [Server thread/INFO]:     Can't understand this condition: 'if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}"'
-[00:14:41] [Server thread/INFO]:     Ligne : if if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}":
-[00:14:41] [Server thread/INFO]:  
-[00:14:41] [Server thread/INFO]: Pre-clearing ...
-[00:14:41] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:14:41] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:14:41] [Server thread/INFO]: Removing teams ...
-[00:14:41] [Server thread/INFO]: Removed team [blue]
-[00:14:41] [Server thread/INFO]: Removed team [red]
-[00:14:41] [Server thread/INFO]: Created team [red]
-[00:14:41] [Server thread/INFO]: Updated the color for team [red] to red
-[00:14:41] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:14:41] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:14:41] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:14:41] [Server thread/INFO]: Created team [blue]
-[00:14:41] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:14:41] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:14:41] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:14:41] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:14:41] [Server thread/INFO]: Clearing workspace ...
-[00:14:41] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:14:41] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:14:41] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:14:41] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:14:41] [Server thread/INFO]: [Skript] 4 erreurs rencontrées lors du rechargement de minijeu.sk! (936ms)
-[00:15:01] [Server thread/INFO]: [Skript] Rechargement de minijeu.sk...
-[00:15:01] [Server thread/INFO]: Ligne 988 : (minijeu.sk)
-[00:15:01] [Server thread/INFO]:     Can't understand this condition: 'if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}"'
-[00:15:01] [Server thread/INFO]:     Ligne : if if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}":
-[00:15:01] [Server thread/INFO]:  
-[00:15:02] [Server thread/INFO]: Pre-clearing ...
-[00:15:02] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:02] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:02] [Server thread/INFO]: Removing teams ...
-[00:15:02] [Server thread/INFO]: Removed team [blue]
-[00:15:02] [Server thread/INFO]: Removed team [red]
-[00:15:02] [Server thread/INFO]: Created team [red]
-[00:15:02] [Server thread/INFO]: Updated the color for team [red] to red
-[00:15:02] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:15:02] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:15:02] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:15:02] [Server thread/INFO]: Created team [blue]
-[00:15:02] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:15:02] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:15:02] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:15:02] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:15:02] [Server thread/INFO]: Clearing workspace ...
-[00:15:02] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:02] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:02] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:15:02] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:15:02] [Server thread/INFO]: [Skript] 1 erreur rencontrée lors du rechargement de minijeu.sk! (909ms)
-[00:15:13] [Server thread/INFO]: [Skript] Rechargement de minijeu.sk...
-[00:15:14] [Server thread/INFO]: Pre-clearing ...
-[00:15:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:14] [Server thread/INFO]: Removing teams ...
-[00:15:14] [Server thread/INFO]: Removed team [blue]
-[00:15:14] [Server thread/INFO]: Removed team [red]
-[00:15:14] [Server thread/INFO]: Created team [red]
-[00:15:14] [Server thread/INFO]: Updated the color for team [red] to red
-[00:15:14] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:15:14] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:15:14] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:15:14] [Server thread/INFO]: Created team [blue]
-[00:15:14] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:15:14] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:15:14] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:15:14] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:15:14] [Server thread/INFO]: Clearing workspace ...
-[00:15:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:15:14] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:15:14] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:15:14] [Server thread/INFO]: [Skript] minijeu.sk rechargé(s) avec succès. (822ms)
-[00:15:22] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:22] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:15:22] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:22] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:15:25] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:25] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:15:27] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:27] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:15:28] [Server thread/INFO]: Summoned new Armor Stand
-[00:15:28] [Server thread/INFO]: Gator3000 (uuid=5792af6d-5024-30e3-9e28-1e72052b9fcc) has left clicked
-[00:15:29] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:29] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:15:29] [Server thread/INFO]: Gator3000 (uuid=5792af6d-5024-30e3-9e28-1e72052b9fcc) has left clicked
-[00:15:29] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:29] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:15:32] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:32] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:15:32] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:15:32] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:18:43] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:18:44] [Server thread/INFO]: Pre-clearing ...
-[00:18:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:18:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:18:44] [Server thread/INFO]: Removing teams ...
-[00:18:44] [Server thread/INFO]: Removed team [blue]
-[00:18:44] [Server thread/INFO]: Removed team [red]
-[00:18:44] [Server thread/INFO]: Created team [red]
-[00:18:44] [Server thread/INFO]: Updated the color for team [red] to red
-[00:18:44] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:18:44] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:18:44] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:18:44] [Server thread/INFO]: Created team [blue]
-[00:18:44] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:18:44] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:18:44] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:18:44] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:18:44] [Server thread/INFO]: Clearing workspace ...
-[00:18:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:18:44] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:18:44] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:18:44] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:19:17] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:19:18] [Server thread/INFO]: Pre-clearing ...
-[00:19:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:18] [Server thread/INFO]: Removing teams ...
-[00:19:18] [Server thread/INFO]: Removed team [blue]
-[00:19:18] [Server thread/INFO]: Removed team [red]
-[00:19:18] [Server thread/INFO]: Created team [red]
-[00:19:18] [Server thread/INFO]: Updated the color for team [red] to red
-[00:19:18] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:19:18] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:19:18] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:19:18] [Server thread/INFO]: Created team [blue]
-[00:19:18] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:19:18] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:19:18] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:19:18] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:19:18] [Server thread/INFO]: Clearing workspace ...
-[00:19:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:18] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:19:18] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:19:52] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:19:53] [Server thread/INFO]: Pre-clearing ...
-[00:19:53] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:53] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:53] [Server thread/INFO]: Removing teams ...
-[00:19:53] [Server thread/INFO]: Removed team [blue]
-[00:19:53] [Server thread/INFO]: Removed team [red]
-[00:19:53] [Server thread/INFO]: Created team [red]
-[00:19:53] [Server thread/INFO]: Updated the color for team [red] to red
-[00:19:53] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:19:53] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:19:53] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:19:53] [Server thread/INFO]: Created team [blue]
-[00:19:53] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:19:53] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:19:53] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:19:53] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:19:53] [Server thread/INFO]: Clearing workspace ...
-[00:19:53] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:53] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:19:53] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:19:53] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:20:13] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:20:14] [Server thread/INFO]: Pre-clearing ...
-[00:20:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:20:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:20:14] [Server thread/INFO]: Removing teams ...
-[00:20:14] [Server thread/INFO]: Removed team [blue]
-[00:20:14] [Server thread/INFO]: Removed team [red]
-[00:20:14] [Server thread/INFO]: Created team [red]
-[00:20:14] [Server thread/INFO]: Updated the color for team [red] to red
-[00:20:14] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:20:14] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:20:14] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:20:14] [Server thread/INFO]: Created team [blue]
-[00:20:14] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:20:14] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:20:14] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:20:14] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:20:14] [Server thread/INFO]: Clearing workspace ...
-[00:20:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:20:14] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:20:14] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:20:14] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:20:34] [Server thread/INFO]: Gator3000 issued server command: /mvtp map0
-[00:21:12] [Server thread/INFO]: Gator3000 issued server command: /kill @e[type=!minecraft:player]
-[00:21:12] [Server thread/INFO]: [Gator3000: Killed 1538 entities]
-[00:21:17] [Server thread/INFO]: Gator3000 issued server command: /gamemode creative
-[00:21:17] [Server thread/INFO]: [Gator3000: Set own game mode to Creative Mode]
-[00:21:41] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:41] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:21:41] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:41] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:21:42] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:42] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:21:42] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:42] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:21:43] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:43] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:21:44] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:44] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:21:45] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:45] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:21:46] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:21:46] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:03] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:03] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:03] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:03] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:05] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:05] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:07] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:07] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:46] [Server thread/INFO]: Gator3000 issued server command: /tggbuild
-[00:23:51] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:51] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:51] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:51] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:52] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:52] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:52] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:52] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:52] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:52] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:54] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:54] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:55] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:55] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:56] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:56] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:56] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:56] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:23:57] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:23:57] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:10] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:10] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:10] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:10] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:11] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:11] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:11] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:11] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:12] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:12] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:13] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:13] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:15] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:15] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:16] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:16] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:19] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:24:27] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:24:59] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:59] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:24:59] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:24:59] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:00] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:00] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:00] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:00] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:00] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:00] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:02] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:02] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:02] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:02] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:03] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:03] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:04] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:04] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:05] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:05] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:45] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:25:46] [Server thread/INFO]: Pre-clearing ...
-[00:25:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:25:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:25:46] [Server thread/INFO]: Removing teams ...
-[00:25:46] [Server thread/INFO]: Removed team [blue]
-[00:25:46] [Server thread/INFO]: Removed team [red]
-[00:25:46] [Server thread/INFO]: Created team [red]
-[00:25:46] [Server thread/INFO]: Updated the color for team [red] to red
-[00:25:46] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:25:46] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:25:46] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:25:46] [Server thread/INFO]: Created team [blue]
-[00:25:46] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:25:46] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:25:46] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:25:46] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:25:46] [Server thread/INFO]: Clearing workspace ...
-[00:25:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:25:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:25:46] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:25:46] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:25:48] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:48] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:48] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:48] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:50] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:50] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:53] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:25:53] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:25:54] [Server thread/INFO]: Gator3000 issued server command: /gamemode adventure
-[00:25:54] [Server thread/INFO]: [Gator3000: Set own game mode to Adventure Mode]
-[00:25:57] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:25:58] [Server thread/INFO]: Summoned new Armor Stand
-[00:25:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:26:01] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:26:01] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:26:01] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:26:01] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:26:04] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:26:04] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:26:06] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:26:06] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:26:12] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:26:12] [Server thread/INFO]: Target doesn't have the requested effect
-[00:27:44] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:27:45] [Server thread/INFO]: Pre-clearing ...
-[00:27:45] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:27:45] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:27:45] [Server thread/INFO]: Removing teams ...
-[00:27:45] [Server thread/INFO]: Removed team [blue]
-[00:27:45] [Server thread/INFO]: Removed team [red]
-[00:27:45] [Server thread/INFO]: Created team [red]
-[00:27:45] [Server thread/INFO]: Updated the color for team [red] to red
-[00:27:45] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:27:45] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:27:45] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:27:45] [Server thread/INFO]: Created team [blue]
-[00:27:45] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:27:45] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:27:45] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:27:45] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:27:45] [Server thread/INFO]: Clearing workspace ...
-[00:27:45] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:27:45] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:27:45] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:27:45] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:27:46] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:27:46] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:27:46] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:27:46] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:27:48] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:27:48] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:27:51] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:27:51] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:12] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:28:13] [Server thread/INFO]: Pre-clearing ...
-[00:28:13] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:13] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:13] [Server thread/INFO]: Removing teams ...
-[00:28:13] [Server thread/INFO]: Removed team [blue]
-[00:28:13] [Server thread/INFO]: Removed team [red]
-[00:28:13] [Server thread/INFO]: Created team [red]
-[00:28:13] [Server thread/INFO]: Updated the color for team [red] to red
-[00:28:13] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:28:13] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:28:13] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:28:13] [Server thread/INFO]: Created team [blue]
-[00:28:13] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:28:13] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:28:13] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:28:13] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:28:13] [Server thread/INFO]: Clearing workspace ...
-[00:28:13] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:13] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:13] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:28:13] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:28:15] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:15] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:15] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:15] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:17] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:17] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:19] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:19] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:38] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:28:39] [Server thread/INFO]: Pre-clearing ...
-[00:28:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:39] [Server thread/INFO]: Removing teams ...
-[00:28:39] [Server thread/INFO]: Removed team [blue]
-[00:28:39] [Server thread/INFO]: Removed team [red]
-[00:28:39] [Server thread/INFO]: Created team [red]
-[00:28:39] [Server thread/INFO]: Updated the color for team [red] to red
-[00:28:39] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:28:39] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:28:39] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:28:39] [Server thread/INFO]: Created team [blue]
-[00:28:39] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:28:39] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:28:39] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:28:39] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:28:39] [Server thread/INFO]: Clearing workspace ...
-[00:28:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:28:39] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:28:39] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:28:40] [Server thread/INFO]: Summoned new Armor Stand
-[00:28:42] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:42] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:42] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:42] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:44] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:44] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:28:46] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:28:46] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:29:27] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:29:28] [Server thread/INFO]: Pre-clearing ...
-[00:29:28] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:29:28] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:29:28] [Server thread/INFO]: Removing teams ...
-[00:29:28] [Server thread/INFO]: Removed team [blue]
-[00:29:28] [Server thread/INFO]: Removed team [red]
-[00:29:28] [Server thread/INFO]: Created team [red]
-[00:29:28] [Server thread/INFO]: Updated the color for team [red] to red
-[00:29:28] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:29:28] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:29:28] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:29:28] [Server thread/INFO]: Created team [blue]
-[00:29:28] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:29:28] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:29:28] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:29:28] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:29:28] [Server thread/INFO]: Clearing workspace ...
-[00:29:28] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:29:28] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:29:28] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:29:28] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:29:29] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:29:29] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:29:33] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:29:33] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:29:40] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:29:42] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:29:47] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:47] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:47] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:47] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:47] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:50] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:29:54] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:29:56] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:57] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:57] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:57] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:57] [Server thread/INFO]: Summoned new Armor Stand
-[00:29:57] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:29:57] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:29:59] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:29:59] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:30:00] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:00] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:02] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:02] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:02] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:02] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:04] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:04] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:05] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:05] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:07] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:07] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:09] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:09] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:14] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:14] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:15] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:15] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:19] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:30:19] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:30:21] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:30:21] [Server thread/INFO]: Summoned new Armor Stand
-[00:30:22] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:31:49] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:31:50] [Server thread/INFO]: Pre-clearing ...
-[00:31:50] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:31:50] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:31:50] [Server thread/INFO]: Removing teams ...
-[00:31:50] [Server thread/INFO]: Removed team [blue]
-[00:31:50] [Server thread/INFO]: Removed team [red]
-[00:31:50] [Server thread/INFO]: Created team [red]
-[00:31:50] [Server thread/INFO]: Updated the color for team [red] to red
-[00:31:50] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:31:50] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:31:50] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:31:50] [Server thread/INFO]: Created team [blue]
-[00:31:50] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:31:50] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:31:50] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:31:50] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:31:50] [Server thread/INFO]: Clearing workspace ...
-[00:31:50] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:31:50] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:31:50] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:31:50] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:31:56] [Server thread/INFO]: Gator3000 issued server command: /initplayervarables
-[00:31:58] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:58] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:58] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:58] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:58] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:58] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:31:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:00] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:32:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:05] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:06] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:32:06] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:06] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:06] [Server thread/INFO]: Summoned new Armor Stand
-[00:32:06] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:03] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:33:04] [Server thread/INFO]: Pre-clearing ...
-[00:33:04] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:04] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:04] [Server thread/INFO]: Removing teams ...
-[00:33:04] [Server thread/INFO]: Removed team [blue]
-[00:33:04] [Server thread/INFO]: Removed team [red]
-[00:33:04] [Server thread/INFO]: Created team [red]
-[00:33:04] [Server thread/INFO]: Updated the color for team [red] to red
-[00:33:04] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:33:04] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:33:04] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:33:04] [Server thread/INFO]: Created team [blue]
-[00:33:04] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:33:04] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:33:04] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:33:04] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:33:04] [Server thread/INFO]: Clearing workspace ...
-[00:33:04] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:04] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:04] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:33:04] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:33:05] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:33:06] [Server thread/INFO]: Pre-clearing ...
-[00:33:06] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:06] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:06] [Server thread/INFO]: Removing teams ...
-[00:33:06] [Server thread/INFO]: Removed team [blue]
-[00:33:06] [Server thread/INFO]: Removed team [red]
-[00:33:06] [Server thread/INFO]: Created team [red]
-[00:33:06] [Server thread/INFO]: Updated the color for team [red] to red
-[00:33:06] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:33:06] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:33:06] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:33:06] [Server thread/INFO]: Created team [blue]
-[00:33:06] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:33:06] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:33:06] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:33:06] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:33:06] [Server thread/INFO]: Clearing workspace ...
-[00:33:06] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:06] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:33:06] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:33:06] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:33:08] [Server thread/INFO]: Gator3000 issued server command: /initplayervarables
-[00:33:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:12] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:12] [Server thread/INFO]: Summoned new Armor Stand
-[00:33:16] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:33:16] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:33:20] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:33:20] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:35:57] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:35:57] [Server thread/INFO]: Summoned new Armor Stand
-[00:35:58] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:35:59] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:00] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:01] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:02] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:03] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:04] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:36:05] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:36:05] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:07] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:08] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:09] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:10] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:11] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:12] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:12] [Server thread/INFO]: Summoned new Armor Stand
-[00:36:12] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:36:12] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:36:16] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:36:16] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:36:17] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:36:17] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:36:20] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:36:20] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:39:35] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:39:35] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:39:38] [Server thread/INFO]: Set 0 experience levels on Gator3000
-[00:39:38] [Server thread/INFO]: Set 0 experience points on Gator3000
-[00:39:51] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:39:51] [Server thread/INFO]: Summoned new Armor Stand
-[00:39:51] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:39:53] [Server thread/INFO]: Summoned new Armor Stand
-[00:40:01] [Server thread/INFO]: Applied effect Slowness to Gator3000
-[00:40:04] [Server thread/INFO]: Summoned new Armor Stand
-[00:40:06] [Server thread/INFO]: Killed 253 entities
-[00:40:07] [Server thread/INFO]: Removed effect Slowness from Gator3000
-[00:52:38] [Server thread/INFO]: Gator3000 issued server command: /sk reload minijeu.sk
-[00:52:39] [Server thread/INFO]: Pre-clearing ...
-[00:52:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:52:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:52:39] [Server thread/INFO]: Removing teams ...
-[00:52:39] [Server thread/INFO]: Removed team [blue]
-[00:52:39] [Server thread/INFO]: Removed team [red]
-[00:52:39] [Server thread/INFO]: Created team [red]
-[00:52:39] [Server thread/INFO]: Updated the color for team [red] to red
-[00:52:39] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:52:39] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:52:39] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:52:39] [Server thread/INFO]: Created team [blue]
-[00:52:39] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:52:39] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:52:39] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:52:39] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:52:39] [Server thread/INFO]: Clearing workspace ...
-[00:52:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:52:39] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:52:39] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:52:39] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:52:50] [Server thread/INFO]: Gator3000 issued server command: /sk enable - serversutils.sk
-[00:54:43] [Server thread/INFO]: Gator3000 issued server command: /sk reload all
-[00:54:46] [Server thread/INFO]: Pre-clearing ...
-[00:54:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:54:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:54:46] [Server thread/INFO]: Removing teams ...
-[00:54:46] [Server thread/INFO]: Removed team [blue]
-[00:54:46] [Server thread/INFO]: Removed team [red]
-[00:54:46] [Server thread/INFO]: Created team [red]
-[00:54:46] [Server thread/INFO]: Updated the color for team [red] to red
-[00:54:46] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:54:46] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:54:46] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:54:46] [Server thread/INFO]: Created team [blue]
-[00:54:46] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:54:46] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:54:46] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:54:46] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:54:46] [Server thread/INFO]: Clearing workspace ...
-[00:54:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:54:46] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:54:46] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:54:46] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:55:13] [Server thread/INFO]: Gator3000 issued server command: /sk reload all
-[00:55:15] [Server thread/INFO]: Pre-clearing ...
-[00:55:15] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:55:15] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:55:15] [Server thread/INFO]: Removing teams ...
-[00:55:15] [Server thread/INFO]: Removed team [blue]
-[00:55:15] [Server thread/INFO]: Removed team [red]
-[00:55:15] [Server thread/INFO]: Created team [red]
-[00:55:15] [Server thread/INFO]: Updated the color for team [red] to red
-[00:55:15] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:55:15] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:55:15] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:55:15] [Server thread/INFO]: Created team [blue]
-[00:55:15] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:55:15] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:55:15] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:55:15] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:55:15] [Server thread/INFO]: Clearing workspace ...
-[00:55:15] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:55:15] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:55:15] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:55:15] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:55:20] [Server thread/INFO]: Summoned new Armor Stand
-[00:55:27] [Server thread/INFO]: Gator3000 issued server command: /initgamerules
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule announceAdvancements is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule commandBlockOutput is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule disableRaids is now set to: true]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule doMobLoot is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule doMobSpawning is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule doPatrolSpawning is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule doTraderSpawning is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule doVinesSpread is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule doWeatherCycle is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule drowningDamage is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule fallDamage is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule keepInventory is now set to: true]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule naturalRegeneration is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule sendCommandFeedback is now set to: true]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule showDeathMessages is now set to: false]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule spawnRadius is now set to: 1]
-[00:55:27] [Server thread/INFO]: [Gator3000: Gamerule spectatorsGenerateChunks is now set to: false]
-[00:55:33] [Server thread/INFO]: Gator3000 lost connection: Disconnected
-[00:55:33] [Server thread/INFO]: Gator3000 left the game
-[00:55:39] [User Authenticator #1/INFO]: UUID of player Gator3000 is 5792af6d-5024-30e3-9e28-1e72052b9fcc
-[00:55:39] [Server thread/INFO]: Gator3000 joined the party !
-[00:55:39] [Server thread/INFO]: Gator3000[/127.0.0.1:32818] logged in with entity id 3077 at ([lobby]0.33391240183441084, 3.0, -6.623983923637863)
-[00:55:41] [Craft Scheduler Thread - 28 - SkBee/INFO]: [SkBee] Checking for update failed!
-[00:55:44] [Server thread/WARN]: [Skuishy] Task #1033 for Skuishy v2.7 generated an exception
-java.lang.NullPointerException: Cannot invoke "String.length()" because "replacement" is null
-	at java.util.regex.Matcher.appendExpandedReplacement(Matcher.java:1058) ~[?:?]
-	at java.util.regex.Matcher.appendReplacement(Matcher.java:1041) ~[?:?]
-	at java.util.regex.Matcher.replaceAll(Matcher.java:1227) ~[?:?]
-	at java.lang.String.replaceAll(String.java:3111) ~[?:?]
-	at lol.aabss.skuishy.other.UpdateChecker.updateCheck(UpdateChecker.java:24) ~[Skuishy-2.7-all.jar:?]
-	at lol.aabss.skuishy.other.UpdateChecker.lambda$onJoin$0(UpdateChecker.java:49) ~[Skuishy-2.7-all.jar:?]
-	at org.bukkit.craftbukkit.v1_19_R3.scheduler.CraftTask.run(CraftTask.java:101) ~[paper-1.19.4.jar:git-Paper-550]
-	at org.bukkit.craftbukkit.v1_19_R3.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:483) ~[paper-1.19.4.jar:git-Paper-550]
-	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1483) ~[paper-1.19.4.jar:git-Paper-550]
-	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:447) ~[paper-1.19.4.jar:git-Paper-550]
-	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1397) ~[paper-1.19.4.jar:git-Paper-550]
-	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1174) ~[paper-1.19.4.jar:git-Paper-550]
-	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:320) ~[paper-1.19.4.jar:git-Paper-550]
-	at java.lang.Thread.run(Thread.java:1570) ~[?:?]
-[00:56:11] [Server thread/INFO]: Gator3000 issued server command: /gamemode creative
-[00:56:11] [Server thread/INFO]: [Gator3000: Set own game mode to Creative Mode]
-[00:56:19] [Server thread/INFO]: Gator3000 issued server command: /tggbuild
-[00:56:27] [Server thread/INFO]: Gator3000 issued server command: /tggbuild
-[00:56:31] [Server thread/INFO]: Gator3000 issued server command: /tggbuild
-[00:58:15] [Server thread/INFO]: Gator3000 issued server command: /sk reload all
-[00:58:18] [Server thread/INFO]: Pre-clearing ...
-[00:58:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:58:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:58:18] [Server thread/INFO]: Removing teams ...
-[00:58:18] [Server thread/INFO]: Removed team [blue]
-[00:58:18] [Server thread/INFO]: Removed team [red]
-[00:58:18] [Server thread/INFO]: Created team [red]
-[00:58:18] [Server thread/INFO]: Updated the color for team [red] to red
-[00:58:18] [Server thread/INFO]: Collision rule for team [red] is now "Never"
-[00:58:18] [Server thread/INFO]: Disabled friendly fire for team [red]
-[00:58:18] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
-[00:58:18] [Server thread/INFO]: Created team [blue]
-[00:58:18] [Server thread/INFO]: Updated the color for team [blue] to blue
-[00:58:18] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
-[00:58:18] [Server thread/INFO]: Disabled friendly fire for team [blue]
-[00:58:18] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
-[00:58:18] [Server thread/INFO]: Clearing workspace ...
-[00:58:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:58:18] [Server thread/INFO]: Nothing changed. That team is already empty
-[00:58:18] [Server thread/INFO]: Teams Initialized by Gator3000 !
-[00:58:18] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
-[00:58:35] [Craft Scheduler Thread - 29 - Skuishy/WARN]: [Skuishy] Plugin Skuishy v2.7 generated an exception while executing task 5
-java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.net.ConnectException
-	at lol.aabss.skuishy.other.GetVersion.latestVersion(GetVersion.java:48) ~[Skuishy-2.7-all.jar:?]
-	at lol.aabss.skuishy.Skuishy.lambda$onEnable$1(Skuishy.java:75) ~[Skuishy-2.7-all.jar:?]
-	at org.bukkit.craftbukkit.v1_19_R3.scheduler.CraftTask.run(CraftTask.java:101) ~[paper-1.19.4.jar:git-Paper-550]
-	at org.bukkit.craftbukkit.v1_19_R3.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:57) ~[paper-1.19.4.jar:git-Paper-550]
-	at com.destroystokyo.paper.ServerSchedulerReportingWrapper.run(ServerSchedulerReportingWrapper.java:22) ~[paper-1.19.4.jar:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
-	at java.lang.Thread.run(Thread.java:1570) ~[?:?]
-Caused by: java.util.concurrent.ExecutionException: java.net.ConnectException
-	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[?:?]
-	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[?:?]
-	at lol.aabss.skuishy.other.GetVersion.latestVersion(GetVersion.java:45) ~[Skuishy-2.7-all.jar:?]
-	... 7 more
-Caused by: java.net.ConnectException
-	at jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065) ~[java.net.http:?]
-	at jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:?]
-	at jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:472) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134) ~[java.net.http:?]
-	at jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:445) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:487) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
-	at java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950) ~[?:?]
-	at java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372) ~[?:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:477) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:365) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?]
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
-	... 3 more
-Caused by: java.nio.channels.UnresolvedAddressException
-	at sun.nio.ch.Net.checkAddress(Net.java:137) ~[?:?]
-	at sun.nio.ch.Net.checkAddress(Net.java:145) ~[?:?]
-	at sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:929) ~[?:?]
-	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:952) ~[?:?]
-	at jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:?]
-	at java.security.AccessController.doPrivileged(AccessController.java:571) ~[?:?]
-	at jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:?]
-	at jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:472) ~[java.net.http:?]
-	at jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134) ~[java.net.http:?]
-	at jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423) ~[java.net.http:?]
-	at jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:445) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:487) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
-	at java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950) ~[?:?]
-	at java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372) ~[?:?]
-	at jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:477) ~[java.net.http:?]
-	at jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:365) ~[java.net.http:?]
-	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?]
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
-	... 3 more
-[00:59:02] [Server thread/INFO]: Stopping the server
-[00:59:02] [Server thread/INFO]: Stopping server
-[00:59:02] [Server thread/INFO]: [RandomSk] Disabling RandomSk v2.7.2
-[00:59:03] [Server thread/INFO]: [SkQuery] Disabling SkQuery v4.1.10
-[00:59:03] [Server thread/INFO]: [Multiverse-Core] Disabling Multiverse-Core v4.3.1-b861
-[00:59:03] [Server thread/INFO]: [Skuishy] Disabling Skuishy v2.7
-[00:59:03] [Server thread/INFO]: [ProtocolLib] Disabling ProtocolLib v5.3.0-SNAPSHOT-723
-[00:59:03] [Server thread/INFO]: [SkBee] Disabling SkBee v3.5.7
-[00:59:03] [Server thread/INFO]: [Skript] Disabling Skript v2.9.0
-[00:59:03] [Server thread/INFO]: Saving players
-[00:59:03] [Server thread/INFO]: Gator3000 lost connection: Server closed by Gator3000's PC
-[00:59:03] [Server thread/INFO]: Gator3000 left the game
-[00:59:03] [Server thread/INFO]: Saving worlds
-[00:59:03] [Server thread/INFO]: Saving chunks for level 'ServerLevel[lobby]'/minecraft:overworld
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'lobby'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'lobby'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'lobby'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saved 1 block chunks, 101 entity chunks, 0 poi chunks in world 'lobby' in 0,02s
-[00:59:03] [Server thread/INFO]: ThreadedAnvilChunkStorage (lobby): All chunks are saved
-[00:59:03] [Server thread/INFO]: Saving chunks for level 'ServerLevel[lobby_the_end]'/minecraft:the_end
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'lobby_the_end'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'lobby_the_end'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'lobby_the_end'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saved 10 block chunks, 0 entity chunks, 0 poi chunks in world 'lobby_the_end' in 0,00s
-[00:59:03] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[00:59:03] [Server thread/INFO]: Saving chunks for level 'ServerLevel[map1]'/minecraft:map1
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'map1'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'map1'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'map1'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saved 2 block chunks, 0 entity chunks, 0 poi chunks in world 'map1' in 0,00s
-[00:59:03] [Server thread/INFO]: ThreadedAnvilChunkStorage (map1): All chunks are saved
-[00:59:03] [Server thread/INFO]: Saving chunks for level 'ServerLevel[map0]'/minecraft:map0
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'map0'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'map0'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'map0'
-[00:59:03] [Server thread/INFO]: [ChunkHolderManager] Saved 4 block chunks, 2 entity chunks, 0 poi chunks in world 'map0' in 0,01s
-[00:59:03] [Server thread/INFO]: ThreadedAnvilChunkStorage (map0): All chunks are saved
-[00:59:03] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[00:59:03] [Server thread/INFO]: Flushing Chunk IO
-[00:59:03] [Server thread/INFO]: Closing Thread Pool
-[00:59:03] [Server thread/INFO]: Closing Server
+[14:53:30] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[14:53:31] [ServerMain/INFO]: Loaded 7 recipes
+[14:53:32] [Server thread/INFO]: Starting minecraft server version 1.19.4
+[14:53:32] [Server thread/INFO]: Loading properties
+[14:53:32] [Server thread/INFO]: This server is running Paper version git-Paper-550 (MC: 1.19.4) (Implementing API version 1.19.4-R0.1-SNAPSHOT) (Git: 483368e on ver/1.19.4)
+[14:53:32] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[14:53:32] [Server thread/INFO]: Using 4 threads for Netty based IO
+[14:53:32] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[14:53:32] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 2 worker threads, and gen parallelism of 2 threads
+[14:53:33] [Server thread/INFO]: Default game type: ADVENTURE
+[14:53:33] [Server thread/INFO]: Generating keypair
+[14:53:33] [Server thread/INFO]: Starting Minecraft server on *:6666
+[14:53:33] [Server thread/INFO]: Using epoll channel type
+[14:53:33] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[14:53:33] [Server thread/INFO]: Paper: Using OpenSSL 3.0.x (Linux x86_64) cipher from Velocity.
+[14:53:33] [Server thread/WARN]: [org.bukkit.craftbukkit.v1_19_R3.legacy.CraftLegacy] Initializing Legacy Material Support. Unless you have legacy plugins and/or data this is a bug!
+[14:53:35] [Server thread/WARN]: Legacy plugin RandomSk v2.7.2 does not specify an api-version.
+[14:53:35] [Server thread/INFO]: [Skript] Loading server plugin Skript v2.9.0
+[14:53:35] [Server thread/INFO]: [SkBee] Loading server plugin SkBee v3.5.7
+[14:53:35] [Server thread/INFO]: [ProtocolLib] Loading server plugin ProtocolLib v5.3.0-SNAPSHOT-723
+[14:53:36] [Server thread/INFO]: [Skuishy] Loading server plugin Skuishy v2.7
+[14:53:36] [Server thread/INFO]: [Multiverse-Core] Loading server plugin Multiverse-Core v4.3.1-b861
+[14:53:36] [Server thread/INFO]: [SkQuery] Loading server plugin SkQuery v4.1.10
+[14:53:36] [Server thread/INFO]: [RandomSk] Loading server plugin RandomSk v2.7.2
+[14:53:36] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[14:53:36] [Server thread/INFO]: [ProtocolLib] Enabling ProtocolLib v5.3.0-SNAPSHOT-723
+[14:53:36] [Server thread/INFO]: Preparing level "lobby"
+[14:53:36] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[14:53:36] [Server thread/INFO]: Time elapsed: 86 ms
+[14:53:36] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[14:53:36] [Server thread/INFO]: Time elapsed: 26 ms
+[14:53:36] [Server thread/INFO]: [Skript] Enabling Skript v2.9.0
+[14:53:38] [ForkJoinPool.commonPool-worker-1/INFO]: [Skript] Une nouvelle version de Skript est disponible : 2.9.1 (vous utilisez actuellement 2.9.0)
+[14:53:38] [ForkJoinPool.commonPool-worker-1/INFO]: Download it at: <aqua><u><link:https://github.com/SkriptLang/Skript/releases/download/2.9.1/Skript-2.9.1.jar>https://github.com/SkriptLang/Skript/releases/download/2.9.1/Skript-2.9.1.jar
+[14:53:39] [Server thread/INFO]: [Skript] Loaded 151084 aliases in 2606ms
+[14:53:40] [Server thread/INFO]: [Skript]  ~ créé par & © Peter Güttinger alias Njol ~
+[14:53:40] [Server thread/INFO]: [SkBee] Enabling SkBee v3.5.7
+[14:53:40] [Server thread/INFO]: [SkBee] Loading NBTApi...
+[14:53:40] [Server thread/INFO]: [SkBee] [NBTAPI] Found Minecraft: v1_19_R3! Trying to find NMS support
+[14:53:40] [Server thread/INFO]: [SkBee] [NBTAPI] NMS support 'MC1_19_R3' loaded!
+[14:53:40] [Server thread/INFO]: [SkBee] Successfully loaded NBTApi!
+[14:53:40] [Server thread/INFO]: [SkBee] NBT Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Text Component Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Advancement Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] BossBar Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Bound Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Damage Source elements disabled (Requires Minecraft 1.20.4+)
+[14:53:40] [Server thread/INFO]: [SkBee] Display Entity elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Fishing elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Game Event Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Particle Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] RayTrace elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Recipe Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Scoreboard Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Scoreboard Objective Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Statistic Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Structure Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Minecraft Tag elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Team Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Tick Manager elements disabled (Requires Minecraft 1.20.4+)
+[14:53:40] [Server thread/INFO]: [SkBee] Villager Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Virtual Furnace Elements disabled via config
+[14:53:40] [Server thread/INFO]: [SkBee] World Border Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] World Creator Elements successfully loaded
+[14:53:40] [Server thread/INFO]: [SkBee] Chunk Generator Elements disabled via config
+[14:53:40] [Server thread/INFO]: [SkBee] Loaded (376) elements:
+[14:53:40] [Server thread/INFO]: [SkBee]  - 55 events
+[14:53:40] [Server thread/INFO]: [SkBee]  - 54 effects
+[14:53:40] [Server thread/INFO]: [SkBee]  - 237 expressions
+[14:53:40] [Server thread/INFO]: [SkBee]  - 21 conditions
+[14:53:40] [Server thread/INFO]: [SkBee]  - 9 sections
+[14:53:40] [Server thread/INFO]: [SkBee] Checking for update...
+[14:53:41] [Server thread/INFO]: [SkBee] Plugin is not up to date!
+[14:53:41] [Server thread/INFO]: [SkBee]  - Current version: v3.5.7
+[14:53:41] [Server thread/INFO]: [SkBee]  - Available update: v3.5.9
+[14:53:41] [Server thread/INFO]: [SkBee]  - Download available at: https://github.com/ShaneBeee/SkBee/releases
+[14:53:41] [Server thread/INFO]: [SkBee] Successfully enabled v3.5.7 in 0,67 seconds
+[14:53:41] [Server thread/INFO]: [Skuishy] Enabling Skuishy v2.7
+[14:53:41] [Server thread/INFO]: [Skuishy] DecentHolograms elements not loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Vivecraft elements not loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Vulcan elements not loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] General elements loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Note elements loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Permission elements loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Persistence elements loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Plugin elements loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Skin elements loaded.
+[14:53:41] [Server thread/INFO]: [Skuishy] Skuishy has been enabled!
+[14:53:41] [Server thread/INFO]: [Multiverse-Core] Enabling Multiverse-Core v4.3.1-b861
+[14:53:41] [Server thread/WARN]: [Multiverse-Core] "Multiverse-Core v4.3.1-b861" has registered a listener for org.bukkit.event.entity.EntityCreatePortalEvent on method "public void com.onarandombox.MultiverseCore.listeners.MVPortalListener.entityPortalCreate(org.bukkit.event.entity.EntityCreatePortalEvent)", but the event is Deprecated. "Server performance will be affected"; please notify the authors [dumptruckman, Rigby, fernferret, lithium3141, main--].
+[14:53:41] [Server thread/INFO]: [Multiverse-Core] §aWe are aware of the warning about the deprecated event. There is no alternative that allows us to do what we need to do and performance impact is negligible. It is safe to ignore.
+[14:53:41] [Server thread/INFO]: Preparing start region for dimension minecraft:map1
+[14:53:41] [Server thread/INFO]: Time elapsed: 109 ms
+[14:53:41] [Server thread/INFO]: Preparing start region for dimension minecraft:map0
+[14:53:41] [Server thread/INFO]: Time elapsed: 65 ms
+[14:53:41] [Server thread/INFO]: [Multiverse-Core] 4 - World(s) loaded.
+[14:53:41] [Server thread/WARN]: [Multiverse-Core] Buscript failed to load! The script command will be disabled! If you would like not to see this message, use `/mv conf enablebuscript false` to disable Buscript from loading.
+[14:53:41] [Server thread/INFO]: [Multiverse-Core] Version 4.3.1-b861 (API v24) Enabled - By dumptruckman, Rigby, fernferret, lithium3141 and main--
+[14:53:41] [Server thread/INFO]: [SkQuery] Enabling SkQuery v4.1.10
+[14:53:41] [Server thread/INFO]: [skQuery] Locating classes from SkQuery...
+[14:53:41] [Server thread/INFO]: [skQuery] Beginning to process a total of 117 from SkQuery
+[14:53:41] [Server thread/INFO]: [skQuery] Out of 117 classes, 117 classes were loaded from SkQuery
+[14:53:41] [Server thread/INFO]: [RandomSk] Enabling RandomSk v2.7.2*
+[14:53:41] [Server thread/WARN]: ch.njol.skript.SkriptAPIException: Comparators cannot be retrieved until Skript has finished registrations.
+[14:53:41] [Server thread/WARN]: 	at Skript-2.9.0.jar//org.skriptlang.skript.lang.comparator.Comparators.assertIsDoneLoading(Comparators.java:391)
+[14:53:41] [Server thread/WARN]: 	at Skript-2.9.0.jar//org.skriptlang.skript.lang.comparator.Comparators.getComparatorInfo(Comparators.java:200)
+[14:53:41] [Server thread/WARN]: 	at Skript-2.9.0.jar//org.skriptlang.skript.lang.comparator.Comparators.getComparator(Comparators.java:185)
+[14:53:41] [Server thread/WARN]: 	at Skript-2.9.0.jar//ch.njol.skript.registrations.Comparators.getComparator(Comparators.java:66)
+[14:53:41] [Server thread/WARN]: 	at RandomSk-2.8.0.jar//com.mirre.random.elements.CommonComparators.register(CommonComparators.java:12)
+[14:53:41] [Server thread/WARN]: 	at RandomSk-2.8.0.jar//com.mirre.random.RandomSk.registerFeatures(RandomSk.java:111)
+[14:53:41] [Server thread/WARN]: 	at RandomSk-2.8.0.jar//com.mirre.random.RandomSk.onEnable(RandomSk.java:84)
+[14:53:41] [Server thread/WARN]: 	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:281)
+[14:53:41] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginInstanceManager.enablePlugin(PaperPluginInstanceManager.java:189)
+[14:53:41] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.enablePlugin(PaperPluginManagerImpl.java:104)
+[14:53:41] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:507)
+[14:53:41] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_19_R3.CraftServer.enablePlugin(CraftServer.java:563)
+[14:53:41] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_19_R3.CraftServer.enablePlugins(CraftServer.java:474)
+[14:53:41] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.loadWorld0(MinecraftServer.java:638)
+[14:53:41] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.loadLevel(MinecraftServer.java:437)
+[14:53:41] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.e(DedicatedServer.java:308)
+[14:53:41] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:1104)
+[14:53:41] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:320)
+[14:53:41] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1570)
+[14:53:41] [Server thread/INFO]: Running delayed init tasks
+[14:53:41] [Server thread/INFO]: [Skript] Loading variables...
+[14:53:41] [Server thread/INFO]: [Skript] Loaded 630 variables in 0.0 seconds
+[14:53:42] [Craft Scheduler Thread - 3 - Skuishy/INFO]: [Skuishy] Got latest version.
+[14:53:44] [Server thread/INFO]: Pre-clearing ...
+[14:53:44] [Server thread/INFO]: Unknown team 'blue'
+[14:53:44] [Server thread/INFO]: Unknown team 'red'
+[14:53:44] [Server thread/INFO]: Removing teams ...
+[14:53:44] [Server thread/INFO]: Unknown team 'blue'
+[14:53:44] [Server thread/INFO]: Unknown team 'red'
+[14:53:44] [Server thread/INFO]: Created team [red]
+[14:53:44] [Server thread/INFO]: Updated the color for team [red] to red
+[14:53:44] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[14:53:44] [Server thread/INFO]: Disabled friendly fire for team [red]
+[14:53:44] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[14:53:44] [Server thread/INFO]: Created team [blue]
+[14:53:44] [Server thread/INFO]: Updated the color for team [blue] to blue
+[14:53:44] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[14:53:44] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[14:53:44] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[14:53:44] [Server thread/INFO]: Clearing workspace ...
+[14:53:44] [Server thread/INFO]: Nothing changed. That team is already empty
+[14:53:44] [Server thread/INFO]: Nothing changed. That team is already empty
+[14:53:44] [Server thread/INFO]: Teams Initialized from the console !
+[14:53:44] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[14:53:44] [Server thread/INFO]: [Skript] Tous les scripts ont été chargés sans erreur.
+[14:53:44] [Server thread/INFO]: [Skript] 4 scripts ont été chargés avec un total de 71 structures en 2.77 seconds
+[14:53:44] [Server thread/INFO]: [Skript] Chargement terminé.
+[14:53:44] [Server thread/INFO]: Done (12.187s)! For help, type "help"
+[14:53:44] [Server thread/INFO]: Timings Reset
+[16:53:42] [Craft Scheduler Thread - 27 - Skuishy/INFO]: [Skuishy] Got latest version.
+[18:04:13] [User Authenticator #0/INFO]: UUID of player Gator3000 is 9a887d64-af45-4c7b-8072-e7a9c63be1f5
+[18:04:14] [Server thread/INFO]: Gator3000 joined the party !
+[18:04:14] [Server thread/INFO]: Gator3000[/127.0.0.1:52176] logged in with entity id 1 at ([lobby]0.33391240183441084, 3.0, -6.623983923637863)
+[18:04:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:27] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:04:27] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:04:29] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:04:29] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:04:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:45] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:04:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:04:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:05:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:18:24] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:19:04] [Server thread/INFO]: Killed 257 entities
+[18:19:21] [User Authenticator #1/INFO]: UUID of player blarhos is cac0f0a1-63b5-4500-9652-7f6e75741dc9
+[18:19:21] [Server thread/INFO]: blarhos joined the party !
+[18:19:21] [Server thread/INFO]: blarhos[/5.49.116.18:24678] logged in with entity id 699 at ([lobby]0.33391240183441084, 3.0, -6.623983923637863)
+[18:19:32] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:19:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:34] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:19:39] [Server thread/INFO]: Killed 251 entities
+[18:19:43] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:19:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:19:50] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:19:54] [Server thread/INFO]: blarhos issued server command: /gamemode creative
+[18:19:54] [Server thread/INFO]: [blarhos: Set own game mode to Creative Mode]
+[18:20:20] [Server thread/INFO]: blarhos issued server command: /effect give @a minecraft:instant_health 1 5 true
+[18:20:20] [Server thread/INFO]: [blarhos: Applied effect Instant Health to 2 targets]
+[18:20:23] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:20:25] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:20:25] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:20:25] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:20:25] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:20:26] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:20:26] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:20:27] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:20:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:42] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:20:42] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:20:48] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:20:49] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:20:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:20:53] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:20:53] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:21:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:30] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:21:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:38] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:41] [Server thread/INFO]: blarhos issued server command: /gamemode adventure
+[18:21:41] [Server thread/INFO]: [blarhos: Set own game mode to Adventure Mode]
+[18:21:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:47] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:21:47] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:21:47] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:21:47] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:21:47] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:21:47] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:21:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:21:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:02] [Server thread/INFO]: blarhos issued server command: /initplayerweaponsvarables
+[18:22:25] [Server thread/INFO]: Gator3000 issued server command: /initplayervarables
+[18:22:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:32] [Server thread/INFO]: blarhos issued server command: /initplayerweaponsvarables
+[18:22:34] [Server thread/INFO]: blarhos issued server command: /initplayerweaponsvarable
+[18:22:38] [Server thread/INFO]: blarhos issued server command: /initplayervarables
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:22:59] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:23:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:09] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:23:10] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:10] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:10] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:11] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:16] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:23:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:18] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:19] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:20] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:23] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:23:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:31] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:23:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:37] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:39] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:23:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:45] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:47] [Server thread/INFO]: Gator3000 issued server command: /
+[18:23:48] [Server thread/INFO]: Gator3000 issued server command: /d
+[18:23:51] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:23:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:54] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:55] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:56] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:23:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:04] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:10] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:24:10] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:11] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:24:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:12] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:13] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:14] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:15] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:24:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:16] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:17] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:24:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:17] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:24:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:17] [Server thread/INFO]: Summoned new Armor Stand
+[18:24:18] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:24:18] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:24:20] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:24:21] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:25:16] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:16] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:22] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:22] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:29] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:29] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:43] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:43] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:45] [Server thread/INFO]: Gator3000 issued server command: /gamemode spectator
+[18:25:45] [Server thread/INFO]: [Gator3000: Set own game mode to Spectator Mode]
+[18:25:47] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:47] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:50] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:50] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:54] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:54] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:55] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:55] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:56] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:56] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:58] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:58] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:25:59] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:25:59] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:00] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:00] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:01] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:01] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:02] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:02] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:03] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:03] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:04] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:04] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:05] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:05] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:11] [Server thread/INFO]: blarhos issued server command: /gamemode creative
+[18:26:11] [Server thread/INFO]: [blarhos: Set own game mode to Creative Mode]
+[18:26:11] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:11] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:13] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:26:13] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:26:15] [Server thread/INFO]: blarhos issued server command: /gamemode adventure
+[18:26:15] [Server thread/INFO]: [blarhos: Set own game mode to Adventure Mode]
+[18:26:28] [Server thread/INFO]: Gator3000 issued server command: /gamemode adventure
+[18:26:28] [Server thread/INFO]: [Gator3000: Set own game mode to Adventure Mode]
+[18:26:31] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:26:33] [Server thread/INFO]: Gator3000 issued server command: /gamemode spectator
+[18:26:33] [Server thread/INFO]: [Gator3000: Set own game mode to Spectator Mode]
+[18:26:33] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:26:37] [Server thread/INFO]: blarhos issued server command: /initplayervarables
+[18:26:46] [Server thread/INFO]: Gator3000 issued server command: /gamemode adventure
+[18:26:46] [Server thread/INFO]: [Gator3000: Set own game mode to Adventure Mode]
+[18:26:55] [Server thread/INFO]: blarhos issued server command: /effect give @a minecraft:glowing 2 1 true
+[18:26:55] [Server thread/INFO]: [blarhos: Applied effect Glowing to 2 targets]
+[18:26:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:26:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:26:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:26:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:26:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:26:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:26:58] [Server thread/INFO]: Applied effect Slowness to blarhos
+[18:26:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:26:59] [Server thread/INFO]: Removed effect Slowness from blarhos
+[18:26:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:27:16] [Server thread/INFO]: Gator3000 issued server command: /gamemode spectator
+[18:27:16] [Server thread/INFO]: [Gator3000: Set own game mode to Spectator Mode]
+[18:27:23] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:27:23] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:27:28] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:27:28] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:27:29] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:27:29] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:27:30] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:27:30] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:27:33] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:27:33] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:27:49] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:27:49] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:27:54] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:27:54] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:28:04] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:28:04] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:28:16] [Server thread/INFO]: Gator3000 issued server command: /gamemode adventure
+[18:28:16] [Server thread/INFO]: [Gator3000: Set own game mode to Adventure Mode]
+[18:29:35] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:29:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:29:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:30:02] [Server thread/INFO]: Gator3000 issued server command: /gamemode spectator
+[18:30:02] [Server thread/INFO]: [Gator3000: Set own game mode to Spectator Mode]
+[18:30:14] [Server thread/INFO]: blarhos issued server command: /gamemode adventure @a
+[18:30:14] [Server thread/INFO]: [blarhos: Set Gator3000's game mode to Adventure Mode]
+[18:30:16] [Server thread/INFO]: Gator3000 issued server command: /gamemode spectator
+[18:30:16] [Server thread/INFO]: [Gator3000: Set own game mode to Spectator Mode]
+[18:30:22] [Server thread/INFO]: blarhos issued server command: /gamemode adventure @a
+[18:30:22] [Server thread/INFO]: [blarhos: Set Gator3000's game mode to Adventure Mode]
+[18:30:23] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:30:23] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:30:24] [Server thread/INFO]: Gator3000 issued server command: /gamemode spectator
+[18:30:24] [Server thread/INFO]: [Gator3000: Set own game mode to Spectator Mode]
+[18:30:32] [Server thread/INFO]: Gator3000 lost connection: Disconnected
+[18:30:32] [Server thread/INFO]: Gator3000 left the game
+[18:30:38] [Server thread/INFO]: blarhos issued server command: /gamemode creative
+[18:30:38] [Server thread/INFO]: [blarhos: Set own game mode to Creative Mode]
+[18:30:38] [Server thread/INFO]: blarhos issued server command: /gamemode adventure
+[18:30:38] [Server thread/INFO]: [blarhos: Set own game mode to Adventure Mode]
+[18:32:00] [User Authenticator #2/INFO]: UUID of player Gator3000 is 9a887d64-af45-4c7b-8072-e7a9c63be1f5
+[18:32:00] [Server thread/INFO]: Gator3000 joined the party !
+[18:32:00] [Server thread/INFO]: Gator3000[/127.0.0.1:50854] logged in with entity id 4607 at ([lobby]0.33391240183441084, 3.0, -6.623983923637863)
+[18:33:55] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:33:55] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:03] [Server thread/INFO]: Summoned new Armor Stand
+[18:34:21] [Server thread/INFO]: blarhos issued server command: /initplayerweaponsvarables
+[18:34:32] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:32] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:43] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:43] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:44] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:44] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:47] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:47] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:48] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:48] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:49] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:49] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:49] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:49] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:51] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:51] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:52] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:52] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:34:53] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:34:53] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:35:24] [Server thread/INFO]: Gator3000 issued server command: /gamemode spectator
+[18:35:24] [Server thread/INFO]: [Gator3000: Set own game mode to Spectator Mode]
+[18:35:26] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:35:26] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:35:34] [Server thread/INFO]: blarhos issued server command: /tp blarhos Gator3000
+[18:35:34] [Server thread/INFO]: [blarhos: Teleported blarhos to Gator3000]
+[18:35:41] [Server thread/INFO]: blarhos issued server command: /gamemode creative
+[18:35:41] [Server thread/INFO]: [blarhos: Set own game mode to Creative Mode]
+[18:36:02] [Server thread/INFO]: blarhos issued server command: /tggbuild
+[18:36:19] [Server thread/INFO]: Gator3000 issued server command: /deop blarhos
+[18:36:19] [Server thread/INFO]: [Gator3000: Made blarhos no longer a server operator]
+[18:36:29] [Server thread/INFO]: Gator3000 issued server command: /gamemode adventure blarhos
+[18:36:29] [Server thread/INFO]: [Gator3000: Set blarhos's game mode to Adventure Mode]
+[18:36:33] [Server thread/INFO]: Gator3000 issued server command: /gamemode adventure
+[18:36:33] [Server thread/INFO]: [Gator3000: Set own game mode to Adventure Mode]
+[18:36:34] [Server thread/INFO]: blarhos lost connection: Disconnected
+[18:36:34] [Server thread/INFO]: blarhos left the game
+[18:36:35] [Server thread/INFO]: Gator3000 issued server command: /gamemode creative
+[18:36:35] [Server thread/INFO]: [Gator3000: Set own game mode to Creative Mode]
+[18:36:41] [Server thread/INFO]: Gator3000 issued server command: /tggbuild
+[18:38:51] [Server thread/INFO]: Gator3000 issued server command: /tggbuild
+[18:40:00] [Server thread/INFO]: Gator3000 issued server command: /gamemode adventure
+[18:40:00] [Server thread/INFO]: [Gator3000: Set own game mode to Adventure Mode]
+[18:40:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:40:05] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:40:05] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:40:06] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:40:06] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:40:09] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:40:09] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:40:11] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:40:11] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:43:12] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:43:14] [Server thread/INFO]: Pre-clearing ...
+[18:43:14] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:14] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:14] [Server thread/INFO]: Removing teams ...
+[18:43:14] [Server thread/INFO]: Removed team [blue]
+[18:43:14] [Server thread/INFO]: Removed team [red]
+[18:43:14] [Server thread/INFO]: Created team [red]
+[18:43:14] [Server thread/INFO]: Updated the color for team [red] to red
+[18:43:14] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:43:14] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:43:14] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:43:14] [Server thread/INFO]: Created team [blue]
+[18:43:14] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:43:14] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:43:14] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:43:14] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:43:14] [Server thread/INFO]: Clearing workspace ...
+[18:43:14] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:14] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:14] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:43:14] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[18:43:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:43:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:43:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:43:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:43:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:43:21] [Server thread/INFO]: Summoned new Armor Stand
+[18:43:51] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:43:52] [Server thread/INFO]: Pre-clearing ...
+[18:43:52] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:52] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:52] [Server thread/INFO]: Removing teams ...
+[18:43:52] [Server thread/INFO]: Removed team [blue]
+[18:43:52] [Server thread/INFO]: Removed team [red]
+[18:43:52] [Server thread/INFO]: Created team [red]
+[18:43:52] [Server thread/INFO]: Updated the color for team [red] to red
+[18:43:52] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:43:52] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:43:52] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:43:52] [Server thread/INFO]: Created team [blue]
+[18:43:52] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:43:52] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:43:52] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:43:52] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:43:52] [Server thread/INFO]: Clearing workspace ...
+[18:43:52] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:52] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:43:52] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:43:52] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[18:44:05] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:44:06] [Server thread/INFO]: Pre-clearing ...
+[18:44:06] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:44:06] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:44:06] [Server thread/INFO]: Removing teams ...
+[18:44:06] [Server thread/INFO]: Removed team [blue]
+[18:44:06] [Server thread/INFO]: Removed team [red]
+[18:44:06] [Server thread/INFO]: Created team [red]
+[18:44:06] [Server thread/INFO]: Updated the color for team [red] to red
+[18:44:06] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:44:06] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:44:06] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:44:06] [Server thread/INFO]: Created team [blue]
+[18:44:06] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:44:06] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:44:06] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:44:06] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:44:06] [Server thread/INFO]: Clearing workspace ...
+[18:44:06] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:44:06] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:44:06] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:44:06] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[18:45:50] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:45:51] [Server thread/INFO]: Pre-clearing ...
+[18:45:51] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:45:51] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:45:51] [Server thread/INFO]: Removing teams ...
+[18:45:51] [Server thread/INFO]: Removed team [blue]
+[18:45:51] [Server thread/INFO]: Removed team [red]
+[18:45:51] [Server thread/INFO]: Created team [red]
+[18:45:51] [Server thread/INFO]: Updated the color for team [red] to red
+[18:45:51] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:45:51] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:45:51] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:45:51] [Server thread/INFO]: Created team [blue]
+[18:45:51] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:45:51] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:45:51] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:45:51] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:45:51] [Server thread/INFO]: Clearing workspace ...
+[18:45:51] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:45:51] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:45:51] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:45:51] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[18:46:36] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:46:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:47:09] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:47:10] [Server thread/INFO]: Pre-clearing ...
+[18:47:10] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:47:10] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:47:10] [Server thread/INFO]: Removing teams ...
+[18:47:10] [Server thread/INFO]: Removed team [blue]
+[18:47:10] [Server thread/INFO]: Removed team [red]
+[18:47:10] [Server thread/INFO]: Created team [red]
+[18:47:10] [Server thread/INFO]: Updated the color for team [red] to red
+[18:47:10] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:47:10] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:47:10] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:47:10] [Server thread/INFO]: Created team [blue]
+[18:47:10] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:47:10] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:47:10] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:47:10] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:47:10] [Server thread/INFO]: Clearing workspace ...
+[18:47:10] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:47:10] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:47:10] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:47:10] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[18:47:13] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:47:15] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:11] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:48:13] [Server thread/INFO]: Pre-clearing ...
+[18:48:13] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:48:13] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:48:13] [Server thread/INFO]: Removing teams ...
+[18:48:13] [Server thread/INFO]: Removed team [blue]
+[18:48:13] [Server thread/INFO]: Removed team [red]
+[18:48:13] [Server thread/INFO]: Created team [red]
+[18:48:13] [Server thread/INFO]: Updated the color for team [red] to red
+[18:48:13] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:48:13] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:48:13] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:48:13] [Server thread/INFO]: Created team [blue]
+[18:48:13] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:48:13] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:48:13] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:48:13] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:48:13] [Server thread/INFO]: Clearing workspace ...
+[18:48:13] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:48:13] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:48:13] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:48:13] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[18:48:14] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:48:22] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:27] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:48:27] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:48:29] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:48:29] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:48:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:42] [Server thread/INFO]: Summoned new Armor Stand
+[18:48:42] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:48:42] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:48:43] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:48:43] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:49:21] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:49:23] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:49:25] [Server thread/INFO]: Pre-clearing ...
+[18:49:25] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:49:25] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:49:25] [Server thread/INFO]: Removing teams ...
+[18:49:25] [Server thread/INFO]: Removed team [blue]
+[18:49:25] [Server thread/INFO]: Removed team [red]
+[18:49:25] [Server thread/INFO]: Created team [red]
+[18:49:25] [Server thread/INFO]: Updated the color for team [red] to red
+[18:49:25] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:49:25] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:49:25] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:49:25] [Server thread/INFO]: Created team [blue]
+[18:49:25] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:49:25] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:49:25] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:49:25] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:49:25] [Server thread/INFO]: Clearing workspace ...
+[18:49:25] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:49:25] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:49:25] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:49:25] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[18:49:28] [Server thread/INFO]: Gator3000 issued server command: /initplayerweaponsvarables
+[18:49:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:30] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:35] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:49:35] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:49:38] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:49:38] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:49:39] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:49:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:39] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:40] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:41] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:43] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:43] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:49:43] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:49:46] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:49:46] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:49:46] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:49:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:50] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:52] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:53] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:57] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:49:59] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:00] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:01] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:02] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:04] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:05] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:06] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:07] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:08] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:09] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:09] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:09] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:09] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:09] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:09] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:50:09] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:50:11] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:50:14] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:50:14] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:50:23] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:50:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:24] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:26] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:27] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:28] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:29] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:31] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:32] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:33] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:34] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:35] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:36] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:37] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:50:37] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:50:38] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:50:38] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:50:41] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:50:41] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:50:41] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:50:42] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:50:43] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:50:44] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:46] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:48] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:51] [Server thread/INFO]: Summoned new Armor Stand
+[18:50:53] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:50:53] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:50:56] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:50:56] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:50:58] [Server thread/INFO]: Summoned new Armor Stand
+[18:51:00] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:51:21] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:51:23] [Server thread/INFO]: Summoned new Armor Stand
+[18:51:25] [Server thread/INFO]: Summoned new Armor Stand
+[18:51:25] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:51:47] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:51:47] [Server thread/INFO]: Summoned new Armor Stand
+[18:51:48] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:51:49] [Server thread/INFO]: Applied effect Slowness to Gator3000
+[18:51:49] [Server thread/INFO]: Summoned new Armor Stand
+[18:51:50] [Server thread/INFO]: Removed effect Slowness from Gator3000
+[18:51:51] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:51:51] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:51:54] [Server thread/INFO]: Set 0 experience levels on Gator3000
+[18:51:54] [Server thread/INFO]: Set 0 experience points on Gator3000
+[18:53:46] [Craft Scheduler Thread - 53 - Skuishy/INFO]: [Skuishy] Got latest version.
+[18:56:25] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[18:56:26] [Server thread/INFO]: Pre-clearing ...
+[18:56:26] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:56:26] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:56:26] [Server thread/INFO]: Removing teams ...
+[18:56:26] [Server thread/INFO]: Removed team [blue]
+[18:56:26] [Server thread/INFO]: Removed team [red]
+[18:56:26] [Server thread/INFO]: Created team [red]
+[18:56:26] [Server thread/INFO]: Updated the color for team [red] to red
+[18:56:26] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[18:56:26] [Server thread/INFO]: Disabled friendly fire for team [red]
+[18:56:26] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[18:56:26] [Server thread/INFO]: Created team [blue]
+[18:56:26] [Server thread/INFO]: Updated the color for team [blue] to blue
+[18:56:26] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[18:56:26] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[18:56:26] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[18:56:26] [Server thread/INFO]: Clearing workspace ...
+[18:56:26] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:56:26] [Server thread/INFO]: Nothing changed. That team is already empty
+[18:56:26] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[18:56:26] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[19:00:28] [Server thread/INFO]: Gator3000 issued server command: /sk reload scripts
+[19:00:29] [Server thread/INFO]: Pre-clearing ...
+[19:00:29] [Server thread/INFO]: Nothing changed. That team is already empty
+[19:00:29] [Server thread/INFO]: Nothing changed. That team is already empty
+[19:00:29] [Server thread/INFO]: Removing teams ...
+[19:00:29] [Server thread/INFO]: Removed team [blue]
+[19:00:29] [Server thread/INFO]: Removed team [red]
+[19:00:29] [Server thread/INFO]: Created team [red]
+[19:00:29] [Server thread/INFO]: Updated the color for team [red] to red
+[19:00:29] [Server thread/INFO]: Collision rule for team [red] is now "Never"
+[19:00:29] [Server thread/INFO]: Disabled friendly fire for team [red]
+[19:00:29] [Server thread/INFO]: Nametag visibility for team [red] is now "Hide for other teams"
+[19:00:29] [Server thread/INFO]: Created team [blue]
+[19:00:29] [Server thread/INFO]: Updated the color for team [blue] to blue
+[19:00:29] [Server thread/INFO]: Collision rule for team [blue] is now "Never"
+[19:00:29] [Server thread/INFO]: Disabled friendly fire for team [blue]
+[19:00:29] [Server thread/INFO]: Nametag visibility for team [blue] is now "Hide for other teams"
+[19:00:29] [Server thread/INFO]: Clearing workspace ...
+[19:00:29] [Server thread/INFO]: Nothing changed. That team is already empty
+[19:00:29] [Server thread/INFO]: Nothing changed. That team is already empty
+[19:00:29] [Server thread/INFO]: Teams Initialized by Gator3000 !
+[19:00:29] [Server thread/INFO]: Make you sure to rejoin your team for a good experience !
+[19:00:42] [Server thread/INFO]: Gator3000 issued server command: /tggbuild blahros
+[19:00:45] [Server thread/INFO]: Summoned new Armor Stand
+[19:00:54] [Server thread/INFO]: Summoned new Armor Stand
+[19:01:19] [Server thread/INFO]: Gator3000 lost connection: Disconnected
+[19:01:19] [Server thread/INFO]: Gator3000 left the game
+[19:01:35] [Server thread/INFO]: Stopping the server
+[19:01:35] [Server thread/INFO]: Stopping server
+[19:01:35] [Server thread/INFO]: [RandomSk] Disabling RandomSk v2.7.2
+[19:01:35] [Server thread/INFO]: [SkQuery] Disabling SkQuery v4.1.10
+[19:01:35] [Server thread/INFO]: [Multiverse-Core] Disabling Multiverse-Core v4.3.1-b861
+[19:01:35] [Server thread/INFO]: [Skuishy] Disabling Skuishy v2.7
+[19:01:35] [Server thread/INFO]: [ProtocolLib] Disabling ProtocolLib v5.3.0-SNAPSHOT-723
+[19:01:35] [Server thread/INFO]: [SkBee] Disabling SkBee v3.5.7
+[19:01:35] [Server thread/INFO]: [Skript] Disabling Skript v2.9.0
+[19:01:35] [Server thread/INFO]: Saving players
+[19:01:35] [Server thread/INFO]: Saving worlds
+[19:01:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[lobby]'/minecraft:overworld
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'lobby'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'lobby'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'lobby'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saved 1 block chunks, 152 entity chunks, 0 poi chunks in world 'lobby' in 0,03s
+[19:01:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (lobby): All chunks are saved
+[19:01:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[lobby_the_end]'/minecraft:the_end
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'lobby_the_end'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'lobby_the_end'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'lobby_the_end'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saved 10 block chunks, 0 entity chunks, 0 poi chunks in world 'lobby_the_end' in 0,00s
+[19:01:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:01:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[map1]'/minecraft:map1
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'map1'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'map1'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'map1'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saved 2 block chunks, 0 entity chunks, 0 poi chunks in world 'map1' in 0,00s
+[19:01:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (map1): All chunks are saved
+[19:01:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[map0]'/minecraft:map0
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'map0'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'map0'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'map0'
+[19:01:35] [Server thread/INFO]: [ChunkHolderManager] Saved 4 block chunks, 0 entity chunks, 0 poi chunks in world 'map0' in 0,00s
+[19:01:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (map0): All chunks are saved
+[19:01:35] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:01:35] [Server thread/INFO]: Flushing Chunk IO
+[19:01:35] [Server thread/INFO]: Closing Thread Pool
+[19:01:35] [Server thread/INFO]: Closing Server

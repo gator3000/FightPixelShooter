@@ -5,7 +5,7 @@ worlds:
     alias: lobby_the_end
     color: WHITE
     style: NORMAL
-    pvp: 'false'
+    pvp: 'true'
     scale: '16.0'
     respawnWorld: ''
     allowWeather: 'true'
@@ -52,7 +52,7 @@ worlds:
     alias: lobby
     color: WHITE
     style: NORMAL
-    pvp: 'false'
+    pvp: 'true'
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
@@ -99,7 +99,7 @@ worlds:
     alias: map1
     color: WHITE
     style: NORMAL
-    pvp: 'false'
+    pvp: 'true'
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
@@ -146,7 +146,7 @@ worlds:
     alias: map0
     color: WHITE
     style: NORMAL
-    pvp: 'false'
+    pvp: 'true'
     scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'

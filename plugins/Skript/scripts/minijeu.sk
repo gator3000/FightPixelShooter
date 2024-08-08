@@ -12,50 +12,12 @@ command /initplayervarables:
     trigger:
         if {game} is false:
             set {minijeu::%player's uuid%.kills.total} to 0
-            set {minijeu::%player's uuid%.ghost.cooldown} to true
-            set {minijeu::%player's uuid%.ghost.bullets} to 15
-            set {minijeu::%player's uuid%.ghost.reloading} to false
-            set {minijeu::%player's uuid%.ghost.aiming} to false
-            set {minijeu::%player's uuid%.bulldog.cooldown} to true
-            set {minijeu::%player's uuid%.bulldog.bullets} to 24
-            set {minijeu::%player's uuid%.bulldog.reloading} to false
-            set {minijeu::%player's uuid%.bulldog.aiming} to false
-            set {minijeu::%player's uuid%.operator.cooldown} to true
-            set {minijeu::%player's uuid%.operator.bullets} to 5
-            set {minijeu::%player's uuid%.operator.reloading} to false
-            set {minijeu::%player's uuid%.operator.aiming} to false
-            set {minijeu::%player's uuid%.odin.cooldown} to true
-            set {minijeu::%player's uuid%.odin.bullets} to 100
-            set {minijeu::%player's uuid%.odin.reloading} to false
-            set {minijeu::%player's uuid%.odin.shooting} to false
-            set {minijeu::%player's uuid%.odin.aiming} to false
+            make player execute command "/initplayerweaponsvarables"
             set {minijeu::%player's uuid%.money} to 0
-            send "&aYour variables are initialized !" to all players
-
-# command /initgamerules:
-#     permission: op
-#     trigger:
-#         make player execute command "/gamerule announceAdvancements false"
-#         make player execute command "/gamerule commandBlockOutput false"
-#         make player execute command "/gamerule disableRaids true"
-#         make player execute command "/gamerule doMobLoot false"
-#         make player execute command "/gamerule doMobSpawning false"
-#         make player execute command "/gamerule doPatrolSpawning false"
-#         make player execute command "/gamerule doTraderSpawning false"
-#         make player execute command "/gamerule doVinesSpread false"
-#         make player execute command "/gamerule doWeatherCycle false"
-#         make player execute command "/gamerule drowningDamage false"
-#         make player execute command "/gamerule fallDamage false"
-#         make player execute command "/gamerule keepInventory true"
-#         make player execute command "/gamerule naturalRegeneration false"
-#         make player execute command "/gamerule sendCommandFeedback true"
-#         make player execute command "/gamerule showDeathMessages false"
-#         make player execute command "/gamerule spawnRadius 1"
-#         make player execute command "/gamerule spectatorsGenerateChunks false"
-        
+            send "&aYour variables are initialized !" to player
 
 function initbullets(P: player):
-    # play sound "gun.reload" in player category with volume 1 at {_P}
+    # play sound "gun.sad" in player category with volume 1 at {_P}
     set {minijeu::%{_P}'s uuid%.ghost.bullets} to 15
     set {minijeu::%{_P}'s uuid%.bulldog.bullets} to 24
     set {minijeu::%{_P}'s uuid%.operator.bullets} to 5
@@ -119,58 +81,10 @@ on load:
     else:
         make console execute command "/teamsinit"
 
-# on server list ping:
-#     set {mymotd} to "A &bM&2i&bn&2e&bc&2r&ba&2f&bt&r X &cV&ea&cl&eo&cr&ea&cn&et&9 distance PVP1.9&r server%nl%"
-#     chance of 20%:
-#         set the motd to "%{mymotd}%""Wherever I go, obliteration follows."""
-#     else:
-#         chance of 25%:
-#             set the motd to "%{mymotd}%""They should've dug a deeper grave."""
-#         else:
-#             chance of 33%:
-#                 set the motd to "%{mymotd}%""Nobody escapes me. But they'll try."""
-#             else:
-#                 chance of 50%:
-#                     set the motd to "%{mymotd}%""Stay alive! I want their life, not yours."""
-#                 else:
-#                     set the motd to "%{mymotd}%""We're gonna win. No other option. Let's go."""
-
-# command /togglebuildmode:
-#     aliases: tggbuild, build, tggbm
-#     permission: op
-#     trigger:
-#         if {minijeu::%player's uuid%.buildermode} is false:
-#             set {minijeu::%player's uuid%.buildermode} to true
-#             send "Now, you can build !" to player
-#         else:
-#             set {minijeu::%player's uuid%.buildermode} to false
-#             send "Good ! You are secure from grief the world." to player
-        
-# on block break:
-#     if {minijeu::%player's uuid%.buildermode} isn't set:
-#         set {minijeu::%player's uuid%.buildermode} to false
-#     if {minijeu::%player's uuid%.buildermode} is false:
-#         send "&cYou can't build and break now ! Use '/togglebuildmode' to modify the world !" to player
-#         cancel event
-
-# on block build:
-#     if {minijeu::%player's uuid%.buildermode} isn't set:
-#         set {minijeu::%player's uuid%.buildermode} to false
-#     if {minijeu::%player's uuid%.buildermode} is false:
-#         send "&cYou can't build and break now ! Use '/togglebuildmode' to modify the world !" to player
-#         cancel event
-
-
-
 
 every 5 ticks:
     loop all players:
         setscoreboard(loop-player)
-
-# every 10 seconds:
-#     loop all players:
-#         set loop-player's food level to 20
-
 
 
 function getTeammates(TEAM: string) :: players:
@@ -737,17 +651,7 @@ on death of a player:
 
 
 on damage:
-    if event-damagecause is suffocation:
-        cancel event
-        stop
     # broadcast "%event-projectile%"
-    if event-projectile is a spectral arrow:
-        set damage to 8
-        play sound "entity.arrow.hit_player" to attacker
-    else if event-projectile is a arrow:
-        set damage to 2
-        play sound "entity.arrow.hit_player" to attacker
-        
     # victim is a player
     # attacker is a player
     if victim is attacker:
@@ -868,327 +772,6 @@ on left clicking holding TNT:                                                   
         spawn 1 primed TNT at location of block above player
         push last spawned tnt in direction of player with force 0.8
 
-
-
-
-command /givebaseweapons:
-    trigger:
-        give 1 iron sword named "&lKnife" to player
-        give 1 stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}" to player
-        give 1 stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}" to player
-        give 1 stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}" to player
-        give 1 stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}" to player
-
-function reloadGhost(P: player):
-    set {minijeu::%{_P}'s uuid%.ghost.reloading} to true
-    send actionbar "&eReloading Ghost ..." to {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    wait 3 ticks
-    give 1 xp to {_P}
-    wait 4 ticks
-    give 1 xp to {_P}
-    wait 4 ticks
-    give 1 xp to {_P}
-    wait 4 ticks
-    give 1 xp to {_P}
-    play sound "gun.reload" in player category with volume 0.8 at {_P}
-    wait 4 ticks
-    give 1 xp to {_P}
-    wait 4 ticks
-    give 1 xp to {_P}
-    wait 4 ticks
-    give 1 xp to {_P}
-    wait 3 ticks
-    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    set {minijeu::%{_P}'s uuid%.ghost.bullets} to 15
-    set {minijeu::%{_P}'s uuid%.ghost.reloading} to false
-
-function reloadBulldog(P: player):
-    set {minijeu::%{_P}'s uuid%.bulldog.reloading} to true
-    send actionbar "&eReloading Bulldog ..." to {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    wait 6 ticks
-    give 1 xp to {_P}
-    wait 6 ticks
-    give 1 xp to {_P}
-    wait 6 ticks
-    give 1 xp to {_P}
-    wait 6 ticks
-    give 1 xp to {_P}
-    play sound "gun.reload" in player category with volume 0.8 at {_P}
-    wait 6 ticks
-    give 1 xp to {_P}
-    wait 6 ticks
-    give 1 xp to {_P}
-    wait 6 ticks
-    give 1 xp to {_P}
-    wait 6 ticks
-    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    set {minijeu::%{_P}'s uuid%.bulldog.bullets} to 24
-    set {minijeu::%{_P}'s uuid%.bulldog.reloading} to false
-
-
-function reloadOdin(P: player):
-    set {minijeu::%{_P}'s uuid%.odin.reloading} to true
-    send actionbar "&eReloading Odin ..." to {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    wait 12 ticks
-    give 1 xp to {_P}
-    wait 12 ticks
-    give 1 xp to {_P}
-    wait 12 ticks
-    give 1 xp to {_P}
-    play sound "gun.reload.long" in player category with volume 0.8 at {_P}
-    wait 12 ticks
-    give 1 xp to {_P}
-    wait 12 ticks
-    give 1 xp to {_P}
-    wait 12 ticks
-    give 1 xp to {_P}
-    wait 12 ticks
-    give 1 xp to {_P}
-    wait 12 ticks
-    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    set {minijeu::%{_P}'s uuid%.odin.bullets} to 100
-    set {minijeu::%{_P}'s uuid%.odin.reloading} to false
-
-function reloadOperator(P: player):
-    set {minijeu::%{_P}'s uuid%.operator.reloading} to true
-    send actionbar "&eReloading Operator ..." to {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    wait 9 ticks
-    give 1 xp to {_P}
-    wait 9 ticks
-    give 1 xp to {_P}
-    wait 9 ticks
-    give 1 xp to {_P}
-    play sound "gun.reload.long" in player category with volume 0.8 at {_P}
-    wait 9 ticks
-    give 1 xp to {_P}
-    wait 9 ticks
-    give 1 xp to {_P}
-    wait 9 ticks
-    give 1 xp to {_P}
-    wait 9 ticks
-    give 1 xp to {_P}
-    wait 9 ticks
-    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
-    make console execute "xp set %{_P}'s name% 0 levels"
-    make console execute "xp set %{_P}'s name% 0 points"
-    set {minijeu::%{_P}'s uuid%.operator.bullets} to 5
-    set {minijeu::%{_P}'s uuid%.operator.reloading} to false
-
-
-
-on swap item:
-    cancel event
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
-        reloadOperator(player)
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
-        reloadOdin(player)
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
-        reloadBulldog(player)
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}":
-        reloadGhost(player)
-
-
-
-every 1 tick:
-    loop all players:
-        if {minijeu::%loop-player's uuid%.operator.aiming} is true:
-            if loop-player isn't holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
-                set {minijeu::%loop-player's uuid%.operator.aiming} to false
-                make console execute command "/effect clear %loop-player's name% slowness"
-
-        else if {minijeu::%loop-player's uuid%.odin.aiming} is true:
-            if loop-player isn't holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
-                set {minijeu::%loop-player's uuid%.odin.aiming} to false
-                make console execute command "/effect clear %loop-player's name% slowness"
-
-        else if {minijeu::%loop-player's uuid%.bulldog.aiming} is true:
-            if loop-player isn't holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
-                set {minijeu::%loop-player's uuid%.bulldog.aiming} to false
-                make console execute command "/effect clear %loop-player's name% slowness"
-
-        
-on right clicking holding a stick:
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
-        if {minijeu::%player's uuid%.operator.aiming} is false:
-            make console execute command "/effect give %player's name% slowness infinite 6 true"
-            set {minijeu::%player's uuid%.operator.aiming} to true
-        else:
-            set {minijeu::%player's uuid%.operator.aiming} to false
-            make console execute command "/effect clear %player's name% slowness"
-
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
-        if {minijeu::%player's uuid%.odin.aiming} is false:
-            make console execute command "/effect give %player's name% slowness infinite 4 true"
-            set {minijeu::%player's uuid%.odin.aiming} to true
-        else:
-            set {minijeu::%player's uuid%.odin.aiming} to false
-            make console execute command "/effect clear %player's name% slowness"
-        
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
-        if {minijeu::%player's uuid%.bulldog.aiming} is false:
-            make console execute command "/effect give %player's name% slowness infinite 4 true"
-            set {minijeu::%player's uuid%.bulldog.aiming} to true
-        else:
-            set {minijeu::%player's uuid%.bulldog.aiming} to false
-            make console execute command "/effect clear %player's name% slowness"
-    
-function shootArrowWithDispertion(P: player, range: number):
-    set {_var} to {_P}'s location
-    set {_oppositerange} to 0 - {_range}
-    set {_uuid} to random uuid
-    set {_world} to {_P}'s world
-    if "%{_world}%" is "lobby":
-        set {_world} to "overworld"
-    if {_P} isn't on ground:
-        set {_range} to {_range} * 2
-    make console execute command "/execute in minecraft:%{_world}% run summon armor_stand %{_var}'s x-coords% %{_var}'s y-coords - 0.16% %{_var}'s z-coords% {Rotation:[%{_var}'s yaw%f,%{_var}'s pitch%f],Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b}"
-    set {_entity} to the nearest armor stand relative to {_P}
-    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s pitch
-    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s yaw
-    shoot arrow from {_P} at speed 1000 in direction of {_entity}
-    kill {_entity}
-
-function shootSpectralArrowWithDispertion(P: player, range: number):
-    set {_var} to {_P}'s location
-    set {_oppositerange} to 0 - {_range}
-    set {_uuid} to random uuid
-    set {_world} to {_P}'s world
-    if "%{_world}%" is "lobby":
-        set {_world} to "overworld"
-    if {_P} isn't on ground:
-        set {_range} to {_range} * 2
-    make console execute command "/execute in minecraft:%{_world}% run summon armor_stand %{_var}'s x-coords% %{_var}'s y-coords - 0.16% %{_var}'s z-coords% {Rotation:[%{_var}'s yaw%f,%{_var}'s pitch%f],Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b}"
-    set {_entity} to the nearest armor stand relative to {_P}
-    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s pitch
-    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s yaw
-    shoot spectral arrow from {_P} at speed 1000 in direction of {_entity}
-    kill {_entity}
-
-
-on left clicking holding a stick:
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}":
-        cancel event
-        if {minijeu::%player's uuid%.ghost.reloading} is true:
-            stop
-        if {minijeu::%player's uuid%.ghost.cooldown} is true:
-            set {minijeu::%player's uuid%.ghost.cooldown} to false
-            play sound "gun.shoot.silencer" in player category with volume 0.2 at player
-            remove 1 from {minijeu::%player's uuid%.ghost.bullets}
-            shootArrowWithDispertion(player, 0.3)
-            wait 3 ticks
-            set {minijeu::%player's uuid%.ghost.cooldown} to true
-        if {minijeu::%player's uuid%.ghost.bullets} < 1:
-            reloadGhost(player)
-            stop
-
-
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
-        cancel event
-        if {minijeu::%player's uuid%.bulldog.reloading} is true:
-            stop
-        if {minijeu::%player's uuid%.bulldog.cooldown} is true:
-            set {minijeu::%player's uuid%.bulldog.cooldown} to false
-            loop 5 times:
-                play sound "gun.shoot.silencer" in player category with volume 0.2 at player
-                remove 1 from {minijeu::%player's uuid%.bulldog.bullets}
-                if {minijeu::%player's uuid%.bulldog.aiming} is false:
-                    shootArrowWithDispertion(player, 4)
-                else:
-                    shootArrowWithDispertion(player, 1)
-                wait 1 tick
-                if {minijeu::%player's uuid%.bulldog.bullets} < 1:
-                    stop loop
-            wait 2 ticks
-            set {minijeu::%player's uuid%.bulldog.cooldown} to true
-        if {minijeu::%player's uuid%.bulldog.bullets} < 1:
-            reloadBulldog(player)
-            stop
-
-
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
-        cancel event
-        if {minijeu::%player's uuid%.odin.shooting} is true:
-            set {minijeu::%player's uuid%.odin.shooting} to false
-        if {minijeu::%player's uuid%.odin.reloading} is true:
-            stop
-        if {minijeu::%player's uuid%.odin.cooldown} is true:
-            set {minijeu::%player's uuid%.odin.cooldown} to false
-            {minijeu::%player's uuid%.odin.shooting} is false
-            set {minijeu::%player's uuid%.odin.shooting} to true
-            loop 50 times:
-                if player's tool isn't a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
-                    stop loop
-                if {minijeu::%player's uuid%.odin.shooting} is false:
-                    stop loop
-                play sound "gun.shoot.silencer" in player category with volume 0.2 at player
-                remove 1 from {minijeu::%player's uuid%.odin.bullets}
-                if {minijeu::%player's uuid%.odin.aiming} is false:
-                    shootArrowWithDispertion(player, 7.5)
-                else:
-                    shootArrowWithDispertion(player, 4.5)
-                wait 2 ticks
-                if {minijeu::%player's uuid%.odin.bullets} < 1:
-                    stop loop
-            set {minijeu::%player's uuid%.odin.shooting} to false
-            wait 2 ticks
-            set {minijeu::%player's uuid%.odin.cooldown} to true
-        if {minijeu::%player's uuid%.odin.bullets} < 1:
-            reloadOdin(player)
-            stop
-
-
-    if player is holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
-        cancel event
-        if {minijeu::%player's uuid%.operator.reloading} is true:
-            stop
-        if {minijeu::%player's uuid%.operator.cooldown} is true:
-            set {minijeu::%player's uuid%.operator.cooldown} to false
-            play sound "gun.shoot.sniper" in player category with volume 0.5 at player
-            remove 1 from {minijeu::%player's uuid%.operator.bullets}
-            if {minijeu::%player's uuid%.operator.aiming} is false:
-                shootSpectralArrowWithDispertion(player, 30)
-            else:
-                shootSpectralArrowWithDispertion(player, 0.1)
-            wait 26 ticks
-            set {minijeu::%player's uuid%.operator.cooldown} to true
-        if {minijeu::%player's uuid%.operator.bullets} < 1:
-            reloadOperator(player)
-            stop
-    
-
-
-every 2 ticks:
-    loop all players:
-
-        # Bullets Display
-        if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Operator"",""italic"":""false""}]'},CustomModelData:4}":
-            if {minijeu::%loop-player's uuid%.operator.reloading} isn't true:
-                send actionbar "&e&l%{minijeu::%loop-player's uuid%.operator.bullets}%/5" to loop-player
-        else if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Bulldog"",""italic"":""false""}]'},CustomModelData:2}":
-            if {minijeu::%loop-player's uuid%.bulldog.reloading} isn't true:
-                send actionbar "&e&l%{minijeu::%loop-player's uuid%.bulldog.bullets}%/24" to loop-player
-        else if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Odin"",""italic"":""false""}]'},CustomModelData:3}":
-            if {minijeu::%loop-player's uuid%.odin.reloading} isn't true:
-                send actionbar "&e&l%{minijeu::%loop-player's uuid%.odin.bullets}%/100" to loop-player
-        else if loop-player is holding a stick with nbt from "{display:{Name:'[{""text"":""Ghost"",""italic"":""false""}]'},CustomModelData:1}":
-            if {minijeu::%loop-player's uuid%.ghost.reloading} isn't true:
-                send actionbar "&e&l%{minijeu::%loop-player's uuid%.ghost.bullets}%/15" to loop-player
-        else:
-            send actionbar "&e" to loop-player
             
 
 
@@ -1208,6 +791,8 @@ on projectile hit:
                 else if getTeammates("red") contain shooter:
                     if getTeammates("blue") contain loop-player:
                         apply potion of glowing without particles to loop-player for 15 ticks
+                else:
+                    apply potion of glowing without particles to loop-player for 15 ticks
             wait 20 ticks
     else if projectile is a snowball:
         cancel event
@@ -1247,10 +832,7 @@ on potion effect added:
                 set leggings slot of player to air
                 set boots slot of player to air
                 
-                wait 5 ticks
-                remove all glass bottles from event-entity's inventory
-                wait 395 ticks
-                remove all glass bottles from event-entity's inventory
+                wait 400 ticks
 
                 set helmet slot of player to {minijeu::%event-entity%.armor.helmet}
                 set chestplate slot of player to {minijeu::%event-entity%.armor.chestplate}
@@ -1259,8 +841,6 @@ on potion effect added:
             else:
                 send "&cYou can't drink 2 same potions : else, you will lose all your armor..." to event-entity
                 send "&cNow you just lost 1 potion." to event-entity
-        if "%event-potioneffecttype%" = "glowing":
-            cancel event
         else if "%event-potioneffecttype%" = "regeneration":
             wait 5 ticks
             remove all glass bottle from event-entity's inventory
@@ -1299,7 +879,7 @@ command /ready [for] <string> [[in] <int> [seconds]]:
             wait "%arg-2% seconds" parsed as timespan
             set {minijeu::%player's uuid%.wanttostart} to true
             set {_start} to true
-            send "&aYou are ready !" to all players
+            send "&aYou are marked as ready !" to player
             loop getTeammates("blue") and getTeammates("red"):
                 if {minijeu::%loop-value's uuid%.wanttostart} is false:
                     set {_start} to false
