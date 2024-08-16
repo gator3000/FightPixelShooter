@@ -6,8 +6,26 @@
     "bypassesPlayerLimit": false
   },
   {
+    "uuid": "2298a2c9-3dc3-4605-94dd-de39446f7f66",
+    "name": "Bamaau",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
     "uuid": "5792af6d-5024-30e3-9e28-1e72052b9fcc",
     "name": "Gator3000",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "a6bbd087-109e-3823-b491-8b16c087cc89",
+    "name": "The_shinigamie",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "cac0f0a1-63b5-4500-9652-7f6e75741dc9",
+    "name": "blarhos",
     "level": 4,
     "bypassesPlayerLimit": false
   }

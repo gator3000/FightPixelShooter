@@ -1,7 +1,7 @@
 # Default French language file
 
 # Which version of Skript this language file was written for
-version: 2.9.0
+version: 2.9.1
 
 # What null (nothing) should show up as in a string/text
 none: <none>
