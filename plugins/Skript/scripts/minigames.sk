@@ -1,0 +1,365 @@
+options:
+
+    healcooldown: 2 ticks # 2*50 = 100 
+    healamount: 10 # hearts not life point
+    ffgoalkill: 20
+    ffgoalkillstring: "20"
+
+    # nbts
+    knifenbts: nbt from "{display:{Name:'[{text:Knife,italic:false}]'},CustomModelData:1}"
+    ghostnbts: nbt from "{display:{Name:'[{text:Ghost,italic:false}]'},CustomModelData:1}"
+    bulldognbts: nbt from "{display:{Name:'[{text:Bulldog,italic:false}]'},CustomModelData:2}"
+    odinnbts: nbt from "{display:{Name:'[{text:Odin,italic:false}]'},CustomModelData:3}"
+    operatornbts: nbt from "{display:{Name:'[{text:Operator,italic:false}]'},CustomModelData:4}"
+
+    # Icons Strings
+    whiteweapons: "🗡"
+    projetileswweapons: "︻╦╤─"
+    sniperweapons: "︻╦╤───"
+    explosiveweapons: "︻╦╤─ --  ҉ "
+
+    # freefight spawns
+    freefightspawn1: location(-41.84, 8, -42.02, world "ff0", 135, 0)
+    freefightspawn2: location(0, 8, -41.69, world "ff0", 180, 0)
+    freefightspawn3: location(41.89, 8, -42, world "ff0", -135, 0)
+    freefightspawn4: location(41.76, 4, 0, world "ff0", -90, 0)
+    freefightspawn5: location(41.71, 0, 41.75, world "ff0", -45, 0)
+    freefightspawn6: location(-0.01, 0, 42.14, world "ff0", 0, 0)
+    freefightspawn7: location(-41.72, 0, 41.72, world "ff0", 45, 0)
+    freefightspawn8: location(-41.6, 4, -0.1, world "ff0", 90, 0)
+
+on load:
+    set {freefightspawns::*} to {@freefightspawn1}, {@freefightspawn2}, {@freefightspawn3}, {@freefightspawn4}, {@freefightspawn5}, {@freefightspawn6}, {@freefightspawn7} and {@freefightspawn8}
+    set {freefight} to "closed"
+    broadcast "&e&lMinigames&r&e loaded !"
+    make console execute command "/team empty freefighters"
+        
+        
+
+
+
+command /quit:
+    trigger:
+        if getTeammates("freefighters") contain player:
+            remove player from team named "freefighters"
+            send "%player's name% has /quit the game ..." to getTeammates("freefighters")
+            send "You've right quit the game !" to player
+
+
+command /open <string>:
+    usage: /open (ff)
+    trigger:
+        if "ff" is arg-1 in lowercase:
+            if {freefight} is "joining-phase":
+                send "&cThat game is already opened by %{adminfreefightgame}%" to player
+                send "&cUse that to join the game : '/join freefight'" to player
+            else if {freefight} is "fight-phase":
+                send "&cThat game is in progress" to player
+                send "&cWait for the end to recreate it !" to player
+            else:
+                set {adminfreefightgame} to player
+                set {freefight} to "joining-phase"
+
+                make console execute command "/team add freefighters"
+                make console execute command "/team empty freefighters"
+                make console execute command "/team modify freefighters collisionRule never"
+                make console execute command "/team modify freefighters friendlyFire true"
+                make console execute command "/team modify freefighters seeFriendlyInvisibles false"
+                make console execute command "/team modify freefighters nametagVisibility hideForOwnTeam"
+                make console execute command "/team modify freefighters prefix [{""text"":""["",""color"":""gray""},{""text"":""FREEFIGHT"",""color"":""gray"",""font"":""uniform""},{""text"":""]  "",""color"":""gray""}]"
+                
+                make console execute command "/team join freefighters %player's name%"
+                broadcast "&eA Freefight game was opened by &l%player%&r&e !"
+                
+        else:
+            send "&cI don't know this game :'%arg-1%'" to player
+
+
+command /join <string>:
+    usage: /join (ff)
+    trigger:
+        if "ff" is arg-1 in lowercase:
+            if {freefight} is "closed":
+                send "&cThat game is closed !" to player
+                send "&cUse that to create it : '/open freefight'" to player
+            else if {freefight} is "fight-phase":
+                send "&cThat game is in progress" to player
+                send "&cWait for the end to join it !" to player
+            else:
+                if getTeammates("freefighters") contain player:
+                    send "&cYou are already in that fight" to player
+                else:
+                    make console execute command "/team join freefighters %player's name%"
+                    send "Freefight Members : %getTeammates("freefighters") and player%" to getTeammates("freefighters") and player
+        else:
+            send "&cI don't know this game :'%arg-1%'" to player
+
+
+command /start <string>:
+    usage: /start (ff)
+    trigger:
+        if "ff" is arg-1 in lowercase:
+            if {freefight} is "closed":
+                send "&cThat game is closed !" to player
+                send "&cUse that to create it : '/open freefight'" to player
+            else if {freefight} is "fight-phase":
+                send "&cThat game is in progress" to player
+                send "&cWait for the end to join it !" to player
+            else:
+                if {adminfreefightgame} is player:
+                    if size of getTeammates("freefighters") <=8:
+                        set {freefight} to "fight-phase"
+
+                        make console execute command "/team modify freefighters prefix [{""text"":""["",""color"":""gray""},{""text"":""FREEFIGHT"",""color"":""red"",""font"":""uniform""},{""text"":""]  "",""color"":""gray""}]"
+                        enable PvP in world "ff0"
+
+                        send title "Freefight will start in 5" with subtitle "Admin : %{adminfreefightgame}%" to getTeammates("freefighters") for 1 second
+                        wait 1 second
+                        send title "4" to getTeammates("freefighters") for 1 second
+                        wait 1 second
+                        send title "3" to getTeammates("freefighters") for 1 second
+                        wait 1 second
+                        send title "2" to getTeammates("freefighters") for 1 second
+                        wait 1 second
+                        send title "1" to getTeammates("freefighters") for 1 second
+                        wait 1 second
+
+                        # # variables
+                        set {nb_players} to size of getTeammates("freefighters")
+                        set {on_list::*} to false, false, false, false, false, false, false, false and false
+                        set {seed} to random integer from 0 to 7
+
+                        loop {nb_players} times:
+                            set {on_list::%mod({seed} + loop-value, 8)%} to true # mod({seed} + loop-value, 8)
+                        
+                        if {nb_players} >= 4:
+                            set {on_list::9} to true
+                        
+                        make console execute command "/function custom:exe_in/ff0/wall/sep"
+                        loop integers from 1 to 9:
+                            broadcast "%loop-value%: %{on_list::%loop-value%}%"
+                            if {on_list::%loop-value%} is true:
+                                make console execute command "/function custom:exe_in/ff0/wall/clear/%mod(loop-value, 8)%"
+                        
+                        loop getTeammates("freefighters"):
+                            make console execute command "/mvtp %loop-value's name% ff0"
+                        set {_loc} to 1
+                        loop getTeammates("freefighters"):
+                            set {minigames::freefight::%loop-value's uuid%.kills} to 0
+                            set {minigames::freefight::%loop-value's uuid%.deaths} to 0
+                            clear loop-value's inventory
+                            set slot 39 of loop-value to a leather helmet
+                            set slot 38 of loop-value to a leather chestplate
+                            set slot 37 of loop-value to leather leggings
+                            set slot 36 of loop-value to leather boots
+                            give iron sword with nbt {@knifenbts} to loop-value
+                            give stick with nbt {@ghostnbts} to loop-value
+                            reloadAll(loop-value)
+                            set loop-value's gamemode to adventure
+                            heal loop-value by 20 hearts
+                            wait 1 tick
+                            teleport loop-value to {freefightspawns::%mod({seed} + {_loc}, 8)%}
+                            chooseWeapon(loop-value)
+                            add 1 to {_loc}
+                    else:
+                        send "&cThere is too much player in this game for start it !" to player
+                        send "&c%size of getTeammates("freefighters") - 8% player(s) must '/quit' the game to start it..." to {freefighters}
+                else:
+                    send "&cYou are not the admin of that game !" to player
+                    send "&cAsk for %{adminfreefightgame}% to start it !" to player
+        else:
+            send "&cI don't know this game :'%arg-1%'" to player
+
+
+command /end:
+    trigger:
+        if player isn't {adminfreefightgame}:
+            if player isn't console:
+                if player isn't {hardwareadmin}:
+                    send "&cYou can't end a game that your are not the admin !" to player
+                    stop trigger
+        
+
+        if {winner} is a player:
+            send title "Game winned by %{winner}'s name%" to getTeammates("freefighters") for 3 seconds
+            set {winner} to "jajajajaja"
+        else:
+            send title "Game closed before natural end" with subtitle "(%{@ffgoalkillstring}% kills by one player)" to getTeammates("freefighters") for 3 seconds
+        loop getTeammates("freefighters"):
+            make console execute command "/mvtp %loop-value's name% lobby"
+        make console execute command "/team empty freefighters"
+        set {freefight} to "closed"
+        set {adminfreefightgame} to {hardwareadmin}
+
+
+
+# Free fight features
+every 19 ticks:
+    if {freefight} is "joining-phase":
+        loop getTeammates("freefighters"):
+            set the loop-value's tab list name to "%team prefix of team of loop-player%&r%loop-value's name%"
+    else if {freefight} is "fight-phase":
+        loop getTeammates("freefighters"):
+            set the loop-value's tab list name to "%team prefix of team of loop-player%&r%loop-value's name% -- 🗡- %{minigames::freefight::%loop-value's uuid%.kills}%|💀-%{minigames::freefight::%loop-value's uuid%.deaths}%"
+            make console execute command "/effect give %loop-value's name% jump_boost 1 1 true"
+            make console execute command "/effect give %loop-value's name% speed 1 1 true"
+    else:
+        loop all players:
+            if "%team prefix of team of loop-player%" isn't "<none>":
+                set the loop-value's tab list name to "%team prefix of team of loop-player%%loop-value's name%"
+            else:
+                set the loop-value's tab list name to "%loop-value's name%"
+
+command /testspawns:
+    permission: op
+    trigger:
+        teleport player to {@freefightspawn1}
+        send "&efirst" to player
+        wait 5 seconds
+        teleport player to {@freefightspawn2}
+        send "&esecond" to player
+        wait 5 seconds
+        teleport player to {@freefightspawn3}
+        send "&ethird" to player
+        wait 5 seconds
+        teleport player to {@freefightspawn4}
+        send "&e4th" to player
+        wait 5 seconds
+        teleport player to {@freefightspawn5}
+        send "&e5th" to player
+        wait 5 seconds
+        teleport player to {@freefightspawn6}
+        send "&e6th" to player
+        wait 5 seconds
+        teleport player to {@freefightspawn7}
+        send "&e7th" to player
+        wait 5 seconds
+        teleport player to {@freefightspawn8}
+        send "&elast" to player
+        wait 5 seconds
+        send "&erandomtest" to player
+        set {_hey} to random integer from 1 to 8
+        send "%{_hey}%" to player
+        teleport player to {freefightspawns::%{_hey}%}
+
+function chooseWeapon(P: player):
+    open chest inventory with 3 rows named "Choose a weapon" to {_P}
+    set slot 12 of open inventory of {_P} to stick with nbt {@bulldognbts}
+    set slot 13 of open inventory of {_P} to stick with nbt {@odinnbts}
+    set slot 14 of open inventory of {_P} to stick with nbt {@operatornbts}
+
+on inventory click:
+    if name of event-inventory is "Choose a weapon":
+        cancel event
+        if event-item is stick with nbt {@bulldognbts}:
+            give stick with nbt {@bulldognbts} to player
+            play sound "entity.experience_orb.pickup" to player
+        else if event-item is stick with nbt {@odinnbts}:
+            give stick with nbt {@odinnbts} to player
+            play sound "entity.experience_orb.pickup" to player
+        else if event-item is stick with nbt {@operatornbts}:
+            give stick with nbt {@operatornbts} to player
+            play sound "entity.experience_orb.pickup" to player
+        else:
+            stop
+        close inventory view for player
+
+command /chooseweapon:
+    permission: op
+    trigger:
+        if player is {hardwareadmin}:
+            chooseWeapon(player)
+
+on player move:
+    set {_block} to block at location(player's x-coords, (player's y-coords - 1), player's z-coords, player's world)
+    if {_block} is lime concrete:
+        if {freefight::%player's uuid%.healcooldown} isn't false:
+            set {freefight::%player's uuid%.healcooldown} to false
+            loop 50 times:
+                wait {@healcooldown}
+                set {_block} to block at location(player's x-coords, (player's y-coords - 1), player's z-coords, player's world)
+                if  {_block} isn't lime concrete:
+                    stop
+            heal player by {@healamount} hearts
+            set {freefight::%player's uuid%.healcooldown} to true
+
+
+
+on click on light blue stained glass pane:
+    event-world is world "ff0"
+    {utils::%player's uuid%.buildermode} isn't true
+    set {_x} to player's x-coords
+    set {_y} to player's y-coords
+    set {_z} to player's z-coords
+    if player's horizontal facing is north:
+        set {_z} to player's z-coords - 2
+    else if player's horizontal facing is south:
+        set {_z} to player's z-coords + 2
+    else if player's horizontal facing is east:
+        set {_x} to player's x-coords + 2
+    else if player's horizontal facing is west:
+        set {_x} to player's x-coords - 2
+    set {_loc} to location({_x}, {_y}, {_z}, world "ff0", player's yaw, player's pitch)
+    if block at {_loc} is air:
+        teleport player to location({_x}, {_y}, {_z}, world "ff0", player's yaw, player's pitch)
+
+
+on damage:
+    event-world is world "ff0"
+    if getTeammates("freefighters") do not contain victim:
+        cancel event
+        stop
+    if getTeammates("freefighters") do not contain attacker:
+        cancel event
+        stop
+
+    if damage type is projectile:
+        set {lastdamager} to "︻╦╤─"
+        if event-projectile is a spectral arrow:
+            set {lastdamager} to "︻╦╤───"
+    else if damage type is entity explosion:
+        set {lastdamager} to " ҉ "
+    else:
+        set {lastdamager} to  "🗡"
+
+    set damage to damageModifier("%event-projectile%", attacker, damage)
+    # broadcast damage
+    
+    # broadcast victim's health
+    wait 1 tick
+    set victim's invulnerability ticks to 0
+    if final damage >= victim's health:
+        kill victim
+
+
+on death:
+    broadcast "&0&l%attacker% &r&7%{lastdamager}% &0&l%victim%" in world "ff0"
+
+    add 1 to {minigames::freefight::%attacker's uuid%.kills}
+    add 1 to {minigames::freefight::%victim's uuid%.deaths}
+    play sound "kill.one" in player category to attacker
+
+    reloadAll(victim)
+    
+    if {minigames::freefight::%attacker's uuid%.kills} >= {@ffgoalkill}:
+        set {winner} to attacker
+        make {adminfreefightgame} execute command "/end"
+        stop
+    clear victim's inventory
+    set slot 39 of victim to a leather helmet
+    set slot 38 of victim to a leather chestplate
+    set slot 37 of victim to leather leggings
+    set slot 36 of victim to leather boots
+    give iron sword with nbt {@knifenbts} to victim
+    give stick with nbt {@ghostnbts} to victim
+    teleport victim to {freefightspawns::%random integer from {seed} to mod({seed} + size of getTeammates("freefighters"), 8)%}
+    set victim's gamemode to adventure
+    chooseWeapon(victim)
+    # heal victim by 20 hearts
+
+
+
+command /teamtest <string>:
+    trigger:
+        set {_team} to team of player
+        set team prefix of {_team} to "AAHHAAHHAHAHA - "

@@ -1,0 +1,4 @@
+*.log
+logs/
+crash-reports/
+libraries/

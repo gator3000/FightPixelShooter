@@ -1,0 +1,404 @@
+options:
+    # Weapons Variables
+    smalldamages: 1.5
+    bigdamages: 8
+
+    # nbts
+    
+    knifenbts: nbt from "{display:{Name:'[{text:Knife,italic:false}]'},CustomModelData:1}"
+    ghostnbts: nbt from "{display:{Name:'[{text:Ghost,italic:false}]'},CustomModelData:1}"
+    bulldognbts: nbt from "{display:{Name:'[{text:Bulldog,italic:false}]'},CustomModelData:2}"
+    odinnbts: nbt from "{display:{Name:'[{text:Odin,italic:false}]'},CustomModelData:3}"
+    operatornbts: nbt from "{display:{Name:'[{text:Operator,italic:false}]'},CustomModelData:4}"
+
+    # magazines
+    ghostmagazine: 15
+    ghostmagazineasstring: "15"
+    bulldogmagazine: 24
+    bulldogmagazineasstring: "24"
+    odinmagazine: 100
+    odinmagazineasstring: "100"
+    operatormagazine: 5
+    operatormagazineasstring: "5"
+
+    # shoot cooldown
+    ghostshootcooldown: 3
+    ghostshootcooldowninticks: 3 ticks
+    bulldogshootcooldown: 2
+    bulldogshootcooldowninticks: 2 ticks
+    odinshootcooldown: 2
+    odinshootcooldowninticks: 2 ticks
+    operatorshootcooldown: 26
+    operatorshootcooldowninticks: 26 ticks
+
+    # reload cooldown
+    ghostreloadcooldown: 30
+    ghostreloadcooldowninticks: "%{@ghostreloadcooldown}% ticks" parsed as timespan
+    bulldogreloadcooldown: 48
+    bulldogreloadcooldowninticks: "%{@bulldogreloadcooldown}% ticks" parsed as timespan
+    odinreloadcooldown: 96
+    odinreloadcooldowninticks: "%{@odinreloadcooldown}% ticks" parsed as timespan
+    operatorreloadcooldown: 72
+    operatorreloadcooldowninticks: "%{@operatorreloadcooldown}% ticks" parsed as timespan
+
+
+
+on load:
+    broadcast "&e&lWeapons&r&e loaded !"
+
+
+command /givebaseweapons:
+    trigger:
+        give 1 iron sword with nbt {@knifenbts} to player
+        give 1 stick with nbt {@ghostnbts} to player
+        give 1 stick with nbt {@bulldognbts} to player
+        give 1 stick with nbt {@odinnbts} to player
+        give 1 stick with nbt {@operatornbts} to player
+
+command /initplayerweaponsvariables:
+    trigger:
+        {freefight} isn't "fight-phase"
+        set {weapons::%player's uuid%.ghost.cooldown} to true
+        set {weapons::%player's uuid%.ghost.bullets} to {@ghostmagazine}
+        set {weapons::%player's uuid%.ghost.reloading} to false
+        set {weapons::%player's uuid%.ghost.aiming} to false
+        set {weapons::%player's uuid%.bulldog.cooldown} to true
+        set {weapons::%player's uuid%.bulldog.bullets} to {@bulldogmagazine}
+        set {weapons::%player's uuid%.bulldog.reloading} to false
+        set {weapons::%player's uuid%.bulldog.aiming} to false
+        set {weapons::%player's uuid%.operator.cooldown} to true
+        set {weapons::%player's uuid%.operator.bullets} to {@operatormagazine}
+        set {weapons::%player's uuid%.operator.reloading} to false
+        set {weapons::%player's uuid%.operator.aiming} to false
+        set {weapons::%player's uuid%.odin.cooldown} to true
+        set {weapons::%player's uuid%.odin.bullets} to {@odinmagazine}
+        set {weapons::%player's uuid%.odin.reloading} to false
+        set {weapons::%player's uuid%.odin.shooting} to false
+        set {weapons::%player's uuid%.odin.aiming} to false
+        send "&aVariables inited !" to player
+
+function reloadAll(P: player):
+    set {weapons::%{_P}'s uuid%.ghost.bullets} to {@ghostmagazine}
+    set {weapons::%{_P}'s uuid%.bulldog.bullets} to {@bulldogmagazine}
+    set {weapons::%{_P}'s uuid%.odin.bullets} to {@odinmagazine}
+    set {weapons::%{_P}'s uuid%.operator.bullets} to {@operatormagazine}
+
+# Bullets Displaying
+every 2 ticks:
+    loop all players:
+        if loop-player is holding a stick with nbt {@operatornbts}:
+            if {weapons::%loop-player's uuid%.operator.reloading} isn't true:
+                send actionbar "&e&l%{weapons::%loop-player's uuid%.operator.bullets}%/%{@operatormagazineasstring}%" to loop-player
+        else if loop-player is holding a stick with nbt {@bulldognbts}:
+            if {weapons::%loop-player's uuid%.bulldog.reloading} isn't true:
+                send actionbar "&e&l%{weapons::%loop-player's uuid%.bulldog.bullets}%/%{@bulldogmagazineasstring}%" to loop-player
+        else if loop-player is holding a stick with nbt {@odinnbts}:
+            if {weapons::%loop-player's uuid%.odin.reloading} isn't true:
+                send actionbar "&e&l%{weapons::%loop-player's uuid%.odin.bullets}%/%{@odinmagazineasstring}%" to loop-player
+        else if loop-player is holding a stick with nbt {@ghostnbts}:
+            if {weapons::%loop-player's uuid%.ghost.reloading} isn't true:
+                send actionbar "&e&l%{weapons::%loop-player's uuid%.ghost.bullets}%/%{@ghostmagazineasstring}%" to loop-player
+
+
+
+# Reloading general
+function reloadfractiontime(waiting: number) :: timespan:
+    return "%floor({_waiting} / 7)% ticks" parsed as timespan
+
+function reloadfractionendtime(waiting: number) :: timespan:
+    return "%mod({_waiting}, 7)% ticks" parsed as timespan
+
+
+function reloadGhost(P: player):
+    set {weapons::%{_P}'s uuid%.ghost.reloading} to true
+    send actionbar "&eReloading Ghost ..." to {_P}
+    set {_wait} to reloadfractiontime({@ghostreloadcooldown})
+    set {_lastwait} to reloadfractionendtime({@ghostreloadcooldown})
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    loop 4 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    play sound "gun.reload" in player category with volume 0.8 at {_P}
+    loop 3 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    wait {_lastwait}
+    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {weapons::%{_P}'s uuid%.ghost.bullets} to {@ghostmagazine}
+    set {weapons::%{_P}'s uuid%.ghost.reloading} to false
+
+
+function reloadBulldog(P: player):
+    set {weapons::%{_P}'s uuid%.bulldog.reloading} to true
+    send actionbar "&eReloading Bulldog ..." to {_P}
+    set {_wait} to reloadfractiontime({@bulldogreloadcooldown})
+    set {_lastwait} to reloadfractionendtime({@bulldogreloadcooldown})
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    loop 4 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    play sound "gun.reload" in player category with volume 0.8 at {_P}
+    loop 3 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    wait {_lastwait}
+    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {weapons::%{_P}'s uuid%.bulldog.bullets} to {@bulldogmagazine}
+    set {weapons::%{_P}'s uuid%.bulldog.reloading} to false
+
+function reloadOdin(P: player):
+    set {weapons::%{_P}'s uuid%.odin.reloading} to true
+    send actionbar "&eReloading Odin ..." to {_P}
+    set {_wait} to reloadfractiontime({@odinreloadcooldown})
+    set {_lastwait} to reloadfractionendtime({@odinreloadcooldown})
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    loop 4 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    play sound "gun.reload.long" in player category with volume 0.8 at {_P}
+    loop 3 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    wait {_lastwait}
+    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {weapons::%{_P}'s uuid%.odin.bullets} to {@odinmagazine}
+    set {weapons::%{_P}'s uuid%.odin.reloading} to false
+
+function reloadOperator(P: player):
+    set {weapons::%{_P}'s uuid%.operator.reloading} to true
+    send actionbar "&eReloading Operator ..." to {_P}
+    set {_wait} to reloadfractiontime({@operatorreloadcooldown})
+    set {_lastwait} to reloadfractionendtime({@operatorreloadcooldown})
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    loop 4 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    play sound "gun.reload.long" in player category with volume 0.8 at {_P}
+    loop 3 times:
+        wait {_wait}
+        give 1 xp to {_P}
+    wait {_lastwait}
+    play sound "shells.hitground.%random integer from 0 to 4%" in player category with volume 0.8 at {_P}
+    make console execute "xp set %{_P}'s name% 0 levels"
+    make console execute "xp set %{_P}'s name% 0 points"
+    set {weapons::%{_P}'s uuid%.operator.bullets} to {@operatormagazine}
+    set {weapons::%{_P}'s uuid%.operator.reloading} to false
+
+
+on swap item:
+    cancel event
+    if player is holding a stick with nbt {@operatornbts}:
+        if {weapons::%player's uuid%.operator.reloading} is false:
+            reloadOperator(player)
+    if player is holding a stick with nbt {@odinnbts}:
+        if {weapons::%player's uuid%.odin.reloading} is false:
+            reloadOdin(player)
+    if player is holding a stick with nbt {@bulldognbts}:
+        if {weapons::%player's uuid%.bulldog.reloading} is false:
+            reloadBulldog(player)
+    if player is holding a stick with nbt {@ghostnbts}:
+        if {weapons::%player's uuid%.ghost.reloading} is false:
+            reloadGhost(player)
+
+
+# Aiming general
+on right clicking holding a stick:
+    if player is holding a stick with nbt {@operatornbts}:
+        if {weapons::%player's uuid%.operator.aiming} is false:
+            make console execute command "/effect give %player's name% slowness infinite 6 true"
+            set {weapons::%player's uuid%.operator.aiming} to true
+        else:
+            set {weapons::%player's uuid%.operator.aiming} to false
+            make console execute command "/effect clear %player's name% slowness"
+
+    if player is holding a stick with nbt {@odinnbts}:
+        if {weapons::%player's uuid%.odin.aiming} is false:
+            make console execute command "/effect give %player's name% slowness infinite 4 true"
+            set {weapons::%player's uuid%.odin.aiming} to true
+        else:
+            set {weapons::%player's uuid%.odin.aiming} to false
+            make console execute command "/effect clear %player's name% slowness"
+        
+    if player is holding a stick with nbt {@bulldognbts}:
+        if {weapons::%player's uuid%.bulldog.aiming} is false:
+            make console execute command "/effect give %player's name% slowness infinite 4 true"
+            set {weapons::%player's uuid%.bulldog.aiming} to true
+        else:
+            set {weapons::%player's uuid%.bulldog.aiming} to false
+            make console execute command "/effect clear %player's name% slowness"
+
+
+every 1 tick:
+    loop all players:
+        if {weapons::%loop-player's uuid%.operator.aiming} is true:
+            if loop-player isn't holding a stick with nbt {@operatornbts}:
+                set {weapons::%loop-player's uuid%.operator.aiming} to false
+                make console execute command "/effect clear %loop-player's name% slowness"
+
+        else if {weapons::%loop-player's uuid%.odin.aiming} is true:
+            if loop-player isn't holding a stick with nbt {@odinnbts}:
+                set {weapons::%loop-player's uuid%.odin.aiming} to false
+                make console execute command "/effect clear %loop-player's name% slowness"
+
+        else if {weapons::%loop-player's uuid%.bulldog.aiming} is true:
+            if loop-player isn't holding a stick with nbt {@bulldognbts}:
+                set {weapons::%loop-player's uuid%.bulldog.aiming} to false
+                make console execute command "/effect clear %loop-player's name% slowness"
+
+
+
+# Firing General
+
+# Firing and dispertion
+function shootArrowWithDispertion(P: player, range: number):
+    set {_var} to {_P}'s location
+    set {_oppositerange} to 0 - {_range}
+    set {_uuid} to random uuid
+    set {_world} to {_P}'s world
+    if "%{_world}%" is "lobby":
+        set {_world} to "overworld"
+    if {_P} isn't on ground:
+        set {_range} to {_range} * 2
+    make console execute command "/execute in minecraft:%{_world}% run summon armor_stand %{_var}'s x-coords% %{_var}'s y-coords - 0.16% %{_var}'s z-coords% {Rotation:[%{_var}'s yaw%f,%{_var}'s pitch%f],Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b}"
+    set {_entity} to the nearest armor stand relative to {_P}
+    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s pitch
+    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s yaw
+    shoot arrow from {_P} at speed 1000 in direction of {_entity}
+    kill {_entity}
+
+function shootSpectralArrowWithDispertion(P: player, range: number):
+    set {_var} to {_P}'s location
+    set {_oppositerange} to 0 - {_range}
+    set {_uuid} to random uuid
+    set {_world} to {_P}'s world
+    if "%{_world}%" is "lobby":
+        set {_world} to "overworld"
+    if {_P} isn't on ground:
+        set {_range} to {_range} * 2
+    make console execute command "/execute in minecraft:%{_world}% run summon armor_stand %{_var}'s x-coords% %{_var}'s y-coords - 0.16% %{_var}'s z-coords% {Rotation:[%{_var}'s yaw%f,%{_var}'s pitch%f],Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b}"
+    set {_entity} to the nearest armor stand relative to {_P}
+    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s pitch
+    add (random integer from ({_oppositerange} * 10) to ({_range} * 10)) / 10 to {_entity}'s yaw
+    shoot spectral arrow from {_P} at speed 1000 in direction of {_entity}
+    kill {_entity}
+
+# Weapons
+on left clicking holding a stick:
+    if player is holding a stick with nbt {@ghostnbts}:
+        cancel event
+        if {weapons::%player's uuid%.ghost.reloading} is true:
+            stop
+        if {weapons::%player's uuid%.ghost.cooldown} is true:
+            set {weapons::%player's uuid%.ghost.cooldown} to false
+            play sound "gun.shoot.silencer" in player category with volume 0.2 at player
+            remove 1 from {weapons::%player's uuid%.ghost.bullets}
+            shootArrowWithDispertion(player, 0.3)
+            wait {@ghostshootcooldowninticks}
+            set {weapons::%player's uuid%.ghost.cooldown} to true
+        if {weapons::%player's uuid%.ghost.bullets} < 1:
+            if {weapons::%player's uuid%.ghost.reloading} is false:
+                reloadGhost(player)
+
+
+    if player is holding a stick with nbt {@bulldognbts}:
+        cancel event
+        if {weapons::%player's uuid%.bulldog.reloading} is true:
+            stop
+        if {weapons::%player's uuid%.bulldog.cooldown} is true:
+            set {weapons::%player's uuid%.bulldog.cooldown} to false
+            loop 6 times:
+                play sound "gun.shoot.silencer" in player category with volume 0.2 at player
+                remove 1 from {weapons::%player's uuid%.bulldog.bullets}
+                if {weapons::%player's uuid%.bulldog.aiming} is false:
+                    shootArrowWithDispertion(player, 4)
+                else:
+                    shootArrowWithDispertion(player, 1)
+                wait 1 tick
+                if {weapons::%player's uuid%.bulldog.bullets} < 1:
+                    stop loop
+            wait {@bulldogshootcooldowninticks}
+            set {weapons::%player's uuid%.bulldog.cooldown} to true
+        if {weapons::%player's uuid%.bulldog.bullets} < 1:
+            reloadBulldog(player)
+            stop
+
+
+    if player is holding a stick with nbt {@odinnbts}:
+        cancel event
+        if {weapons::%player's uuid%.odin.shooting} is true:
+            set {weapons::%player's uuid%.odin.shooting} to false
+        if {weapons::%player's uuid%.odin.reloading} is true:
+            stop
+        if {weapons::%player's uuid%.odin.cooldown} is true:
+            set {weapons::%player's uuid%.odin.cooldown} to false
+            {weapons::%player's uuid%.odin.shooting} is false
+            set {weapons::%player's uuid%.odin.shooting} to true
+            loop 50 times:
+                if player's tool isn't a stick with nbt {@odinnbts}:
+                    stop loop
+                if {weapons::%player's uuid%.odin.shooting} is false:
+                    stop loop
+                play sound "gun.shoot.silencer" in player category with volume 0.2 at player
+                remove 1 from {weapons::%player's uuid%.odin.bullets}
+                if {weapons::%player's uuid%.odin.aiming} is false:
+                    shootArrowWithDispertion(player, 7.5)
+                else:
+                    shootArrowWithDispertion(player, 4.5)
+                wait 2 ticks
+                if {weapons::%player's uuid%.odin.bullets} < 1:
+                    stop loop
+            set {weapons::%player's uuid%.odin.shooting} to false
+            wait {@odinshootcooldowninticks}
+            set {weapons::%player's uuid%.odin.cooldown} to true
+        if {weapons::%player's uuid%.odin.bullets} < 1:
+            reloadOdin(player)
+            stop
+
+
+    if player is holding a stick with nbt {@operatornbts}:
+        cancel event
+        if {weapons::%player's uuid%.operator.reloading} is true:
+            stop
+        if {weapons::%player's uuid%.operator.cooldown} is true:
+            set {weapons::%player's uuid%.operator.cooldown} to false
+            play sound "gun.shoot.sniper" in player category with volume 0.5 at player
+            remove 1 from {weapons::%player's uuid%.operator.bullets}
+            if {weapons::%player's uuid%.operator.aiming} is false:
+                shootSpectralArrowWithDispertion(player, 30)
+            else:
+                shootSpectralArrowWithDispertion(player, 0.1)
+            wait {@operatorshootcooldowninticks}
+            set {weapons::%player's uuid%.operator.cooldown} to true
+        if {weapons::%player's uuid%.operator.bullets} < 1:
+            reloadOperator(player)
+            stop
+
+
+
+
+
+# Misc
+on damage:
+    if event-projectile is a spectral arrow:
+        wait 1 ticks
+        remove glowing from victim
+
+function damageModifier(projectile: text, attacker: player, damages: number):: number:
+    if {_projectile} is "spectral arrow":
+        play sound "entity.arrow.hit_player" to {_attacker}
+        return {@bigdamages}
+    else if {_projectile} is "arrow":
+        play sound "entity.arrow.hit_player" to {_attacker}
+        return {@smalldamages}
+    else:
+        return {_damages}

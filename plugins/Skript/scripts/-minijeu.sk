@@ -1,0 +1,825 @@
+options:
+    server: "Minecraft X Valorant"
+
+
+
+
+
+on first join:
+    make player execute command "/initplayervarables"
+
+command /initplayervarables:
+    trigger:
+        if {game} is false:
+            set {minijeu::%player's uuid%.kills.total} to 0
+            make player execute command "/initplayerweaponsvarables"
+            set {minijeu::%player's uuid%.money} to 0
+            send "&aYour variables are initialized !" to player
+
+function initbullets(P: player):
+    set {weapons::%{_P}'s uuid%.ghost.bullets} to 15
+    set {weapons::%{_P}'s uuid%.bulldog.bullets} to 24
+    set {weapons::%{_P}'s uuid%.operator.bullets} to 5
+    set {weapons::%{_P}'s uuid%.odin.bullets} to 100
+
+
+
+
+function setscoreboard(P: player):
+    if getTeammates("blue") contain {_P}:
+        set {_teamcolor} to "&9"
+        set {_team} to "blue"
+        set {_kills} to {morts.red}
+        set {_deaths} to {morts.blue}
+    else if getTeammates("red") contain {_P}:
+        set {_teamcolor} to "&c"
+        set {_team} to "red"
+        set {_kills} to {morts.blue}
+        set {_deaths} to {morts.red}
+    else:
+        set {_teamcolor} to "&7"
+        set {_team} to "NONE"   
+        set {_kills} to 0
+        set {_deaths} to 0
+    if {game}:
+        set {_round} to "Round: %{round}%"
+    else:
+        set {_round} to "There is no game"
+    set title of {_P}'s scoreboard to "&e&l%{@server}%"
+    set line 1 of {_P}'s scoreboard to "    » &f&l%{_round}%"
+    set line 2 of {_P}'s scoreboard to "&a"
+    set line 3 of {_P}'s scoreboard to "&f&lTeam Stats:"
+    set line 4 of {_P}'s scoreboard to "    » %{_teamcolor}%Team: %{_team}%"
+    set line 5 of {_P}'s scoreboard to "    » %{_teamcolor}%Team Kills: &4%{_kills}%"
+    set line 6 of {_P}'s scoreboard to "    » %{_teamcolor}%Team Deaths: &8%{_deaths}%"
+    set line 7 of {_P}'s scoreboard to "&a"
+    set line 8 of {_P}'s scoreboard to "&f&lPlayer Stats:"
+    set line 9 of {_P}'s scoreboard to "    » &7Kills: &4%{minijeu::%{_P}'s uuid%.kills.total}%"
+    set line 10 of {_P}'s scoreboard to "    » &7Coins: &e%{minijeu::%{_P}'s uuid%.money}%"
+    set line 11 of {_P}'s scoreboard to "&a"
+    set line 12 of {_P}'s scoreboard to "&f&lServer Stats:"
+    set line 13 of {_P}'s scoreboard to "    » &7Players: &2%size of all players%/%max players%"
+    
+
+command /togglescoreboard:
+    aliases: tgglsb
+    trigger:
+        toggle player's scoreboard
+        send "&aScoreboard Toggled !" to player
+
+
+
+every 5 ticks:
+    loop all players:
+        setscoreboard(loop-player)
+
+
+
+command /teamsdisplay:
+    trigger:
+        send "&9Members of team blue : %getTeammates("blue")%"
+        send "&cMembers of team red : %getTeammates("red")%"
+
+on join:
+    set join message to "&e%player's name% joined the party !"
+    make console execute command "/mvtp %player's name% lobby"
+    # give player a written book with nbt from "{title:Help,author:Gator3000,display:{Lore:[""DM Discord for more infos"",""Pseudo -> _gator3000""]},pages:[{""text"":""Welcome !""}]}"
+    # {pages:['[,{text:Hello !\\nVoici une aide pour les items en vente dans le shop, mais aussi les },{text:commandes custom,clickEvent:{action:change_page,value:2}},{text: pour te permettre de passer un agréable moment.\\n\\nServeur Discord pour mieux comprendre :\\n},{text:https://discord.gg/EGwCPUs4hg,color:blue,clickEvent:{action:open_url,value:https://discord.gg/EGwCPUs4hg}},{text:\\n \\u0020 \\u0020 \\u0020 \\u0020 \\u0020 \\u0020 \\u0020 \\u0020Gator :),color:reset}]','[,{text:Commandes :,bold:true},{text:\\n,color:reset},{text:/teamsdisplay,color:gray,clickEvent:{action:run_command,value:/teamsdisplay}},{text::\\nAffiche les joueurs dans les teams.\\n,color:reset},{text:/teamblue,color:gray,clickEvent:{action:run_command,value:/teamblue}},{text::\\nRejoint la team blue !\\n,color:reset},{text:/teamred,color:gray,clickEvent:{action:run_command,value:/teamred}},{text::\\nRejoint la team red !,color:reset}]'],title:Aide !,author:Gator3000,display:{Lore:[MP sur discord si tu n'as pas compris : pseudo -> _gator3000]}}"
+    setscoreboard(player)
+    set {minijeu::%player's uuid%.wanttostart} to false
+    if {game} is true:
+        send "&eType &7/teamblue &eor &7/teamred &eto choose a team when the game ends," to player
+        send "&eand wait for a new game to play also !" to player
+    send "&eType &7/ready&e to start a game when all players are ready !" to player
+    send "&eDont forget to set your FOV effects accessibility parameter to 100percents" to player
+
+on quit:
+    if getTeammates("blue") contain player:
+        make player execute command "/teamquit"
+    else if getTeammates("red") contain player:
+        make player execute command "/teamquit"
+
+
+command /trade <int> [coins to] <player>:
+    trigger:
+        if getTeammates("blue") contain player:
+            if getTeammates("blue") contain arg-2:
+                remove arg-1 from {minijeu::%player's uuid%.money}
+                add arg-1 to {minijeu::%arg-2's uuid%.money}
+            else:
+                send "&cYou can't trade with another team ..." to player
+        else if getTeammates("red") contain player:
+            if getTeammates("red") contain arg-2:
+                remove arg-1 from {minijeu::%player's uuid%.money}
+                add arg-1 to {minijeu::%arg-2's uuid%.money}
+            else:
+                send "&cYou can't trade with another team ..." to player
+        else:
+            send "&cYou can't trade if you aren't in a team" to player
+
+command /teamquit:                                                                         # Team management 2
+    trigger:
+        if {game} is true:
+            send "Dont quit your team in a game !! Think to your teammates before disconecting..."
+            stop
+        if getTeammates("blue") contain player:
+            make player execute command "/team leave blue"
+        else if getTeammates("red") contain player:
+            make player execute command "/team leave red"
+        else:
+            send "You aren't in a team lmaoo !" to player
+
+
+command /teamblue:                                                                        # Team management 3
+    trigger:
+        if getTeammates("blue") contain player:
+            send "&9You are already in this Team" to player
+            stop
+        else if {game}:
+            send "&cThere is a game in process ..."
+            stop
+        else if getTeammates("red") contain player:
+            make player execute command "/team leave red"
+            make player execute command "/team join blue"
+        else:
+            make player execute command "/team join blue"
+        make all players execute command "/teamsdisplay"
+
+
+command /teamred:                                                                        # Team management 4
+    trigger:
+        if getTeammates("red") contain player:
+            send "&cYou are already in this Team"
+            stop
+        else if {game}:
+            send "&cThere is a game in process ..."
+            stop
+        else if getTeammates("blue") contain player:
+            make player execute command "/team leave blue"
+            make player execute command "/team join red"
+        else:
+            make player execute command "/team join red "
+        make all players execute command "/teamsdisplay"
+
+
+command /teamsinit:                                                                         # Team Initialization
+    permission: op
+    trigger:
+        send "Pre-clearing ..." to console
+        make console execute command "/teamsclear"
+        send "Removing teams ..." to console
+        make console execute command "/team remove blue"
+        make console execute command "/team remove red"
+        make console execute command "/team add red"
+        make console execute command "/team modify red color red"
+        make console execute command "/team modify red collisionRule never"
+        make console execute command "/team modify red friendlyFire false"
+        make console execute command "/team modify red nametagVisibility hideForOtherTeams"
+        make console execute command "/team add blue"
+        make console execute command "/team modify blue color blue"
+        make console execute command "/team modify blue collisionRule never"
+        make console execute command "/team modify blue friendlyFire false"
+        make console execute command "/team modify blue nametagVisibility hideForOtherTeams"
+        send "Clearing workspace ..." to console
+        make console execute command "/teamsclear"
+        if "%player%" isn't "<none>":
+            broadcast "&eTeams Initialized by &l%player%&r&e !"
+        else:
+            broadcast "&eTeams Initialized from &lthe console&r&e !"
+        broadcast "&aMake you sure to rejoin your team for a good experience !"
+
+
+command /teamsclear:                                                                        # Team clearing
+    permission: op
+    trigger:
+        make console execute command "/team empty blue"
+        make console execute command "/team empty red"
+
+
+
+
+
+command /teamchoose:
+    trigger:                                                                               # Team choice
+        open chest inventory with 3 row named "Choose your Team" to player
+        wait 1 tick
+        set {_slotActuel} to 0
+        while {_slotActuel} < 27:
+            set slot {_slotActuel} of open inventory of player to purple stained glass pane named "Nothing"
+            increase {_slotActuel} by 1
+            if {_slotActuel} = 10:
+                set {_slotActuel} to 17
+        set slot 12 of open inventory of player to red wool named "&cred Team"
+        set slot 14 of open inventory of player to blue wool named "&9blue Team"
+        set slot 26 of open inventory of player to barrier named "&lClear Teams"
+
+
+
+ 
+
+
+on right clicking:
+    if held item of player is a nether star:                                               # Nether star management
+        if player has permission "op":
+            if player is sneaking:
+                make player execute command "/adminshop"
+                remove 1 nether star from player's inventory
+                stop
+        make player execute command "/shop"
+    if held item of player is a iron sword:
+        if player has permission "op":
+            if player is sneaking:
+                make player execute command "/adminshop"
+                stop
+
+command /adminshop:                                                                        # Admin open shop management
+    permission: op
+    aliases: opshop
+    trigger:
+        give a nether star to player
+        set {_money} to {minijeu::%player's uuid%.money}
+        add 64 to {minijeu::%player's uuid%.money}
+        make player execute command "/shop"
+        wait 20 seconds
+        set {minijeu::%player's uuid%.money} to {_money}
+
+
+
+command /shop:                                                                             # Open shop management
+    trigger:
+        if amount of nether star in player's inventory >= 1:
+            open chest inventory with 6 row named "Shop" to player
+            wait 1 tick
+            set {_slotActuel} to 0
+            while {_slotActuel} < 54:
+                set slot {_slotActuel} of open inventory of player to purple stained glass pane named "Nothing"
+                increase {_slotActuel} by 1
+                if {_slotActuel} = 9:
+                    set {_slotActuel} to 45
+            set slot 10 of open inventory of player to crossbow named "&c&lRocket launcher"  with lore "&l&610C"
+            set slot 19 of open inventory of player to tipped arrow named "&d&lBuldog" with lore "&l&68C"
+            set slot 28 of open inventory of player to bow named "&6&lSniper" with lore "&l&64C"
+
+            set slot 11 of open inventory of player to tnt named "&4&lDynamite" with lore "&l&64C"
+            set slot 20 of open inventory of player to a ender pearl named "&9&lOmen Skill" with lore "&l&64C"
+            set slot 29 of open inventory of player to trident named "&b&lSignature Skill" with lore "&l&63C"
+            set slot 38 of open inventory of player to snowball named "&7&lSmoke-Orb" with lore "&l&61C"
+
+            set slot 12 of open inventory of player to splash potion named "&2&lPoison" with lore "&l&62C" with NBT from "{CustomPotionColor:10217097,CustomPotionEffects:[{Id:19,Duration:160}],CustomPotionColor:50950}"
+            set slot 21 of open inventory of player to splash potion named "&e&lFlash" with lore "&l&62C" with nbt from "{CustomPotionEffects:[{Id:15,Duration:100,ShowParticles:0b}],CustomPotionColor:16777215}"
+            set slot 30 of open inventory of player to a potion named "&c&lHeal" with lore "&l&62C" with nbt from "{CustomPotionColor:16711680,CustomPotionEffects:[{Id:10,Duration:60,Amplifier:3,ShowIcon:0b}]}"
+            set slot 39 of open inventory of player to a potion named "&b&lInvisibility" with lore "&l&63C" with nbt from "{CustomPotionColor:62975,CustomPotionEffects:[{Id:14,Duration:400}]}"
+
+
+            set slot 14 of open inventory of player to iron boots named "&7&lBoots" with lore "&l&61C"
+            set slot 23 of open inventory of player to chainmail chestplate named "&7&lBullet-Proof Vest" with lore "&l&63C"
+            set slot 32 of open inventory of player to light blue stained glass pane named "&b&lSpeed" with lore "&l&62C"
+            set slot 41 of open inventory of player to lime stained glass pane named "&a&lJump" with lore "&l&61C"
+
+            remove a nether star from player's inventory
+        else:
+            send "&cYou can't go to the shop without nether star" to player
+
+on inventory click:
+    if name of event-inventory is "Choose your Team":                                    # Team management 1
+        cancel event
+    if name of event-inventory is "Choose your Team":
+        if index of event-slot is 12:
+            make player execute command "/teamred"
+        else if index of event-slot is 14:
+            make player execute command "/teamblue"
+        else if index of event-slot is 26:
+            make player execute command "/teamsclear"
+
+
+
+    if name of event-inventory is "Shop":                                              # Shop management
+        cancel event
+    if name of event-inventory is "Shop":                               # Rocket launcher
+        if index of event-slot is 10:
+            if amount of crossbow in player's inventory >= 1:
+                send "&cYou have already a Rocket launcher" to player
+            else if {minijeu::%player's uuid%.money} >= 10:
+                give a crossbow of quick charge 1 named "&l&0Rocket launcher" to player
+                set slot 40 of player's inventory to 5 firework rocket named "&lRoquettes" with NBT from "{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:0,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0,FadeColors:[I;11743532]}]}}"
+                remove 10 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+    
+    if name of event-inventory is "Shop":                               # Buldog
+        if index of event-slot is 19:
+            if amount of tipped arrow in player's inventory >= 1:
+                send "&cYou have already a Bulldog" to player
+            else if {minijeu::%player's uuid%.money} >= 8:
+                give tipped arrow to player
+                remove 8 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+        
+    if name of event-inventory is "Shop":                               # Sniper
+        if index of event-slot is 28:
+            if amount of bow in player's inventory >= 1:
+                send "&cYou have already a Sniper" to player
+            else if {minijeu::%player's uuid%.money} >= 4:
+                give bow named "&lSniper" to player
+                give 10 arrow to player
+                remove 4 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+    
+
+
+
+    if name of event-inventory is "Shop":                               # Dynamite
+        if index of event-slot is 11:
+            if amount of tnt in player's inventory >= 2:
+                send "&cYou have too many Dynamite" to player
+            else if {minijeu::%player's uuid%.money} >= 4:
+                give a tnt named "&4&lDynamite" to player
+                remove 4 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+    
+    if name of event-inventory is "Shop":                               # Omen Skill
+        if index of event-slot is 20:
+            if amount of ender pearl in player's inventory >= 2:
+                send "&cEh ! You aren't an enderman !" to player
+            else if {minijeu::%player's uuid%.money} >= 4:
+                give a ender pearl named "&9&lOmen Skill" with lore "&l&64G" to player
+                remove 4 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+    
+    if name of event-inventory is "Shop":                               # Signature Skill
+        if index of event-slot is 29:
+            if amount of trident in player's inventory >= 2:
+                send "&cYou have too many Signature Skills" to player
+            else if {minijeu::%player's uuid%.money} >= 3:
+                give a trident named "&d&lSignature Skills" to player
+                remove 3 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+
+    if name of event-inventory is "Shop":                               # Smoke orb
+        if index of event-slot is 38:
+            if amount of snowball in player's inventory >= 3:
+                send "&cYou have too many Smoke-Orbs" to player
+            else if {minijeu::%player's uuid%.money} >= 1:
+                give a snowball named "&7&lSmoke-Orb" to player
+                remove 1 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+
+
+
+
+    if name of event-inventory is "Shop":                               # Poison
+        if index of event-slot is 12:
+            if amount of splash potion in player's inventory >= 3:
+                send "&cYou have too many splash potion !" to player
+            else if {minijeu::%player's uuid%.money} >= 2:
+                give 1 splash potion with NBT from "{CustomPotionColor:10217097,CustomPotionEffects:[{Id:19,Duration:160}],CustomPotionColor:50950}" named "&2&lPoison Bottle" to player's inventory
+                remove 2 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+
+    if name of event-inventory is "Shop":                               # Flash
+        if index of event-slot is 21:
+            if amount of splash potion in player's inventory >= 3:
+                send "&cYou have too many splash potion !" to player
+            else if {minijeu::%player's uuid%.money} >= 2:
+                give 1 splash potion with NBT from "{CustomPotionColor:16777152,CustomPotionEffects:[{Id:15,Duration:60,ShowParticles:0b}]}" named "&e&lFlash-Orb" to player's inventory
+                remove 2 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+    
+    if name of event-inventory is "Shop":                               # Heal
+        if index of event-slot is 30:
+            if amount of potion in player's inventory >= 2:
+                send "&cYou have too many passive potions !" to player
+            else if {minijeu::%player's uuid%.money} >= 2:
+                give 1 potion with NBT from "{CustomPotionColor:16711680,CustomPotionEffects:[{Id:10,Duration:60,Amplifier:3,ShowIcon:0b}]}" named "&c&lHeal" to player's inventory
+                remove 2 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+    
+    if name of event-inventory is "Shop":                               # Invisibility
+        if index of event-slot is 39:
+            if amount of potion in player's inventory >= 2:
+                send "&cYou have too many passive potions !" to player
+            else if {minijeu::%player's uuid%.money} >= 3:
+                give 1 potion with nbt from "{CustomPotionColor:62975,CustomPotionEffects:[{Id:14,Duration:400}]}" named "&b&lInvisibility" to player's inventory
+                remove 3 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+    
+
+
+
+
+    if name of event-inventory is "Shop":                               # Bullet-Proof Vest
+        if index of event-slot is 23:
+            if amount of chainmail chestplate in player's inventory >= 1:
+                send "&cYou have already a Bullet-Proof Vest" to player
+            else if {minijeu::%player's uuid%.money} >= 3:
+                set chestplate slot of player to chainmail chestplate of projectile protection 1 named "&7&lBullet-Proof Vest"
+                remove 3 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+
+    if name of event-inventory is "Shop":                               # Boots
+        if index of event-slot is 14:
+            if amount of iron boots in player's inventory >= 1:
+                send "&cYou have already Boots" to player           
+            else if {minijeu::%player's uuid%.money} >= 2:
+                set boots slot of player to iron boots named "&7&lBoots"
+                remove 1 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+
+    
+
+    if name of event-inventory is "Shop":                               # Speed
+        if index of event-slot is 32:
+            if {minijeu::%player's uuid%.money} >= 2:
+                apply potion of speed without particles to player for 1 day
+                remove 2 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+
+    if name of event-inventory is "Shop":                               # Jump
+        if index of event-slot is 41:
+            if {minijeu::%player's uuid%.money} >= 1:
+                apply potion of jump boost without particles to player for 1 day
+                remove 1 from {minijeu::%player's uuid%.money}
+                play sound "entity.experience_orb.pickup" to player
+
+            
+    
+    
+
+
+
+
+
+
+command /opstart <integer>:                                                                        # Starting game
+    permission: op
+    aliases: start
+    trigger:
+        set {game} to true
+        set {score.blue} to 0
+        set {score.red} to 0
+        
+        set {nombre.red} to size of getTeammates("red")
+        set {nombre.blue} to size of getTeammates("blue")
+        loop getTeammates("blue") and getTeammates("red"):
+            clear loop-value's inventory
+            set {minijeu::%player's uuid%.money} to 3
+            set {minijeu::%player's uuid%.kills.total} to 0
+            give a iron sword named "&lKnife" to loop-value's inventory
+            give a shield with nbt from "{Damage:333}" to loop-value's inventory
+
+        set {round} to 0
+        disable PvP in all worlds
+        set {shoplenght} to argument
+        make console execute command "/nextround"
+
+function fill(x1: int, y1: int, z1: int, x2: int, y2: int, z2: int, block: itemtype, world: string):
+    loop integers from {_x1} to {_x2}:
+        loop integers from {_y1} to {_y2}:
+            loop integers from {_z1} to {_z2}:
+                set block at location (loop-value-1, loop-value-2, loop-value-3) in world {_world} to {_block}
+
+function buildShopBases(s: string, map: string):
+    if {_s} is "true":
+        fill(-34, 1, 18, -36, 4, 18, red stained glass, {_map})
+        fill(-33, 1, 21, -33, 4, 19, red stained glass, {_map})
+        fill(-36, 4, 22, -34, 1, 22, red stained glass, {_map})
+        fill(-37, 1, 21, -37, 4, 19, red stained glass, {_map})
+        fill(-36, 5, 19, -34, 5, 21, red stained glass, {_map})
+
+        fill(36, 1, -18, 34, 4, -18, blue stained glass, {_map})
+        fill(33, 1, -19, 33, 4, -21, blue stained glass, {_map})
+        fill(34, 1, -22, 36, 4, -22, blue stained glass, {_map})
+        fill(37, 1, -21, 37, 4, -19, blue stained glass, {_map})
+        fill(36, 5, -19, 34, 5, -21, blue stained glass, {_map})
+    else:
+        fill(-34, 1, 18, -36, 4, 18, air, {_map})
+        fill(-33, 1, 21, -33, 4, 19, air, {_map})
+        fill(-36, 4, 22, -34, 1, 22, air, {_map})
+        fill(-37, 1, 21, -37, 4, 19, air, {_map})
+        fill(-36, 5, 19, -34, 5, 21, air, {_map})
+
+        fill(36, 1, -18, 34, 4, -18, air, {_map})
+        fill(33, 1, -19, 33, 4, -21, air, {_map})
+        fill(34, 1, -22, 36, 4, -22, air, {_map})
+        fill(37, 1, -21, 37, 4, -19, air, {_map})
+        fill(36, 5, -19, 34, 5, -21, air, {_map})
+
+
+command /nextround:                                                                        # Init and Play the next Round
+    permission: op
+    aliases: next
+    trigger:
+        if {game} is not true:
+            send "&cThere is no game ..."
+            stop
+        increase {round} by 1
+
+        set {y} to 4
+        
+        set {x1} to 35.5
+        set {z1} to -19.5
+
+        set {xBlue} to {x1}
+        set {zBlue} to {z1}
+        set {xRed} to (0 - {x1}) + 1
+        set {zRed} to (0 - {z1}) + 1
+        
+        chance of 50%:
+            set {_map} to "map0"
+        else:
+            set {_map} to "map1"
+        
+        disable PvP in {_map}
+        set {nombre.red} to size of getTeammates("red")
+        set {nombre.blue} to size of getTeammates("blue")
+
+        loop getTeammates("blue") and getTeammates("red"):
+            set {minijeu::%player's uuid%.kills.round.%{round}%} to 0
+            set gamemode of loop-value to adventure
+            heal loop-value
+            if {minijeu::%loop-value%.alive} is false:
+                add 3 to {minijeu::%player's uuid%.money}
+                clear loop-value's inventory
+                give a iron sword named "&lKnife" to loop-value's inventory
+                give a shield with nbt from "{Damage:333}" to loop-value's inventory
+            else:
+                add 3 to {minijeu::%player's uuid%.money}
+                if amount of bow in loop-value's inventory >= 1:
+                    set {arrows} to amount of arrow in loop-value's inventory
+                    give 10 arrow to loop-value's inventory
+                if amount of crossbow in loop-value's inventory >= 1:
+                    set slot 40 of loop-value's inventory to 5 firework rocket with NBT from "{Fireworks:{Flight:2,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:0,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0},{Type:0,Flicker:0,Trail:0,FadeColors:[I;11743532]}]}}"
+            set {minijeu::%loop-value%.alive} to true
+            give a nether star named "&e&lShop" to loop-value's inventory
+        loop getTeammates("blue"):
+            set slot 39 of loop-value to a leather helmet with nbt from "{display:{color:1331199}}"
+            set slot 38 of loop-value to a leather chestplate with nbt from "{display:{color:1331199}}"
+            set slot 37 of loop-value to leather leggings with nbt from "{display:{color:1331199},Enchantments:[{lvl:2,id:swift_sneak}]}"
+            set slot 36 of loop-value to leather boots with nbt from "{display:{color:1331199}}"
+            teleport loop-value to location {xBlue}, {y}, {zBlue} in {_map}
+        loop getTeammates("red"):
+            set slot 39 of loop-value to leather helmet with nbt from "{display:{color:16056327}}"
+            set slot 38 of loop-value to a leather chestplate with nbt from "{display:{color:16056327}}"
+            set slot 37 of loop-value to a leather leggings with nbt from "{display:{color:16056327},Enchantments:[{lvl:2,id:swift_sneak}]}"
+            set slot 36 of loop-value to leather boots with nbt from "{display:{color:16056327}}"
+            teleport loop-value to location {xRed}, {y}, {zRed} in {_map}
+        make console execute command "/kill @e[type=!player]"
+
+        #set {%players%.alive} to true
+        remove invisibility from all players
+        remove blindness from all players
+        remove speed from all players
+        remove jump boost from all players
+        remove glowing from all players
+        remove poison from all players
+        set {morts.blue} to 0
+        set {morts.red} to 0
+
+
+        buildShopBases("true", {_map})
+        loop getTeammates("blue") and getTeammates("red"):
+            initbullets(loop-value)
+            send title "Round %{round}%" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 2 seconds
+        wait 42 ticks
+        if {game} is true:
+            send title "Shop phase" with subtitle "&e%{shoplenght}% seconds" to all players for 3 seconds
+            if {game} is true:
+                wait "%{shoplenght}% seconds" parsed as timespan
+                buildShopBases("false", {_map})
+                enable PvP in {_map}
+                send title "PvP phase" with subtitle "&eUntil an entire team is eliminated" to all players for 3 seconds
+            else:
+                buildShopBases("false", {_map})
+        else:
+            buildShopBases("false", {_map})
+
+        
+command /endgame:
+    permission: op
+    aliases: end
+    trigger:
+        if {game} is not true:
+            send "&cThere is no game ..."
+            stop
+        disable PvP in all worlds
+        loop getTeammates("blue") and getTeammates("red"):
+            make console execute command "/mvtp %player's name% lobby"
+        if {score.red} > {score.blue}:
+            wait 20 ticks
+            loop getTeammates("blue"):
+                send title "&cDefeat..." with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
+            loop getTeammates("red"):
+                send title "&cVictory !" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
+        else if {score.red} < {score.blue}:
+            wait 20 ticks
+            loop getTeammates("red"):
+                send title "&cDefeat..." with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
+            loop getTeammates("blue"):
+                send title "&cVictory !" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-value for 5 seconds
+        else:
+            wait 20 ticks
+            loop getTeammates("blue") and getTeammates("red"):
+                send title "&7Draw !" with subtitle "&9%{score.blue}% &r- &c%{score.red}%" to loop-player for 5 seconds
+        set {game} to false
+
+
+
+
+
+
+on death of a player:
+    initbullets(victim)
+
+
+
+on damage:
+    attacker is a player
+    if damage is more than victim's health:
+        cancel event
+        increase {minijeu::%attacker's uuid%.kills.total} by 1
+        increase {minijeu::%attacker's uuid%.kills.round.%{round}%} by 1
+        if {minijeu::%attacker's uuid%.kills.round.%{round}%} <= 1:
+            play sound "kill.one" in player category to attacker
+        else if {minijeu::%attacker's uuid%.kills.round.%{round}%} is 2:
+            play sound "kill.two" in player category to attacker
+        else if {minijeu::%attacker's uuid%.kills.round.%{round}%} is 3:
+            play sound "kill.three" in player category to attacker
+        else if {minijeu::%attacker's uuid%.kills.round.%{round}%} is 4:
+            play sound "kill.four" in player category to attacker
+        else if {minijeu::%attacker's uuid%.kills.round.%{round}%} >= 5:
+            play sound "kill.five" in player category to attacker
+        victim is player
+        if getTeammates("blue") contain victim:
+            set {_victimteam} to "&9"
+        else if getTeammates("red") contain victim:
+            set {_victimteam} to "&c"
+        else:
+            set {_victimteam} to "&0"
+        if getTeammates("blue") contain attacker:
+            set {_attackerteam} to "&9"
+        else if getTeammates("red") contain attacker:
+            set {_attackerteam} to "&c"
+        else:
+            set {_attackerteam} to "&0"
+        if damage type is projectile:
+            set {_damager} to "︻╦╤─"
+            if event-projectile is a spectral arrow:
+                set {_damager} to "︻╦╤───"
+            else if event-projectile is a arrow:
+                set {_damager} to "︻╦╤─"
+        else if damage type is entity explosion:
+            set {_damager} to "︻╦╤─ --  ҉ "
+        else:
+            set {_damager} to "🗡"
+        broadcast "%{_attackerteam}%&l%attacker's name%&7 %{_damager}% %{_victimteam}%&l%victim's name%"
+        initbullets(victim)
+        {game} is true
+        set gamemode of victim to spectator
+        add 2 to {minijeu::%attacker's uuid%.money}
+        set {minijeu::%victim's uuid%.alive} to false
+
+        if getTeammates("blue") contain victim:
+            clear victim's inventory
+            add 1 to {morts.blue}
+            if size of getTeammates("blue") = {morts.blue}:
+                broadcast "&cRound win by reds !"
+                add 1 to {score.red}
+                wait 50 ticks
+                make console execute command "/nextround"
+        if getTeammates("red") contain victim:
+            clear victim's inventory
+            add 1 to {morts.red}
+            if size of getTeammates("red") = {morts.red}:
+                broadcast "&9Round win by blues !"
+                add 1 to {score.blue}
+                wait 50 ticks
+                make console execute command "/nextround"
+
+
+on respawn:
+    wait 1 tick
+    if {minijeu::%player's uuid%.alive} is false:
+        set player's gamemode to spectator
+        set helmet slot of player to air
+        set chestplate slot of player to air
+        set leggings slot of player to air
+        set boots slot of player to air
+    
+
+
+command /alive:
+    trigger:
+        if {game} is false:
+            send "All ! : There is no game..."
+            stop
+        send "&cReds alive :&r %{nombre.red}-{morts.red}%/%size of getTeammates("red")%"
+        send "&9Blues alive :&r %{nombre.blue}-{morts.blue}%/%size of getTeammates("blue")%"
+
+
+
+
+
+on projectile hit:
+    if projectile is a trident:
+        loop 13 times:
+            loop all players in radius 15 around event-location:
+                if getTeammates("blue") contain shooter:
+                    if getTeammates("red") contain loop-player:
+                        apply potion of glowing without particles to loop-player for 15 ticks
+                else if getTeammates("red") contain shooter:
+                    if getTeammates("blue") contain loop-player:
+                        apply potion of glowing without particles to loop-player for 15 ticks
+                else:
+                    apply potion of glowing without particles to loop-player for 15 ticks
+            wait 20 ticks
+    else if projectile is a snowball:
+        cancel event
+        if getTeammates("blue") contain shooter:
+            set {_texture} to "blue_wool"
+        else if getTeammates("red") contain shooter:
+            set {_texture} to "red_wool"
+        else if shooter has permission "op":
+            set {_texture} to "black_wool"
+        else:
+            set {_texture} to "light_grey_wool"
+        set {_currentsmokeuuid} to a random uuid
+        play sound "smoke.spawn" in ambient category at projectile's location
+        loop all blocks in radius 5 around location:
+            set {_blocklocation} to loop-block's location
+            if distance between {_blocklocation} and location >= 4:
+                spawn block display at {_blocklocation} with nbt from "{CustomName:""[\""%{_currentsmokeuuid}%\""]"",block_state:{Name:%{_texture}%},NoGravity:1b}"
+        wait 10 seconds
+        make console execute command "/kill @e[name=""%{_currentsmokeuuid}%""]"
+    if event-block isn't a block display:
+        wait 100 ticks
+        kill event-projectile
+
+
+on potion effect added:
+    if event-entity is a player:
+        if "%event-potioneffecttype%" = "invisibility":
+            if event-entity doesn't have invisibility:
+                set {minijeu::%event-entity%.armor.helmet} to helmet slot of event-entity
+                set {minijeu::%event-entity%.armor.chestplate} to chestplate slot of event-entity
+                set {minijeu::%event-entity%.armor.leggings} to leggings slot of event-entity
+                set {minijeu::%event-entity%.armor.boots} to boots slot of event-entity
+                set helmet slot of player to air
+                set chestplate slot of player to air
+                set leggings slot of player to air
+                set boots slot of player to air
+                
+                wait 400 ticks
+
+                set helmet slot of player to {minijeu::%event-entity%.armor.helmet}
+                set chestplate slot of player to {minijeu::%event-entity%.armor.chestplate}
+                set leggings slot of player to {minijeu::%event-entity%.armor.leggings}
+                set boots slot of player to {minijeu::%event-entity%.armor.boots}
+            else:
+                send "&cYou can't drink 2 same potions : else, you will lose all your armor..." to event-entity
+                send "&cNow you just lost 1 potion." to event-entity
+        else if "%event-potioneffecttype%" = "regeneration":
+            wait 5 ticks
+            remove all glass bottle from event-entity's inventory
+
+
+
+command /ready [for] <string> [[in] <int> [seconds]]:
+    trigger:
+        if arg-1 in lowercase is "teamdeathmatch":
+            if {game} isn't false:
+                send "There is already a game ... wait for the end !" to player
+            wait "%arg-2% seconds" parsed as timespan
+            set {minijeu::%player's uuid%.wanttostart} to true
+            set {_start} to true
+            send "&aYou are marked as ready !" to player
+            loop getTeammates("blue") and getTeammates("red"):
+                if {minijeu::%loop-value's uuid%.wanttostart} is false:
+                    set {_start} to false
+            if {_start} is true:
+                loop getTeammates("blue") and getTeammates("red"):
+                    set {minijeu::%loop-value's uuid%.wanttostart} to false
+
+                send title "Game will start in 5" to all players for 2 seconds
+                wait 1 second
+                send title "4" to all players for 1 second
+                wait 1 second
+                send title "3" to all players for 1 second
+                wait 1 second
+                send title "2" to all players for 1 second
+                wait 1 second
+                send title "1" to all players for 1 second
+                wait 1 second
+                make console execute command "/opstart 15"
+            else:
+                send "&eWait for other players in a team!"
+        else:
+            send "&cI don't know the game '%arg-1%'" to player
+
+
+
+
+
+# every 1 second:
+#     loop all players:
+#         if loop-player isn't in world "lobby":
+#             # make console execute command "/effect give %loop-player's name% speed 1 0 true"
+#             # make console execute command "/effect give %loop-player's name% jump_boost 1 1 true"

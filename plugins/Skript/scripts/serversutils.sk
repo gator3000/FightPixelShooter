@@ -1,0 +1,245 @@
+options:
+    server: "Minecraft X Valorant"
+
+on load:
+    broadcast "&e&lServerutils&r&e loaded !"
+
+
+# Motd
+on server list ping:
+    set {mymotd} to "A &bM&2i&bn&2e&bc&2r&ba&2f&bt&r X &cV&ea&cl&eo&cr&ea&cn&et&9 distance PVP1.9&r server%nl%"
+    chance of 20%:
+        set the motd to "%{mymotd}%""Wherever I go, obliteration follows."""
+    else:
+        chance of 25%:
+            set the motd to "%{mymotd}%""They should've dug a deeper grave."""
+        else:
+            chance of 33%:
+                set the motd to "%{mymotd}%""Nobody escapes me. But they'll try."""
+            else:
+                chance of 50%:
+                    set the motd to "%{mymotd}%""Stay alive! I want their life, not yours."""
+                else:
+                    set the motd to "%{mymotd}%""We're gonna win. No other option. Let's go."""
+
+
+# Hardware admin
+command /setadmin <offlineplayer>:
+    executable by: console
+    trigger:
+        set {hardwareadmin} to argument
+        broadcast "&a%argument% is now set to hardware admin !"
+
+
+on load:
+    set {game} to false
+    if {hardwareadmin} is online:
+        make {hardwareadmin} execute command "/teamsinit"
+    else:
+        make console execute command "/teamsinit"
+
+# Build mode
+on join:
+    make console execute command "/attribute %player's name% minecraft:generic.knockback_resistance base set 1"
+    set {utils::%player's uuid%.buildermode} to false
+
+command /togglebuildmode [<offlineplayer>]:
+    aliases: tggbuild, build, tggbm
+    permission: op
+    trigger:
+        if argument is set:
+            if {utils::%argument's uuid%.buildermode} is false:
+                set {utils::%argument's uuid%.buildermode} to true
+                send "&aNow, %argument% can build !" to player
+                send "%player% just toggled your build mode, you can build now !" to argument
+            else:
+                set {utils::%argument's uuid%.buildermode} to false
+                send "Good ! %argument% is secure from grief the world." to player
+                send "&c%player% just toggled your build mode, you can't build now !" to argument
+        else:
+            if {utils::%player's uuid%.buildermode} is false:
+                set {utils::%player's uuid%.buildermode} to true
+                send "Now, you can build !" to player
+            else:
+                set {utils::%player's uuid%.buildermode} to false
+                send "Good ! You are secure from grief the world." to player
+        
+on block break:
+    if {utils::%player's uuid%.buildermode} isn't set:
+        set {utils::%player's uuid%.buildermode} to false
+    if {utils::%player's uuid%.buildermode} is false:
+        send "&cYou can't build and break now ! Use '/togglebuildmode' to modify the world !" to player
+        cancel event
+
+on block build:
+    if {utils::%player's uuid%.buildermode} isn't set:
+        set {utils::%player's uuid%.buildermode} to false
+    if {utils::%player's uuid%.buildermode} is false:
+        send "&cYou can't build and break now ! Use '/togglebuildmode' to modify the world !" to player
+        cancel event
+
+# Food system
+every 10 seconds:
+    loop all players:
+        set loop-player's food level to 20
+
+# World initialization
+command /initgamerules:
+    permission: op
+    trigger:
+        make player execute command "/gamerule announceAdvancements false"
+        make player execute command "/gamerule commandBlockOutput false"
+        make player execute command "/gamerule disableRaids true"
+        make player execute command "/gamerule doMobLoot false"
+        make player execute command "/gamerule doMobSpawning false"
+        make player execute command "/gamerule doPatrolSpawning false"
+        make player execute command "/gamerule doTraderSpawning false"
+        make player execute command "/gamerule doVinesSpread false"
+        make player execute command "/gamerule doWeatherCycle false"
+        make player execute command "/gamerule drowningDamage false"
+        make player execute command "/gamerule fallDamage false"
+        make player execute command "/gamerule keepInventory true"
+        make player execute command "/gamerule naturalRegeneration false"
+        make player execute command "/gamerule sendCommandFeedback true"
+        make player execute command "/gamerule showDeathMessages false"
+        make player execute command "/gamerule spawnRadius 1"
+        make player execute command "/gamerule spectatorsGenerateChunks false"
+
+
+
+# Pvp system
+command /pvp <boolean> [[in] <string>]:
+    permission: op
+    trigger:
+        if arg-2 is set:
+            if arg-1 is true:
+                enable pvp in world arg-2
+                send "&ePvP enabled in world ""%arg-2%""!" to player
+            else:
+                disable pvp in world arg-2
+                send "&ePvP disabled in world ""%arg-2%""!" to player
+        else:
+            if arg-1 is true:
+                enable pvp in all worlds
+                send "&ePvP enabled !" to player
+            else:
+                disable pvp in all worlds
+                send "&ePvP disabled !" to player
+
+
+# Misc
+function fill(x1: int, y1: int, z1: int, x2: int, y2: int, z2: int, block: itemtype, world: string, keep: boolean = true):
+    loop integers from {_x1} to {_x2}:
+        loop integers from {_y1} to {_y2}:
+            loop integers from {_z1} to {_z2}:
+                if {_keep} is true:
+                    if (block at location (loop-value-1, loop-value-2, loop-value-3) in world {_world}) is air:
+                        set block at location (loop-value-1, loop-value-2, loop-value-3) in world {_world} to {_block}
+                else:
+                    set block at location (loop-value-1, loop-value-2, loop-value-3) in world {_world} to {_block}
+
+# command /fillunlimited <int> <int> <int> <int> <int> <int> <itemtype> [<boolean=true>]:
+#     permission: op
+#     trigger:
+#         send "This action may take a while but is unlimited by number of blocks !" to player
+#         fill(arg-1, arg-2, arg-3, arg-4, arg-5, arg-6, arg-7, player's world, arg-8)
+
+command /reloadskripts:
+    aliases: skrl, rlsk, skreload
+    permission: op
+    trigger:
+        if player is {hardwareadmin}:
+            make player execute command "/sk reload scripts"
+
+command /clearlag:
+    permission: op
+    trigger:
+        if player is {hardwareadmin}:
+            make console execute command "/kill @e[type=minecraft:block_display]"
+            make console execute command "/kill @e[type=#minecraft:impact_projectiles]"
+        else:
+            send "&cYou are not the hardware admin lmaooo !"
+
+
+function getTeammates(TEAM: string) :: players:
+    return team entries of team named {_TEAM}
+
+
+
+on damage:
+    if event-world is world "lobby":
+        if {utils::%attacker's uuid%.buildermode} isn't true:
+            cancel event
+    if event-damagecause is suffocation:
+        cancel event
+    if victim is attacker:
+        cancel event
+    if attacker's tool is trident:
+        cancel event
+        stop
+    if event-projectile is trident:
+        cancel event
+        stop
+
+on item damage:
+    cancel event
+
+on explode:
+    event-entity is tnt
+    cancel event
+    create a safe explosion of force 5 at event-location
+
+on pickup arrow:
+    cancel event
+
+on pickup spectral arrow:
+    cancel event
+
+command /distance <int> <int> <int> [<int> <int> <int>]:
+    trigger:
+        if argument 4 is set:
+            send "&l    %distance between the location (argument 1, argument 2, argument 3) and the location (argument 4, argument 5, argument 6)%" to player
+        else:
+            send "&l    %distance between the location (argument 1, argument 2, argument 3) and player%" to player
+
+command /logpos <string>:
+    trigger:
+        send "%arg-1% : %player's location%" to player and console
+
+command /patchnotes:
+    trigger:
+        make console execute command "/give %player's name% written_book{pages:['[["""",{""text"":""Welcome to our "",""color"":""red"",""bold"":true},{""text"":""minecraft server"",""color"":""gold"",""bold"":true},{""text"":"" !"",""color"":""red"",""bold"":true},""\\n\\n"",{""text"":""Here we are with the v1.0 !!! "",""color"":""gray"",""italic"":true},{""text"":""￼"",""color"":""gray""},""\\nAfter 1 mounth of coding, texturing, and building, the first official version of our FPS minecraft server is ready !\\n\\n     Enjoy it !\\n           Gator3000""]]','[[""First, we have the "",{""text"":""/open"",""clickEvent"":{""action"":""suggest_command"",""value"":""/open ff""},""hoverEvent"":{""action"":""show_text"",""contents"":""/open (ff)""},""color"":""gray""},"" command.\\n\\nIt open a game of the type specified (now just ff).\\n\\n"",{""text"":""Argument(s) :\\nGameType: "",""color"":""dark_gray""},{""text"":""ff"",""color"":""gray""}]]','[[""Second, there is the "",{""text"":""/join"",""clickEvent"":{""action"":""suggest_command"",""value"":""/join ff""},""hoverEvent"":{""action"":""show_text"",""contents"":""/join (ff)""},""color"":""gray""},"" command.\\n\\nIt join a game type specified (just ff too).\\n\\n"",{""text"":""Argument(s):\\nGameType: "",""color"":""dark_gray""},{""text"":""ff"",""color"":""gray""}]]','[[""And, the command "",{""text"":""/start"",""clickEvent"":{""action"":""suggest_command"",""value"":""/start ff""},""hoverEvent"":{""action"":""show_text"",""contents"":""/start (ff)""},""color"":""gray""},"" (can be used only by the owner of a game, the player that executed /open before).\\n\\nIt start the game.\\n\\n"",{""text"":""Argument(s):\\nGameType: "",""color"":""dark_gray""},{""text"":""ff"",""color"":""gray""}]]'],title:""V1.0"",author:Gator3000,generation:0,display:{Lore:['["""",{""text"":""Yay !"",""italic"":false,""color"":""dark_purple""}]']},Enchantments:[{}],Unbreakable:1,HideFlags:2}"
+
+
+
+on tab complete of "/start":
+    set tab completions for position 1 to "ff"
+
+on tab complete of "/join":
+    set tab completions for position 1 to "ff"
+
+on tab complete of "/open":
+    set tab completions for position 1 to "ff"
+
+
+on tab complete of "/pvp":
+    set tab completions for position 1 to "true" and "false"
+    set tab completions for position 2 to all worlds
+
+on tab complete of "/togglebuildmode":
+    set tab completions for position 1 to offline players
+
+on tab complete of "/setadmin":
+    set tab completions for position 1 to offline players
+
+on tab complete of "":
+    set tab completions for position 1 to 
+
+on tab complete of "":
+    set tab completions for position 1 to 
+
+on tab complete of "":
+    set tab completions for position 1 to 
+
+on tab complete of "":
+    set tab completions for position 1 to 

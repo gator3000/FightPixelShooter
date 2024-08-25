@@ -1,0 +1,32 @@
+options:
+    void: "void"
+
+
+on load:
+    broadcast "&e&lSkills&r&e loaded !"
+
+
+on left clicking holding TNT:                                                     # TNT beavour
+    cancel event
+    remove 1 TNT from player's inventory
+    spawn 1 primed TNT at location of block above player
+    push last spawned tnt in direction of player with force 0.8
+
+on projectile hit:
+    if projectile is a snowball:
+        cancel event
+        if shooter has permission "op":
+            set {_texture} to "black_wool"
+        else:
+            set {_texture} to "light_gray_wool"
+        set {_currentsmokeuuid} to a random uuid
+        play sound "smoke.spawn" in ambient category at projectile's location
+        loop all blocks in radius 5 around location:
+            set {_blocklocation} to loop-block's location
+            if distance between {_blocklocation} and location >= 4:
+                spawn block display at {_blocklocation} with nbt from "{CustomName:""[\""%{_currentsmokeuuid}%\""]"",block_state:{Name:%{_texture}%},NoGravity:1b}"
+        wait 10 seconds
+        make console execute command "/kill @e[name=""%{_currentsmokeuuid}%""]"
+    if event-block isn't a block display:
+        wait 100 ticks
+        kill event-projectile

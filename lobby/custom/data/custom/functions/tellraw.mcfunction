@@ -1,0 +1,1 @@
+tellraw @a [{"text":" > ","bold":true,"color":"dark_gray"},{"text":"[custom serveur datapack]","bold":true,"color":"gold"},{"text":" < ","bold":true,"color":"dark_gray"},{"text":"Datapack (re)load !","bold":false,"color":"white"}]
